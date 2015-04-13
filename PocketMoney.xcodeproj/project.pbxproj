@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */; };
+		C800E6181AD8206F00896F96 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6171AD8206F00896F96 /* Account.swift */; };
+		C800E61A1AD8255200896F96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6191AD8255200896F96 /* Transaction.swift */; };
+		C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61B1AD8328C00896F96 /* CreateAccount.swift */; };
+		C800E61E1AD8350400896F96 /* String+floatValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61D1AD8350400896F96 /* String+floatValue.swift */; };
+		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
+		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
+		C8C991211AD80858000E756E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991201AD80858000E756E /* DetailViewController.swift */; };
+		C8C991241AD80858000E756E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C991221AD80858000E756E /* Main.storyboard */; };
+		C8C991261AD80858000E756E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C991251AD80858000E756E /* Images.xcassets */; };
+		C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8C991271AD80858000E756E /* LaunchScreen.xib */; };
+		C8C991351AD80858000E756E /* PocketMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991341AD80858000E756E /* PocketMoneyTests.swift */; };
+		C8C991411AD80B46000E756E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991401AD80B46000E756E /* AccountCell.swift */; };
+		C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C9916A1AD80DCF000E756E /* RoundRectView.framework */; };
+		C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C800E6101AD8201700896F96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8C9914C1AD80C12000E756E;
+			remoteInfo = RoundRectView;
+		};
+		C800E6121AD8201700896F96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8C991571AD80C12000E756E;
+			remoteInfo = RoundRectViewTests;
+		};
+		C8C9912F1AD80858000E756E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8C9910F1AD80858000E756E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8C991161AD80858000E756E;
+			remoteInfo = PocketMoney;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketMoney/Pods-PocketMoney.release.xcconfig"; sourceTree = "<group>"; };
+		56BB657A417FFAD5F370DB4A /* Pods-PocketMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketMoney/Pods-PocketMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RoundRectView.xcodeproj; path = RoundRectView/RoundRectView.xcodeproj; sourceTree = "<group>"; };
+		C800E6171AD8206F00896F96 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		C800E6191AD8255200896F96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		C800E61B1AD8328C00896F96 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		C800E61D1AD8350400896F96 /* String+floatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+floatValue.swift"; path = "Extensions/String+floatValue.swift"; sourceTree = "<group>"; };
+		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8C9911C1AD80858000E756E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8C9911E1AD80858000E756E /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		C8C991201AD80858000E756E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C8C991231AD80858000E756E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8C991251AD80858000E756E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C8C991281AD80858000E756E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C991331AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8C991341AD80858000E756E /* PocketMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketMoneyTests.swift; sourceTree = "<group>"; };
+		C8C991401AD80B46000E756E /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		C8C9916A1AD80DCF000E756E /* RoundRectView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoundRectView.framework; path = "RoundRectView/build/Debug-iphoneos/RoundRectView.framework"; sourceTree = "<group>"; };
+		C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+getRGB.swift"; path = "Extensions/UIColor+getRGB.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8C991141AD80858000E756E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */,
+				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C9912B1AD80858000E756E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A35EEF575C35DCDE22B7E74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56BB657A417FFAD5F370DB4A /* Pods-PocketMoney.debug.xcconfig */,
+				1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C800E60C1AD8201700896F96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C800E6111AD8201700896F96 /* RoundRectView.framework */,
+				C800E6131AD8201700896F96 /* RoundRectViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C800E6141AD8202A00896F96 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9911E1AD80858000E756E /* AccountListViewController.swift */,
+				C8C991201AD80858000E756E /* DetailViewController.swift */,
+				C8C991401AD80B46000E756E /* AccountCell.swift */,
+				C8C991221AD80858000E756E /* Main.storyboard */,
+				C800E61B1AD8328C00896F96 /* CreateAccount.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C800E6151AD8203100896F96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C800E6171AD8206F00896F96 /* Account.swift */,
+				C800E6191AD8255200896F96 /* Transaction.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C800E6161AD8204400896F96 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C8C991251AD80858000E756E /* Images.xcassets */,
+				C8C991271AD80858000E756E /* LaunchScreen.xib */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		C8C9910E1AD80858000E756E = {
+			isa = PBXGroup;
+			children = (
+				C8C991191AD80858000E756E /* PocketMoney */,
+				C8C991311AD80858000E756E /* PocketMoneyTests */,
+				C8C991181AD80858000E756E /* Products */,
+				C8C9916C1AD80DD8000E756E /* Dependencies */,
+				9A35EEF575C35DCDE22B7E74 /* Pods */,
+				EFEFF8E1B258549E27451008 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C8C991181AD80858000E756E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8C991171AD80858000E756E /* PocketMoney.app */,
+				C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8C991191AD80858000E756E /* PocketMoney */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9911C1AD80858000E756E /* AppDelegate.swift */,
+				C800E6151AD8203100896F96 /* Model */,
+				C800E6141AD8202A00896F96 /* Views */,
+				C800E6161AD8204400896F96 /* Assets */,
+				C8C9916D1AD811A8000E756E /* Extensions */,
+				C8C9911A1AD80858000E756E /* Supporting Files */,
+			);
+			path = PocketMoney;
+			sourceTree = "<group>";
+		};
+		C8C9911A1AD80858000E756E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9911B1AD80858000E756E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8C991311AD80858000E756E /* PocketMoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8C991341AD80858000E756E /* PocketMoneyTests.swift */,
+				C8C991321AD80858000E756E /* Supporting Files */,
+			);
+			path = PocketMoneyTests;
+			sourceTree = "<group>";
+		};
+		C8C991321AD80858000E756E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8C991331AD80858000E756E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8C9916C1AD80DD8000E756E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9916A1AD80DCF000E756E /* RoundRectView.framework */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		C8C9916D1AD811A8000E756E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */,
+				C800E61D1AD8350400896F96 /* String+floatValue.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EFEFF8E1B258549E27451008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */,
+				0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8C991161AD80858000E756E /* PocketMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C991381AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoney" */;
+			buildPhases = (
+				FD11D4AC997890FA2CB05B6A /* Check Pods Manifest.lock */,
+				C8C991131AD80858000E756E /* Sources */,
+				C8C991141AD80858000E756E /* Frameworks */,
+				C8C991151AD80858000E756E /* Resources */,
+				23735DEE4A281CF3F1BFA431 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketMoney;
+			productName = PocketMoney;
+			productReference = C8C991171AD80858000E756E /* PocketMoney.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8C9912D1AD80858000E756E /* PocketMoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C9913B1AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoneyTests" */;
+			buildPhases = (
+				C8C9912A1AD80858000E756E /* Sources */,
+				C8C9912B1AD80858000E756E /* Frameworks */,
+				C8C9912C1AD80858000E756E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8C991301AD80858000E756E /* PBXTargetDependency */,
+			);
+			name = PocketMoneyTests;
+			productName = PocketMoneyTests;
+			productReference = C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8C9910F1AD80858000E756E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Babbage Consulting";
+				TargetAttributes = {
+					C8C991161AD80858000E756E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					C8C9912D1AD80858000E756E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = C8C991161AD80858000E756E;
+					};
+				};
+			};
+			buildConfigurationList = C8C991121AD80858000E756E /* Build configuration list for PBXProject "PocketMoney" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8C9910E1AD80858000E756E;
+			productRefGroup = C8C991181AD80858000E756E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C800E60C1AD8201700896F96 /* Products */;
+					ProjectRef = C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C8C991161AD80858000E756E /* PocketMoney */,
+				C8C9912D1AD80858000E756E /* PocketMoneyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C800E6111AD8201700896F96 /* RoundRectView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RoundRectView.framework;
+			remoteRef = C800E6101AD8201700896F96 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C800E6131AD8201700896F96 /* RoundRectViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RoundRectViewTests.xctest;
+			remoteRef = C800E6121AD8201700896F96 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8C991151AD80858000E756E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C991241AD80858000E756E /* Main.storyboard in Resources */,
+				C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */,
+				C8C991261AD80858000E756E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C9912C1AD80858000E756E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23735DEE4A281CF3F1BFA431 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketMoney/Pods-PocketMoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD11D4AC997890FA2CB05B6A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8C991131AD80858000E756E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C800E61A1AD8255200896F96 /* Transaction.swift in Sources */,
+				C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */,
+				C8C991211AD80858000E756E /* DetailViewController.swift in Sources */,
+				C800E61E1AD8350400896F96 /* String+floatValue.swift in Sources */,
+				C8C991411AD80B46000E756E /* AccountCell.swift in Sources */,
+				C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */,
+				C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */,
+				C800E6181AD8206F00896F96 /* Account.swift in Sources */,
+				C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8C9912A1AD80858000E756E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C991351AD80858000E756E /* PocketMoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8C991301AD80858000E756E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8C991161AD80858000E756E /* PocketMoney */;
+			targetProxy = C8C9912F1AD80858000E756E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C8C991221AD80858000E756E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8C991231AD80858000E756E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8C991271AD80858000E756E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8C991281AD80858000E756E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8C991361AD80858000E756E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8C991371AD80858000E756E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8C991391AD80858000E756E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56BB657A417FFAD5F370DB4A /* Pods-PocketMoney.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = PocketMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C8C9913A1AD80858000E756E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = PocketMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C8C9913C1AD80858000E756E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PocketMoneyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoney.app/PocketMoney";
+			};
+			name = Debug;
+		};
+		C8C9913D1AD80858000E756E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PocketMoneyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoney.app/PocketMoney";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8C991121AD80858000E756E /* Build configuration list for PBXProject "PocketMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C991361AD80858000E756E /* Debug */,
+				C8C991371AD80858000E756E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8C991381AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C991391AD80858000E756E /* Debug */,
+				C8C9913A1AD80858000E756E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8C9913B1AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C9913C1AD80858000E756E /* Debug */,
+				C8C9913D1AD80858000E756E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8C9910F1AD80858000E756E /* Project object */;
+}
