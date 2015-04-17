@@ -48,13 +48,21 @@ class AccountListViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showDetail" {
-//            if let indexPath = self.tableView.indexPathForSelectedRow() {
-//                let object = objects[indexPath.row] as! NSDate
-//            (segue.destinationViewController as! DetailViewController).detailItem = object
-//            }
-//        }
-    }
+        
+        if segue.identifier == "showTransactions" {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let account = accounts[indexPath.row]
+            (segue.destinationViewController as! TransactionsListViewController).account = account
+            }
+        }
+        
+        if segue.identifier == "newTransaction" {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let account = accounts[indexPath.row]
+                (segue.destinationViewController as! NewTransactionViewController).account = account
+            }
+        }
+  }
 
     // MARK: - Table View
 

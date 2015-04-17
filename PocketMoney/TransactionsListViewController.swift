@@ -8,12 +8,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class TransactionsListViewController: UITableViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    var detailItem: AnyObject? {
+    var account: Account? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,11 +19,11 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
+        if let ac = self.account {
+            title = ac.name
         }
+        
+        tableView.reloadData()
     }
 
     override func viewDidLoad() {
@@ -39,7 +36,15 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+        if let rows = account?.transactions {
+            return rows.count
+        }
+        // else no rows.
+        return 0
+    }
 
 }
 

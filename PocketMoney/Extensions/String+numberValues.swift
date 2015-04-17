@@ -1,5 +1,5 @@
 //
-//  String+floatValue.swift
+//  String+numberValues
 //  PocketMoney
 //
 //  Created by roger nolan on 10/04/2015.
@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    var floatValue: Float {
-        return (self as NSString).floatValue
+    var doubleValue: Double {
+        return (self as NSString).doubleValue
     }
 }

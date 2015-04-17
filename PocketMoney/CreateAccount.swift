@@ -17,7 +17,7 @@ class CreateAccount: UITableViewController {
     
     @IBAction func done(sender: AnyObject) {
         
-        let account = Account(name: accountName.text!, balance: Double(openingBalance.text.floatValue))
+        let account = Account(name: accountName.text!, balance: Double(openingBalance.text.doubleValue))
         account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
             account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
                 // code
