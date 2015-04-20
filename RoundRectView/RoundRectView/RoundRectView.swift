@@ -22,6 +22,7 @@ import UIKit
     @IBInspectable public var fillColour: UIColor {
         set {
             layer.backgroundColor = newValue.CGColor
+
         }
         get {
             return UIColor(CGColor: layer.backgroundColor)!

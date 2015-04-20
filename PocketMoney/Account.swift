@@ -42,5 +42,11 @@ class Account : PFObject, PFSubclassing {
             transactions = [transaction]
         }
         balance -= amount
+        
+        self.saveInBackgroundWithBlock { (saved: Bool, error: NSError?) -> Void in
+            if error == nil {
+                self.saveEventually(nil)
+            }
+        }
     }
 }

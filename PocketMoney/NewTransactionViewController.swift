@@ -31,7 +31,7 @@ class NewTransactionViewController: UITableViewController {
     }
 
     override func viewDidDisappear(animated: Bool) {
-        // Check that we are being dismissed from the top of the stack. Means Cancel has been pressed and we should create a 
+        // Check that we are being dismissed from the top of the stack. Means back has been pressed and we should create a
         // new transaction
         if let name = self.nameEdit.text, ac = account, vcs = self.navigationController?.viewControllers as? [NSObject] {
             if contains(vcs, self) {
@@ -39,6 +39,14 @@ class NewTransactionViewController: UITableViewController {
             }
         }
         super.viewDidDisappear(animated)
+    }
+    
+    @IBAction func saveTapped(sender: AnyObject) {
+        if let name = self.nameEdit.text, ac = account {
+            ac.addTransaction(name , amount: self.amountEdit.text.doubleValue)
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+
     }
     
     // MARK: - Table view data source
