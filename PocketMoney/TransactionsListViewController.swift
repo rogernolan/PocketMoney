@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  TransactionsListViewController.swift
 //  PocketMoney
 //
 //  Created by roger nolan on 10/04/2015.
@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class TransactionsListViewController: UITableViewController {
 
     var account: Account? {
         didSet {
             // Update the view.
-            self.configureView()
+            account?.fetchIfNeededInBackgroundWithBlock({ (fetchedAccount: PFObject?, error: NSError?) -> Void in
+                if error != nil {
+                    self.configureView()
+                }
+
+            })
         }
     }
 
@@ -44,6 +50,18 @@ class TransactionsListViewController: UITableViewController {
         }
         // else no rows.
         return 0
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("transaction", forIndexPath: indexPath) as! TransactionCell
+        let row = indexPath.row
+        if let transaction = account?.transactions?[row] {
+            cell.nameLabel.text = transaction.name
+            cell.amountLabel.text = "£\(transaction.amount)"
+            
+        }
+
+        return cell
     }
 
 }

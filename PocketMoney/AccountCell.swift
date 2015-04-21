@@ -45,4 +45,8 @@ class AccountCell: UITableViewCell {
         
     }
 
+    func configureForAccount(account:Account) {
+        nameLabel.text = account.name
+        amountLabel.text = "£\(account.balance)"
+    }
 }

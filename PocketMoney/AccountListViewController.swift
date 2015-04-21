@@ -50,9 +50,13 @@ class AccountListViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showTransactions" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let account = accounts[indexPath.row]
-            (segue.destinationViewController as! TransactionsListViewController).account = account
+//            CGPoint buttonPosition = [sender convertPoint:CGPointZero
+//                toView:self.tableView];
+//            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+            if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
+                indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
+                    let account = accounts[indexPath.row]
+                    (segue.destinationViewController as! TransactionsListViewController).account = account
             }
         }
         
@@ -78,10 +82,7 @@ class AccountListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Account", forIndexPath: indexPath) as! AccountCell
 
         let account = accounts[indexPath.row]
-        println("cell for \(account.name) : \(account.balance)")
-        cell.nameLabel.text = account.name
-        cell.amountLabel.text = "£\(account.balance)"
-        
+        cell.configureForAccount(account)
         return cell
     }
 
@@ -90,6 +91,7 @@ class AccountListViewController: UITableViewController {
         return false
     }
 
+    
 //    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 //        if editingStyle == .Delete {
 //            objects.removeAtIndex(indexPath.row)

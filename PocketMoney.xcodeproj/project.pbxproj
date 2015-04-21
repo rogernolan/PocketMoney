@@ -183,8 +183,8 @@
 		C8C9910E1AD80858000E756E = {
 			isa = PBXGroup;
 			children = (
-				C82A70BF1ADD879D00B8D021 /* Categories */,
 				C8C991191AD80858000E756E /* PocketMoney */,
+				C82A70BF1ADD879D00B8D021 /* Categories */,
 				C8C991311AD80858000E756E /* PocketMoneyTests */,
 				C8C991181AD80858000E756E /* Products */,
 				C8C9916C1AD80DD8000E756E /* Dependencies */,
