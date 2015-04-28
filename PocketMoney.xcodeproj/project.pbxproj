@@ -14,6 +14,16 @@
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
 		C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70C01ADD880600B8D021 /* String+numberValues.swift */; };
+		C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */; };
+		C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */; };
+		C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */; };
+		C84C45181AE8FF5100FDC400 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450F1AE8FF5100FDC400 /* CoreGraphics.framework */; };
+		C84C45191AE8FF5100FDC400 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45101AE8FF5100FDC400 /* CoreLocation.framework */; };
+		C84C451A1AE8FF5100FDC400 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45111AE8FF5100FDC400 /* MobileCoreServices.framework */; };
+		C84C451B1AE8FF5100FDC400 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45121AE8FF5100FDC400 /* QuartzCore.framework */; };
+		C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45131AE8FF5100FDC400 /* Security.framework */; };
+		C84C451D1AE8FF5100FDC400 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45141AE8FF5100FDC400 /* StoreKit.framework */; };
+		C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
 		C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991201AD80858000E756E /* TransactionsListViewController.swift */; };
@@ -59,9 +69,20 @@
 		C800E6191AD8255200896F96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C800E61B1AD8328C00896F96 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		C800E61D1AD8350400896F96 /* String+floatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+floatValue.swift"; path = "Extensions/String+floatValue.swift"; sourceTree = "<group>"; };
+		C8059BAF1AEEA311003E68EB /* PocketMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketMoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		C82A70C01ADD880600B8D021 /* String+numberValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+numberValues.swift"; path = "PocketMoney/Extensions/String+numberValues.swift"; sourceTree = "<group>"; };
+		C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
+		C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C84C450F1AE8FF5100FDC400 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C84C45101AE8FF5100FDC400 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C84C45111AE8FF5100FDC400 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C84C45121AE8FF5100FDC400 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C84C45131AE8FF5100FDC400 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C84C45141AE8FF5100FDC400 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C9911C1AD80858000E756E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +104,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */,
+				C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */,
+				C84C45181AE8FF5100FDC400 /* CoreGraphics.framework in Frameworks */,
+				C84C45191AE8FF5100FDC400 /* CoreLocation.framework in Frameworks */,
+				C84C451A1AE8FF5100FDC400 /* MobileCoreServices.framework in Frameworks */,
+				C84C451B1AE8FF5100FDC400 /* QuartzCore.framework in Frameworks */,
+				C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */,
+				C84C451D1AE8FF5100FDC400 /* StoreKit.framework in Frameworks */,
+				C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */,
 				C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */,
 				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
 			);
@@ -120,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				C8C991221AD80858000E756E /* Main.storyboard */,
-				C82A70BA1ADD7C0500B8D021 /* CreateTransaction */,
 				C82A70B71ADD7BD300B8D021 /* AccountList */,
+				C82A70BA1ADD7C0500B8D021 /* CreateTransaction */,
 				C82A70B41ADD7BBD00B8D021 /* TransactionList */,
 				C800E61B1AD8328C00896F96 /* CreateAccount.swift */,
 			);
@@ -180,6 +210,22 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		C84C451F1AE8FF5A00FDC400 /* System Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */,
+				C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */,
+				C84C450F1AE8FF5100FDC400 /* CoreGraphics.framework */,
+				C84C45101AE8FF5100FDC400 /* CoreLocation.framework */,
+				C84C45111AE8FF5100FDC400 /* MobileCoreServices.framework */,
+				C84C45121AE8FF5100FDC400 /* QuartzCore.framework */,
+				C84C45131AE8FF5100FDC400 /* Security.framework */,
+				C84C45141AE8FF5100FDC400 /* StoreKit.framework */,
+				C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */,
+			);
+			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
 		C8C9910E1AD80858000E756E = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +235,8 @@
 				C8C991181AD80858000E756E /* Products */,
 				C8C9916C1AD80DD8000E756E /* Dependencies */,
 				9A35EEF575C35DCDE22B7E74 /* Pods */,
-				EFEFF8E1B258549E27451008 /* Frameworks */,
+				EFEFF8E1B258549E27451008 /* Local Frameworks */,
+				C84C451F1AE8FF5A00FDC400 /* System Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +258,7 @@
 				C800E6161AD8204400896F96 /* Assets */,
 				C8C9916D1AD811A8000E756E /* Extensions */,
 				C8C9911A1AD80858000E756E /* Supporting Files */,
+				C8059BAF1AEEA311003E68EB /* PocketMoney-Bridging-Header.h */,
 			);
 			path = PocketMoney;
 			sourceTree = "<group>";
@@ -253,17 +301,18 @@
 			children = (
 				C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */,
 				C800E61D1AD8350400896F96 /* String+floatValue.swift */,
+				C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		EFEFF8E1B258549E27451008 /* Frameworks */ = {
+		EFEFF8E1B258549E27451008 /* Local Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */,
 				0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */,
 			);
-			name = Frameworks;
+			name = "Local Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */,
 				C800E61A1AD8255200896F96 /* Transaction.swift in Sources */,
 				C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */,
 				C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */,
@@ -562,6 +612,7 @@
 			baseConfigurationReference = 56BB657A417FFAD5F370DB4A /* Pods-PocketMoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
@@ -569,6 +620,8 @@
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -577,6 +630,7 @@
 			baseConfigurationReference = 1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
@@ -584,6 +638,7 @@
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
 			};
 			name = Release;
 		};

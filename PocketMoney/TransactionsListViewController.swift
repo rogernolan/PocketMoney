@@ -11,18 +11,38 @@ import Parse
 
 class TransactionsListViewController: UITableViewController {
 
+    var transactions : [Transaction]?
+    
     var account: Account? {
+
         didSet {
-            // Update the view.
-            account?.fetchIfNeededInBackgroundWithBlock({ (fetchedAccount: PFObject?, error: NSError?) -> Void in
-                if error != nil {
+            // set the title
+            self.configureView()
+            // Update the model.
+
+            Transaction.transactionsForAccount(account: account!) { (objects, error) -> Void in
+                if error == nil {
+                    println(objects)
+                    self.transactions = objects
                     self.configureView()
                 }
-
-            })
+            }
         }
     }
 
+    var dateFormatter: NSDateFormatter {
+        struct Static {
+            static let instance : NSDateFormatter = {
+                let formatter = NSDateFormatter()
+                formatter.dateStyle = .MediumStyle
+                formatter.timeStyle = .NoStyle
+                return formatter
+                }()
+        }
+        
+        return Static.instance
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let ac = self.account {
@@ -45,7 +65,7 @@ class TransactionsListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        if let rows = account?.transactions {
+        if let rows = transactions {
             return rows.count
         }
         // else no rows.
@@ -55,10 +75,10 @@ class TransactionsListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("transaction", forIndexPath: indexPath) as! TransactionCell
         let row = indexPath.row
-        if let transaction = account?.transactions?[row] {
+        if let transaction = transactions?[row] {
             cell.nameLabel.text = transaction.name
             cell.amountLabel.text = "£\(transaction.amount)"
-            
+            cell.dateLabel.text = dateFormatter.stringFromDate(transaction.date)        
         }
 
         return cell

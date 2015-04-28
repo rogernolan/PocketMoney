@@ -23,6 +23,8 @@ class AccountListViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
+        checkAndPresentLogin()
+        
         let query = PFQuery(className:Account.parseClassName())
         query.limit = 100
         query.fromLocalDatastore()
@@ -40,6 +42,29 @@ class AccountListViewController: UITableViewController {
         }
     }
 
+    func checkAndPresentLogin(){
+        
+        if PFUser.currentUser() == nil {
+            // No user logged in
+            // Create the log in view controller
+            let logInViewController = PFLogInViewController();
+            logInViewController.fields = ( .UsernameAndPassword | .PasswordForgotten | .LogInButton |
+                                        .Facebook | .Twitter | .SignUpButton)
+
+            logInViewController.delegate = self
+            
+            // Create the sign up view controller
+            let signUpViewController = PFSignUpViewController()
+            signUpViewController.delegate = self
+            
+            // Assign our sign up controller to be displayed from the login controller
+            logInViewController.signUpController = signUpViewController
+            
+            // Present the log in view controller
+            self.presentViewController(logInViewController, animated:true, completion:nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -104,3 +129,6 @@ class AccountListViewController: UITableViewController {
 
 }
 
+extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
+    
+}

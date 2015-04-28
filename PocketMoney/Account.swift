@@ -20,6 +20,7 @@ class Account : PFObject, PFSubclassing {
         self.init()
         name = aName
         balance = aBalance
+        self.pin()
     }
     
     // MARK: - debug
@@ -34,12 +35,12 @@ class Account : PFObject, PFSubclassing {
     
     func addTransaction(name:String, amount:Double){
         let transaction = Transaction(account: self, name: name, amount: amount)
-        balance -= amount
+        transaction.pin()
         
-        self.saveInBackgroundWithBlock { (saved: Bool, error: NSError?) -> Void in
-            if error == nil {
-                self.saveEventually(nil)
-            }
-        }
+        balance -= amount
+
+        self.saveEventually(nil)
+        transaction.saveEventually(nil)
     }
+
 }
