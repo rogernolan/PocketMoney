@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Parse
+// import Parse
 
 class CreateAccount: UITableViewController {
 
@@ -17,7 +17,7 @@ class CreateAccount: UITableViewController {
     
     @IBAction func done(sender: AnyObject) {
         
-        let account = Account(name: accountName.text!, balance: Double(openingBalance.text.doubleValue))
+        let account = Account(name: accountName.text!, balance: Double(openingBalance.text.doubleValue), user:PFUser.currentUser())
         account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
             account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
                 // code

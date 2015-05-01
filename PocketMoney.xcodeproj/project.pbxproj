@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */; };
+		B1BAF0EBA0E45559953179FC /* Pods_PocketMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CF75E59AF5483A18BD84 /* Pods_PocketMoney.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C800E6181AD8206F00896F96 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6171AD8206F00896F96 /* Account.swift */; };
 		C800E61A1AD8255200896F96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6191AD8255200896F96 /* Transaction.swift */; };
 		C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61B1AD8328C00896F96 /* CreateAccount.swift */; };
+		C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8059BB91AEF659D003E68EB /* LoginViewController.swift */; };
+		C824AA481AF3E3E60042FCFF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824AA471AF3E3E60042FCFF /* SignUpViewController.swift */; };
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
 		C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70C01ADD880600B8D021 /* String+numberValues.swift */; };
@@ -24,6 +27,7 @@
 		C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45131AE8FF5100FDC400 /* Security.framework */; };
 		C84C451D1AE8FF5100FDC400 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45141AE8FF5100FDC400 /* StoreKit.framework */; };
 		C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */; };
+		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
 		C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991201AD80858000E756E /* TransactionsListViewController.swift */; };
@@ -64,12 +68,15 @@
 		0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketMoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketMoney/Pods-PocketMoney.release.xcconfig"; sourceTree = "<group>"; };
 		56BB657A417FFAD5F370DB4A /* Pods-PocketMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketMoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketMoney/Pods-PocketMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		A859CF75E59AF5483A18BD84 /* Pods_PocketMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RoundRectView.xcodeproj; path = RoundRectView/RoundRectView.xcodeproj; sourceTree = "<group>"; };
 		C800E6171AD8206F00896F96 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C800E6191AD8255200896F96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C800E61B1AD8328C00896F96 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		C800E61D1AD8350400896F96 /* String+floatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+floatValue.swift"; path = "Extensions/String+floatValue.swift"; sourceTree = "<group>"; };
 		C8059BAF1AEEA311003E68EB /* PocketMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketMoney-Bridging-Header.h"; sourceTree = "<group>"; };
+		C8059BB91AEF659D003E68EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C824AA471AF3E3E60042FCFF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		C82A70C01ADD880600B8D021 /* String+numberValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+numberValues.swift"; path = "PocketMoney/Extensions/String+numberValues.swift"; sourceTree = "<group>"; };
@@ -83,6 +90,7 @@
 		C84C45131AE8FF5100FDC400 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C84C45141AE8FF5100FDC400 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C9911C1AD80858000E756E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 				C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */,
 				C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */,
 				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
+				B1BAF0EBA0E45559953179FC /* Pods_PocketMoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +144,14 @@
 				1CB476604C50DFFF96EBA6F0 /* Pods-PocketMoney.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C870BA09D876A154EF733B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A859CF75E59AF5483A18BD84 /* Pods_PocketMoney.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C800E60C1AD8201700896F96 /* Products */ = {
@@ -163,6 +180,7 @@
 			children = (
 				C800E6171AD8206F00896F96 /* Account.swift */,
 				C800E6191AD8255200896F96 /* Transaction.swift */,
+				C89EEE981AF0B55C00E63DA2 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,6 +192,15 @@
 				C8C991271AD80858000E756E /* LaunchScreen.xib */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		C8059BB51AEF64CE003E68EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C8059BB91AEF659D003E68EB /* LoginViewController.swift */,
+				C824AA471AF3E3E60042FCFF /* SignUpViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		C82A70B41ADD7BBD00B8D021 /* TransactionList */ = {
@@ -237,6 +264,7 @@
 				9A35EEF575C35DCDE22B7E74 /* Pods */,
 				EFEFF8E1B258549E27451008 /* Local Frameworks */,
 				C84C451F1AE8FF5A00FDC400 /* System Frameworks */,
+				9C870BA09D876A154EF733B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,8 +280,9 @@
 		C8C991191AD80858000E756E /* PocketMoney */ = {
 			isa = PBXGroup;
 			children = (
-				C8C9911C1AD80858000E756E /* AppDelegate.swift */,
 				C800E6151AD8203100896F96 /* Model */,
+				C8059BB51AEF64CE003E68EB /* Login */,
+				C8C9911C1AD80858000E756E /* AppDelegate.swift */,
 				C800E6141AD8202A00896F96 /* Views */,
 				C800E6161AD8204400896F96 /* Assets */,
 				C8C9916D1AD811A8000E756E /* Extensions */,
@@ -479,11 +508,14 @@
 				C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */,
 				C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */,
 				C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */,
+				C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */,
 				C8C991411AD80B46000E756E /* AccountCell.swift in Sources */,
 				C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */,
+				C824AA481AF3E3E60042FCFF /* SignUpViewController.swift in Sources */,
 				C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */,
 				C800E6181AD8206F00896F96 /* Account.swift in Sources */,
 				C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */,
+				C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */,
 				C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

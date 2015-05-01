@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Babbage Consulting. All rights reserved.
 //
 
-import Parse
+// import Parse
 
 class Transaction: PFObject, PFSubclassing {
     @NSManaged var amount: Double

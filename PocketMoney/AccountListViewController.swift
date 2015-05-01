@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Parse
+// import Parse
 
 class AccountListViewController: UITableViewController {
 
@@ -18,28 +18,20 @@ class AccountListViewController: UITableViewController {
         
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        checkAndPresentLogin()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
-        checkAndPresentLogin()
-        
-        let query = PFQuery(className:Account.parseClassName())
-        query.limit = 100
-        query.fromLocalDatastore()
-        query.findObjectsInBackgroundWithBlock() { (objects: [AnyObject]?, error:NSError?) -> Void in
-            // 
-            if let e = error {
-                println("error fetching Accounts data from parse: \(e)")
-            }
-            if let accounts = objects as? [Account] {
-                println("Have \(accounts.count) accounts from Parse")
-                self.accounts = accounts
-                self.tableView.reloadData()
-            }
-            
+        if PFUser.currentUser() != nil {
+            loadModelObjects()
         }
+
     }
 
     func checkAndPresentLogin(){
@@ -47,14 +39,14 @@ class AccountListViewController: UITableViewController {
         if PFUser.currentUser() == nil {
             // No user logged in
             // Create the log in view controller
-            let logInViewController = PFLogInViewController();
+            let logInViewController = LoginViewController();
             logInViewController.fields = ( .UsernameAndPassword | .PasswordForgotten | .LogInButton |
                                         .Facebook | .Twitter | .SignUpButton)
 
             logInViewController.delegate = self
             
             // Create the sign up view controller
-            let signUpViewController = PFSignUpViewController()
+            let signUpViewController = SignUpViewController()
             signUpViewController.delegate = self
             
             // Assign our sign up controller to be displayed from the login controller
@@ -125,10 +117,39 @@ class AccountListViewController: UITableViewController {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 //        }
 //    }
+    func loadModelObjects() {
+                
+        Account.loadFrom(.local, callback : { accounts, error in
+            
+            if let a = accounts {
+                self.accounts = a
+                self.tableView.reloadData()
 
+            }
+        })
+    }
 
 }
 
 extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
+        loadModelObjects()
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+        //
+        })
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+        // create a new account.
+        
+        let account = Account(name: "My first account", balance: 0.0, user:user)
+        loadModelObjects()
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            //
+        })
+
+
+    }
+
 }

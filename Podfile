@@ -10,4 +10,3 @@ end
 target 'PocketMoneyTests' do
 
 end
-
