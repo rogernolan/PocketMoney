@@ -27,7 +27,6 @@ class Account : PFObject, PFSubclassing {
         balance = aBalance
         // We crash if you try to make an account without being logged in.
         owner = user != nil ?  user! : PFUser.currentUser()!
-        self.pin()
     }
     
     // MARK: - debug

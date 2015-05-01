@@ -36,7 +36,10 @@ class AccountListViewController: UITableViewController {
 
     func checkAndPresentLogin(){
         
-        if PFUser.currentUser() == nil {
+        if PFUser.currentUser() != nil {
+            loadModelObjects()
+        }
+        else {
             // No user logged in
             // Create the log in view controller
             let logInViewController = LoginViewController();
@@ -55,6 +58,7 @@ class AccountListViewController: UITableViewController {
             // Present the log in view controller
             self.presentViewController(logInViewController, animated:true, completion:nil)
         }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -129,14 +133,17 @@ class AccountListViewController: UITableViewController {
         })
     }
 
+    @IBAction func unwindToAccountListViewController(segue: UIStoryboardSegue) {
+    }
 }
 
 extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         loadModelObjects()
+        self.loadModelObjects()
+
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
-        //
         })
     }
     

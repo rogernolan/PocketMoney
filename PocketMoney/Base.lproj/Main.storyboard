@@ -147,9 +147,11 @@
                         <outlet property="accountName" destination="OKc-sZ-kj3" id="55b-4k-TJT"/>
                         <outlet property="doneButton" destination="JMj-62-15o" id="9Ef-Rd-2aY"/>
                         <outlet property="openingBalance" destination="G6N-ag-bwg" id="lTx-Ls-LUU"/>
+                        <segue destination="n1Q-xm-ycR" kind="unwind" identifier="haveCreatedAccount" unwindAction="unwindToAccountListViewController:" id="mm1-mF-kWJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDE-XX-mtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="n1Q-xm-ycR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1363" y="-345"/>
         </scene>

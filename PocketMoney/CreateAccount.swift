@@ -23,9 +23,7 @@ class CreateAccount: UITableViewController {
                 // code
             }
             
-            self.dismissViewControllerAnimated(true , completion: { () -> Void in
-                //
-            })
+            self.performSegueWithIdentifier("haveCreatedAccount", sender: self)
         }
 
 
