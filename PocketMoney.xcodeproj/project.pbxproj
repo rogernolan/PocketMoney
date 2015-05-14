@@ -166,6 +166,7 @@
 		C800E6141AD8202A00896F96 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C89B0E7C1AF9EE3F00274F48 /* Account details */,
 				C8C991221AD80858000E756E /* Main.storyboard */,
 				C82A70B71ADD7BD300B8D021 /* AccountList */,
 				C82A70BA1ADD7C0500B8D021 /* CreateTransaction */,
@@ -178,6 +179,7 @@
 		C800E6151AD8203100896F96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C824AA4C1AF8A2BD0042FCFF /* Categories */,
 				C800E6171AD8206F00896F96 /* Account.swift */,
 				C800E6191AD8255200896F96 /* Transaction.swift */,
 				C89EEE981AF0B55C00E63DA2 /* User.swift */,
@@ -201,6 +203,13 @@
 				C824AA471AF3E3E60042FCFF /* SignUpViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		C824AA4C1AF8A2BD0042FCFF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		C82A70B41ADD7BBD00B8D021 /* TransactionList */ = {
@@ -251,6 +260,13 @@
 				C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */,
 			);
 			name = "System Frameworks";
+			sourceTree = "<group>";
+		};
+		C89B0E7C1AF9EE3F00274F48 /* Account details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Account details";
 			sourceTree = "<group>";
 		};
 		C8C9910E1AD80858000E756E = {

@@ -14,6 +14,9 @@ class NewTransactionViewController: UITableViewController {
     
     @IBOutlet weak var amountEdit: UITextField!
     @IBOutlet weak var nameEdit: UITextField!
+    @IBOutlet weak var endOfMonthSwitch: UISwitch!
+    
+    var lastTransactionName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,22 +36,51 @@ class NewTransactionViewController: UITableViewController {
     override func viewDidDisappear(animated: Bool) {
         // Check that we are being dismissed from the top of the stack. Means back has been pressed and we should create a
         // new transaction
-        if let name = self.nameEdit.text, ac = account, vcs = self.navigationController?.viewControllers as? [NSObject] {
+        if let description = self.nameEdit.text, ac = account, vcs = self.navigationController?.viewControllers as? [NSObject] {
             if contains(vcs, self) {
-                ac.addTransaction(name , amount: self.amountEdit.text.doubleValue)
+                if endOfMonthSwitch.on == true {
+                    ac.endMonth(description, amount: self.amountEdit.text.doubleValue, callback: { (error) -> Void in
+                        // code
+                    })
+
+                }
+                else {
+                    ac.addTransaction(description , amount: self.amountEdit.text.doubleValue)
+                }
             }
         }
         super.viewDidDisappear(animated)
     }
     
     @IBAction func saveTapped(sender: AnyObject) {
-        if let name = self.nameEdit.text, ac = account {
-            ac.addTransaction(name , amount: self.amountEdit.text.doubleValue)
+        if let transactionTitle = self.nameEdit.text, ac = account {
+            if endOfMonthSwitch.on == true {
+                ac.endMonth(transactionTitle, amount: self.amountEdit.text.doubleValue, callback: { (error) -> Void in
+                    // code
+                })
+            }
+            else {
+                ac.addTransaction(transactionTitle , amount: self.amountEdit.text.doubleValue)
+            }
             self.navigationController?.popViewControllerAnimated(true)
         }
 
     }
     
+    @IBAction func endOfMonthSwitched(sender: AnyObject) {
+        if endOfMonthSwitch.on == true {
+            lastTransactionName = nameEdit.text
+            nameEdit.text = "End of Month"
+            }
+        else {
+            if let s = lastTransactionName {
+                nameEdit.text = s
+            }
+            else {
+                nameEdit.text = ""
+            }
+        }
+    }
     // MARK: - Table view data source
 
     /*

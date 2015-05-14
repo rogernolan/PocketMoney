@@ -20,12 +20,13 @@ class TransactionsListViewController: UITableViewController {
             self.configureView()
             // Update the model.
 
-            Transaction.transactionsForAccount(account: account!) { (objects, error) -> Void in
-                if error == nil {
-                    println(objects)
+            Transaction.transactionsForAccount(account: account!).continueWithSuccessBlock { (task:BFTask!) in
+                if let objects = task.result as? [Transaction] {
                     self.transactions = objects
                     self.configureView()
                 }
+                
+                return nil
             }
         }
     }
