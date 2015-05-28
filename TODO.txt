@@ -1,4 +1,5 @@
 
+TODO: Refresh transactions from server on startup
 TODO: Error handling
 TODO: Logout
 TODO: Sharing

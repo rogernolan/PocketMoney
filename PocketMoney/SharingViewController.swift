@@ -38,7 +38,7 @@ class SharingViewController: UITableViewController {
             return 1
         }
         else {
-            return account.contributerCount + 1
+            return 2
         }
     }
 
@@ -52,7 +52,7 @@ class SharingViewController: UITableViewController {
             return cell
         }
         
-        if indexPath.row > account.contributerCount {
+        if indexPath.row > 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("AddPersonCell") as! AddPersonCell
             cell.addButton.addTarget(self, action: "addPerson", forControlEvents:UIControlEvents.TouchUpInside)
         }

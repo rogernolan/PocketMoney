@@ -27,14 +27,14 @@ class AccountListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        refreshFromServer()
+    }
+
+    func checkAndPresentLogin(){
         
         if PFUser.currentUser() != nil {
             loadModelObjects()
         }
-
-    }
-
-    func checkAndPresentLogin(){
         
         if PFUser.currentUser() == nil {
             // No user logged in
@@ -133,7 +133,6 @@ class AccountListViewController: UITableViewController {
             if let a = accounts {
                 self.accounts = a
                 self.tableView.reloadData()
-                self.refreshFromServer()
             }
         })
     }

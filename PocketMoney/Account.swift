@@ -17,8 +17,6 @@ class Account : PFObject, PFSubclassing{
     @NSManaged var name : String?
     @NSManaged var owner : PFUser
     @NSManaged var lastMonthEnd : NSDate
-    @NSManaged var contributors: PFRelation
-    @NSManaged var contributerCount : Int
     
     class func parseClassName() -> String {
         return "Account"
@@ -43,6 +41,9 @@ class Account : PFObject, PFSubclassing{
         if let user = PFUser.currentUser() {
             let query = PMUser.query()
             query?.includeKey("accounts")
+            if source == .local {
+                query?.fromLocalDatastore()
+            }
             return query?.getObjectInBackgroundWithId(user.objectId!).continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
                     println("error fetching Accounts data from parse: \(e)")
@@ -57,7 +58,6 @@ class Account : PFObject, PFSubclassing{
                     else {
                         callback(accounts: nil , error: NSError(domain: "PocketMoney", code: 500, userInfo: nil))
                         return task
-
                     }
                 }
             }
