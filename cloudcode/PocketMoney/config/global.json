@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "PocketMoney": {
+      "applicationId": "SQT3AkCHEIOJAIFOTrBV01GeLURTKLDKR9HkyGDQ",
+      "masterKey": "KHFmIr7LHCaGl893hs4CpFFazT29TtOT1GzrLMwb"
+    },
+    "_default": {
+      "link": "PocketMoney"
+    }
+  }
+}

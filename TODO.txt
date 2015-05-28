@@ -1,0 +1,5 @@
+
+TODO: Error handling
+TODO: Logout
+TODO: Sharing
+TODO: Loading activity indicator

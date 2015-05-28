@@ -7,732 +7,713 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041E7EDD975FED90E7FC688A /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F8073436979FA7F352601E /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		06013E2252F7766833A1BE78 /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 0620E6DF9BBC9A960C694E7D /* BFTask.h */; };
-		0DD0DF5E277F6CACE1B115C6 /* PFPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 68C2315124F391E83A0CAC0F /* PFPush.h */; };
-		101BDE9C830DC88CA6247BE8 /* PFLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD0C390E0FD1EF513B71DE49 /* PFLoadingView.h */; };
-		111905E256D353F5C247BAF9 /* PFAnonymousUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0AD77CC8AB0268631E5F7B /* PFAnonymousUtils.h */; };
-		11D46D75979B487DA60ED63B /* PFRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C42B0D3CB1BDDAB23024631 /* PFRelation.h */; };
-		134BC62DD7ADF038040A4422 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCEC3D120594EEF3A21C799 /* AudioToolbox.framework */; };
-		159C9748CC997FFE8A3E8A57 /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 12886A77CEC4EFC1769F8127 /* PFConstants.h */; };
-		17424DC838404E3C4E765BE9 /* Pods-PocketMoney-Parse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F19445560FC48D4CB505269 /* Pods-PocketMoney-Parse-dummy.m */; };
-		18DB885904F74FA0D2E75663 /* PFTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2DE336495E2A2822E7B76D /* PFTextButton.m */; };
-		1960A0682B4989B703216D04 /* PFResources.h in Headers */ = {isa = PBXBuildFile; fileRef = CA3426022A12E231B41EEBA7 /* PFResources.h */; };
-		1B0B770171F1257D9E916B16 /* PFQueryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3459F69F5D0C981C7C4D56 /* PFQueryCollectionViewController.m */; };
-		1E53CB24B0849CE67B3754C6 /* PFPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F8D1C40F981C9BA7C9CBA /* PFPrimaryButton.m */; };
-		1F026BADA4B963395A12CC26 /* PFInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AA379CCEFF53BB051CCDE13 /* PFInstallation.h */; };
-		1F1F103B7D603C0789A73EFC /* PFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2BE6ABA10290CB6F247D /* PFImageView.m */; };
-		21137D7F3641E4368A1AE9F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D758BBC0E8F8741B6017CE /* QuartzCore.framework */; };
-		2A040C6E94C424CCBDC06058 /* PFTextButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 037EA4B9061C793BC3FCAC6E /* PFTextButton.h */; };
-		2B375D2522F02170A308C9A9 /* PFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AE46A276CA055FDD8B2EA2 /* PFImageCache.m */; };
-		2E44ED13CE1A1CD7BF84F9DA /* PFTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = D914657B656B189360D4E42B /* PFTextField.h */; };
-		2ECA57DECF02B2AB0CDFE56F /* PFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C6718DEB202106AC3541763 /* PFObject.h */; };
-		36B72F6A25B2B2E9980F79BF /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B5940BADCF33766BE3C9B52 /* BoltsVersion.h */; };
-		376B0CC8E05AAACC26ECBDC9 /* PFDismissButton.h in Headers */ = {isa = PBXBuildFile; fileRef = DD45B73A93E515CFC0D3F566 /* PFDismissButton.h */; };
-		3B94B1255CE96F9D697FC2DD /* PFRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A93C71D898B6165412663A1 /* PFRect.m */; };
-		3F2C75FA02616819269483C4 /* PFSignUpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B413DFB7975A40910FF343A7 /* PFSignUpViewController.h */; };
-		40BD6662961350B27434A868 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FCCFDEB2EA7B54323489F1 /* MobileCoreServices.framework */; };
-		4420E3571F2BD0791A7896BE /* PFNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 49CC21D8237E931918A6D636 /* PFNullability.h */; };
-		4AD0BCE07C8A0F251C20D667 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D758BBC0E8F8741B6017CE /* QuartzCore.framework */; };
-		4EC47DCBEE14432649A4C9F6 /* Pods-PocketMoney-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A96441921DBD43F4B52707 /* Pods-PocketMoney-Bolts-dummy.m */; };
-		518538D1F204424ABE5AF7A2 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = F27E33839050EF6262B82A53 /* BFExecutor.h */; };
-		52597D935B12781820199302 /* PFGeoPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 63AA234F6F2CF0BA4917146C /* PFGeoPoint.h */; };
-		5DED3D0FE4CA8A3EE78B9B17 /* PFCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 85BCFC39CB15875664DAED5F /* PFCloud.h */; };
-		5EC26E9937E909550D21DA33 /* PFDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F220AE2DEE5A7B3FAB86C9A /* PFDismissButton.m */; };
-		6035E28326F11833D34015FC /* PFUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9985293B6584B9867D4373B0 /* PFUser.h */; };
-		6219163C28DFDD000AAFF0A7 /* PFLogInView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5FBD9A7592E31C810ADA51 /* PFLogInView.h */; };
-		66C309D31FE92572C8CE2C8D /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 38183E43EA960330DD178EFD /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		69530D9EEC6E2D1BF35B613F /* PFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E425E1991CC715C95D2410CA /* PFImage.h */; };
-		6B30E2093EC85244618D83E2 /* PFCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B36109B09027863C529820 /* PFCollectionViewCell.h */; };
-		6C604BE99225B25214CA4F96 /* PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D3183027A171D58657F7F3 /* PFColor.m */; };
-		6C65DDCAA58609A14B83EEB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9230EAAE169E841DEC63BA7C /* UIKit.framework */; };
-		6C7F93339893D9448FEC7160 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A105E8E0797EF268E69A15 /* Security.framework */; };
-		6D7C1493061FFDF1AFF25BE7 /* PFFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D1F3E2D8D16E35152CD79C1 /* PFFile.h */; };
-		74D731C0B28DCB8E05F7D373 /* PFTwitterUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DF437FBD059A1BB4D9DB339 /* PFTwitterUtils.h */; };
-		76677AC86FDB250DF7E830C4 /* PFPurchaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 92659E60D5613D008F61E01C /* PFPurchaseTableViewCell.h */; };
-		789A9043B0282D13B9BBB8B8 /* PFImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 396324560EA0197A7A6EC1AB /* PFImageCache.h */; };
-		78ACD4CE48E6D2A532FF143D /* PFLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BA0FB1D7B84E8B6C3E3D34 /* PFLogInView.m */; };
-		8066B1D86417F7E650960147 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A20531DF2A4598EF584A65E /* Empty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		816E980B7456E920A7A94C34 /* PFSignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = E1BED4FBE6F3CBF11A3EC281 /* PFSignUpView.h */; };
-		84901E234E2ECF88D0FFCED6 /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D67BA2C09815795247F5C6F5 /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		86DF49AAA60F15C9B0E5A944 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D813382BFA9C466928E9F15 /* CFNetwork.framework */; };
-		8930E670CBB8775ABF03A767 /* PFProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 619809F1CFC93E2233791E6F /* PFProduct.h */; };
-		8E2B5393F764D20AA0A7EBD4 /* Pods-PocketMoney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2004E174E2A872450E4C014A /* Pods-PocketMoney-dummy.m */; };
-		9032FB0FD333BB72F49162DF /* PFObject+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = F423008CD71C2AA2E94346D7 /* PFObject+Subclass.h */; };
-		935E769E51733A648D5B95B6 /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE73DE2A2CEA122E0B313AF /* BFTaskCompletionSource.h */; };
-		94F8E19C80BF805C7BD16579 /* PFPrimaryButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D176C37A23D0EA17EA4FD95 /* PFPrimaryButton.h */; };
-		9AD9B6950BFB062D21AC208B /* PFActivityIndicatorCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D148002AA7735B68F3B085 /* PFActivityIndicatorCollectionReusableView.m */; };
-		9D984637E89E802B5E810BAD /* PFACL.h in Headers */ = {isa = PBXBuildFile; fileRef = 91FA79582FCD9E0A95F2BB58 /* PFACL.h */; };
-		9F25175B1865CDD92286BA01 /* PFQueryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BE6AE7DBF86726F3C8EBC /* PFQueryTableViewController.m */; };
-		9F5F91CE8A2727EF95904CCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1FC415B6B2473C15AD32B0 /* CoreGraphics.framework */; };
-		A1F640F783112731FF008B61 /* PFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E2F37128F4CB596A95A2F2 /* PFAlertView.m */; };
-		A3BA2F6553D8A7F640402CBF /* PFPurchaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA67EF9EB5E57C772958EFD /* PFPurchaseTableViewCell.m */; };
-		A5C611586F662C036EF08E6A /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBFD23B219FE9FAEACE4F05 /* Bolts.h */; };
-		A6907ED3D40BF0CFDE0CD26A /* PFAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 16C0DF277178E24F4E347453 /* PFAlertView.h */; };
-		AA4339942928F6394C888F93 /* PFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B29332B7D4969D6FC90C62 /* PFCollectionViewCell.m */; };
-		B1E122FA363F855063A3BA6B /* PFActivityIndicatorCollectionReusableView.h in Headers */ = {isa = PBXBuildFile; fileRef = C9262796FA84B912EF6815E5 /* PFActivityIndicatorCollectionReusableView.h */; };
-		B4011D108696434C45468BC9 /* PFResources.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CAC89D389867620AABA2C4 /* PFResources.m */; };
-		B591C02088622F4CC685B295 /* PFColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F44BF9844308229FD5FB769 /* PFColor.h */; };
-		B5C17826B498E2E502FF4624 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1FC415B6B2473C15AD32B0 /* CoreGraphics.framework */; };
-		B603824C8AA7F824404A4951 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E497A7DB3EE3E8343893C824 /* Foundation.framework */; };
-		B60EA55269BBB2B0CC222FC4 /* PFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FF849E37C6D143914D5EE2 /* PFImage.m */; };
-		B79003C1DAD6A497814C74C2 /* PFSignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = B70CFDC364D25BFABB0E9BC7 /* PFSignUpView.m */; };
-		B84C2A8974CAEB64A50A58CD /* PFSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = A8647BED0C0E386033304C6A /* PFSubclassing.h */; };
-		B85F4033567714166BC537E2 /* PFQueryCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8673ADADCABB57E7240E86E3 /* PFQueryCollectionViewController.h */; };
-		B971812E28430D1BC176DA91 /* PFProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25CF2F3B7EA270EE9C43082 /* PFProductTableViewController.m */; };
-		BADA758727EF8E2C9F00787C /* PFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C91DEEDDDC026AD98969B2A /* PFImageView.h */; };
-		BD0D78788710D95A81533CCC /* Pods-PocketMoney-ParseUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 739933019D6EDCD8845EEC26 /* Pods-PocketMoney-ParseUI-dummy.m */; };
-		BEA7D1C9526B51EFE03B942D /* PFQueryTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A430B71B87965CA29A2C89E /* PFQueryTableViewController.h */; };
-		C0F574D951415EA0E354E381 /* PF_Twitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA249E16A95DF612D29B49D /* PF_Twitter.h */; };
-		C336E253775162090B89B1B4 /* PFProductTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 074DC0C12088D1AD8CB40024 /* PFProductTableViewController.h */; };
-		C6E1B3C54CBA960450FF6929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E497A7DB3EE3E8343893C824 /* Foundation.framework */; };
-		C929C33775C653DF53505DA4 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EA2BEE7B185BB615DF310C /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CA768DB9441CF9690D8FCA8A /* PFTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE761DE7BBCF284E577B6F0 /* PFTableViewCell.h */; };
-		CBB6CC79EEDC6C6B867587DF /* ParseUI.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2CCB51629C9513F072626A /* ParseUI.h */; };
-		CE9ACDEF2AF2380CC9C6B007 /* PFLogInViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F515D002333239006D03BC9 /* PFLogInViewController.h */; };
-		CF38BD6DC20FE2E38B961B8A /* PFSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AC5F4F9B00380AC0E1387D /* PFSession.h */; };
-		D09BCFBB4155639E8757ECC3 /* PFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 731C0ACA5A1E907122E3642B /* PFNetworkActivityIndicatorManager.h */; };
-		D0A8AA6BF5F18AAE94A1B187 /* PFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E403721AD0EB0C85AE588D0 /* PFTableViewCell.m */; };
-		D23AA342A871CC1603D1BCDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E497A7DB3EE3E8343893C824 /* Foundation.framework */; };
-		DA6E235E73EBEBBDB0FBCB2D /* PFActivityIndicatorTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3951516A0A146904ECC6AD13 /* PFActivityIndicatorTableViewCell.h */; };
-		DC63EB1C1A9A5BDD075D9345 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18125C0992937B0682B98A1 /* StoreKit.framework */; };
-		E0F98FC25B4395EB2C033275 /* PFRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 7913B514B612A02C950B093C /* PFRect.h */; };
-		E3BBC754CEAFDAD8B71F5AF9 /* PFLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1377503D91DF426C77A6AC74 /* PFLogInViewController.m */; };
-		E4C28B7FD7DFDC12B3672B25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E497A7DB3EE3E8343893C824 /* Foundation.framework */; };
-		E76518C39EC4C19EB7A8D021 /* PFActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0918942059C17403E1BBAA /* PFActionButton.m */; };
-		E8511E468ACD927A05EB3874 /* PFActionButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B7D6CD119D62661E39CA40 /* PFActionButton.h */; };
-		E929CEB1621249D94351C5CE /* PFConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = DDB528481722E15962F1B627 /* PFConfig.h */; };
-		EAC306EDF5D8C216988A90D7 /* PFSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD14F527A58550D8691472 /* PFSignUpViewController.m */; };
-		EAD7ABBE7B5FD9F63F7FF56E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CE0079368B61BCC6264AF5 /* SystemConfiguration.framework */; };
-		F1DFF5679D95783C860F3537 /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 928AB19565707706B74DFE34 /* PFAnalytics.h */; };
-		F2201B0E072E3E82DC6301A7 /* PFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4411438199F5385D0EE0CB /* PFTextField.m */; };
-		F386EAE8097819AC671BA31B /* PFPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C44C6A69030C92A52FF23E6 /* PFPurchase.h */; };
-		F4615B1A9655A14566F6B2A0 /* PFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A79E6DE7EF65EA1CF1FE0AF /* PFLoadingView.m */; };
-		F697C86C7F328CD7413411F0 /* ParseUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F792285A45ED5BD992BB071 /* ParseUIConstants.h */; };
-		F6F402371E9AEF868EA434D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED8EBE15EB2CCA1E41EEE491 /* CoreLocation.framework */; };
-		F724E05CE9629C210FD7D9DA /* Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = F678A716EC44040CF300F8B2 /* Parse.h */; };
-		F90D4F43BA8511C479CCB4D9 /* PFRole.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DC4BAD806FC23F18A2BC5AD /* PFRole.h */; };
-		FC4A2EE580735FDB3E12AFD5 /* PFLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 6386E59FD30CF391E686B0DD /* PFLocalization.h */; };
-		FDBDF91CE5F80D0755CC5AE0 /* PFQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 656006E9AE5C6ACE9984F803 /* PFQuery.h */; };
-		FE3E644A02308C46BF680A5B /* PFActivityIndicatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B577E11F448523CC5E2A31 /* PFActivityIndicatorTableViewCell.m */; };
+		008936FB73673B0C277D862E /* PFActivityIndicatorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 502E5AB776DBB203522D21EA /* PFActivityIndicatorTableViewCell.m */; };
+		0191B5FF58B81D9DC1136320 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48001D0D31253F932B7CBF6C /* StoreKit.framework */; };
+		01B655A7BAB99E35DB65B213 /* PFActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F281734C34C636CEA99AE71C /* PFActionButton.m */; };
+		03B218076FC33BEE9DB42AED /* PFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 362EA8A5BDA6F25D6C9FA009 /* PFNetworkActivityIndicatorManager.h */; };
+		05CC92EA66D1CEE21AB07ED6 /* PFTwitterUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CDB7600FA4588925BEEAFA9 /* PFTwitterUtils.h */; };
+		06738F1BA3ECDABC0EF43919 /* PF_Twitter.h in Headers */ = {isa = PBXBuildFile; fileRef = DC3C8AFC2ECFE6364E323210 /* PF_Twitter.h */; };
+		0A6221685543DCBB4896DC15 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08014745A0AB8C832C86C065 /* Foundation.framework */; };
+		0EA9BD2F1E68C1E4CF5A2B00 /* PFPrimaryButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FFE48913F35ED40B0B778D1 /* PFPrimaryButton.h */; };
+		10AD402E3760AC73E8ED203C /* PFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CA47BE785A9070D6A54AB063 /* PFImageCache.m */; };
+		1176D1C687C25F34CBF9E600 /* PFProductTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 42F37543DFE4CE031361FC10 /* PFProductTableViewController.h */; };
+		161DCDE3A059FC01E4108B7B /* PFQueryCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 01786E6AB407EB32FCE17AF1 /* PFQueryCollectionViewController.h */; };
+		1B2D8FC49CCE1303507BEB4F /* Pods-PocketMoney-ParseUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63379817106D2EFEC383652D /* Pods-PocketMoney-ParseUI-dummy.m */; };
+		1CC3D37CB0FBAC580814CF72 /* PFResources.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A16D1DCCFD5151C9E272DE /* PFResources.h */; };
+		1DF91B2E99FA016EA42A9459 /* PFNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 448041E6F7EFB3C62B6697EF /* PFNullability.h */; };
+		1EC7AB84229DF1FE00B1EFC1 /* PFFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3535B4111DC95E1CBB5F13AD /* PFFile.h */; };
+		20E43DD67659710841D253A9 /* PFColor.h in Headers */ = {isa = PBXBuildFile; fileRef = FB88316B436EE0EBE7932900 /* PFColor.h */; };
+		235022E003D3FA38B94A5A32 /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = B48AFFC9C8EF46F0E12F7C23 /* PFAnalytics.h */; };
+		235DCA2CD7207ECD8BD87563 /* PFResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FE04D26D3749D3B10B599293 /* PFResources.m */; };
+		26195CCBFA3B8CE88A00352D /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = 19197E00DFC16F4E6398FFFB /* Bolts.h */; };
+		27A4D0315BDFA8920F80831B /* PFRole.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B048F66AF7F0ED5220A8819 /* PFRole.h */; };
+		2930AB265BA3814B8587E94E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38067002C1AD747674D40F93 /* QuartzCore.framework */; };
+		2EADE0B16DA2CED4867EBF95 /* PFACL.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D4D8DAC1B8E9D72A22CC6E /* PFACL.h */; };
+		30718A97DBB99C1C4CCA6975 /* PFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 52024D869C90471C2E395A79 /* PFImage.m */; };
+		312CC363D2F618CE8FEE1B31 /* Pods-PocketMoney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 293924C340AD10122A684BF7 /* Pods-PocketMoney-dummy.m */; };
+		353A669F479108EE3E755462 /* PFLogInView.h in Headers */ = {isa = PBXBuildFile; fileRef = 133AC30D6D97D797717A04F8 /* PFLogInView.h */; };
+		37E709FFDE2C36CD3BB6FBAF /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6ED0821C0D1D2139EC9FC7 /* PFConstants.h */; };
+		37E905AA9D45EBB39DD8DC83 /* PFUser.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB2EBF0E2D40438ABE00567 /* PFUser.h */; };
+		3AA751E373EE27AC151848D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08014745A0AB8C832C86C065 /* Foundation.framework */; };
+		3E4F6CAC7F7410E6973D5036 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFCA21E8132B59F098603A2 /* AudioToolbox.framework */; };
+		45948F4C3564DEDB4262805B /* PFAnonymousUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5E85DA0E810C055019D66D /* PFAnonymousUtils.h */; };
+		4A3991635C6509EA8D3FB151 /* PFProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9C29F23C91A2F059742454 /* PFProductTableViewController.m */; };
+		4AFF41F302CB5273BB99A997 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62399FE2C4201FB2CAFAC1DC /* MobileCoreServices.framework */; };
+		4CB6F1BD561441BCB47CE360 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08014745A0AB8C832C86C065 /* Foundation.framework */; };
+		4FABB89286C633007FA8F0F0 /* PFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFF45A27009206B58C0F330 /* PFAlertView.m */; };
+		51BAF71CBBDBA651264CBF23 /* PFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = CDADC5A9AFB02D189C7D449D /* PFColor.m */; };
+		524C36C535D5D513F3C95544 /* PFQueryTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 20521DC53C95779D0CEE8955 /* PFQueryTableViewController.h */; };
+		52AE7836BCD68366B7926AC4 /* PFRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3F617E7E630F94D404BD11 /* PFRect.h */; };
+		55F44689ABF7D9F48F5ECF7A /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7033B6F908824014357F61 /* Empty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5821F5EFD65340BD479AB3F9 /* PFObject+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 530083158A62659A426ED34A /* PFObject+Subclass.h */; };
+		59586BB7E60E165B24B39D5B /* PFImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FFD91C7C63A09B2C1FDD341 /* PFImageCache.h */; };
+		5B5E8FF1876304E4732281F5 /* PFPrimaryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8519CAEC78B0C4721C408D /* PFPrimaryButton.m */; };
+		5C25151F6B6047BC76980B3C /* PFTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E60DAD14BC9BC0B4A19D9C /* PFTableViewCell.h */; };
+		5CEC97EEE0E6DFD03B0841F1 /* PFCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 221C5FF8C0500F5162A830D4 /* PFCloud.h */; };
+		607FE9E03158AEBEDB0615C3 /* PFTextButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 15DB13CE6BAD2F43AB790E10 /* PFTextButton.h */; };
+		6171BA3824CEA8740385B55A /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B8ACDBEE09F50EF5CB5D94 /* BFTaskCompletionSource.h */; };
+		623F8C92DC7940CF08CF8868 /* PFPurchaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5C44A574171504AB52A711 /* PFPurchaseTableViewCell.h */; };
+		676503EECEAD71B3F3FE7DAE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCFE0245E4319569004E9D8 /* SystemConfiguration.framework */; };
+		685F03FDEA80C216B4364178 /* PFActivityIndicatorCollectionReusableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EAFDD4F3A2BA0E116598ACB /* PFActivityIndicatorCollectionReusableView.h */; };
+		6D4E83EA5452BB3AF73A1283 /* PFActivityIndicatorCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AEC0B4996FB0FD28FEE228 /* PFActivityIndicatorCollectionReusableView.m */; };
+		6FA8ECBA193436E56C07FBD2 /* PFAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3225E93C3BEF4B150D489CE7 /* PFAlertView.h */; };
+		7104799EC4B3217DB1EAAF33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7635673F9264ED5776B7E4 /* UIKit.framework */; };
+		749F0A76C11921A1C35B6842 /* PFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C785ADD404AE070FE800EC62 /* PFImage.h */; };
+		7623C3157AC81EC0C6B2DD99 /* PFPurchaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 891DC77BBA2B5FD8F04AC0BB /* PFPurchaseTableViewCell.m */; };
+		767F654AA27C687D5B543D80 /* PFQueryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F389D0D5356C825BF7E451F1 /* PFQueryCollectionViewController.m */; };
+		79FE3079D20790E03F62C9F2 /* PFGeoPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC64D567E314673A0B3A6B2 /* PFGeoPoint.h */; };
+		7CF088DB2A626779B23562AF /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 98C2BDB76EC05E72909AD271 /* BFTask.h */; };
+		800EE6BE4027F352549A5932 /* PFRect.m in Sources */ = {isa = PBXBuildFile; fileRef = F80F41B3B9A0233F998AC5A0 /* PFRect.m */; };
+		805130B7BEA58140762DBFCF /* PFRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = BC6E9906864E53C27564697E /* PFRelation.h */; };
+		84B2DA5E82C371C5B4CBFADF /* PFLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 926F1A6BF9413B51F872D6D1 /* PFLoadingView.h */; };
+		85E996CD9E5B9437058A0254 /* PFLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = B810697C803EB6BF15A49BF8 /* PFLogInView.m */; };
+		8E3622A3B8CB152E4E1C40C9 /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = 724DF9B0A18A1EBA16D3F41A /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9388A6EF8FCC32D6A5D564D6 /* PFActionButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CDCC599BD7810B2B371E7CC7 /* PFActionButton.h */; };
+		93CA30E68E7627F529851E89 /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 52028A492C0006DDD51AF87E /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		965D38DDD050479665A0A066 /* PFSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049527F140259C384425E76E /* PFSignUpViewController.m */; };
+		98E7E61EEBACBD4AC9AFCDAD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5476FEC59112D5813B33CC43 /* CFNetwork.framework */; };
+		98FBFD32B6F3B2340A3B3F22 /* PFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED8DB3B98810706A9E91420 /* PFImageView.h */; };
+		9A3E12627C4591390F09617D /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 36DDF7179CEF58C471C96308 /* BoltsVersion.h */; };
+		9CFFCF179168B343CBD71E60 /* PFPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 639750FF82B1F83F1765E160 /* PFPurchase.h */; };
+		9E93DBFDC2DA69E2442A95B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08014745A0AB8C832C86C065 /* Foundation.framework */; };
+		9EDD9E8334E7344A06569496 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 368BE0A960145B712C5D5AC6 /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A286BDCAA9B672FA9EA03771 /* PFCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C18AAA8D4665D8BB8422655 /* PFCollectionViewCell.h */; };
+		AE9F24C9A2486F1978EA8B2A /* PFTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7245683F7E006ED767377977 /* PFTextButton.m */; };
+		AF3878B38D8EF339BF681D03 /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BA38C062EE0C2A2C44A61 /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B072BF788CDF068EA6819385 /* ParseUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 94D39498E9724A3893C684FD /* ParseUIConstants.h */; };
+		B20B550A7273F52E9C8F21C4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5BDBFDBBB5CC346B205A28 /* CoreLocation.framework */; };
+		B2EABF1727F66881E0D2DD6E /* PFCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B043207275A27F5613FAE1 /* PFCollectionViewCell.m */; };
+		B412F65DCFEE46CEA91E8177 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17C056B20A3C05BF01AF420 /* CoreGraphics.framework */; };
+		B5C23630ABCD43A641724DBE /* PFPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 60AB02563FB23522A0B271F1 /* PFPush.h */; };
+		B7DF2F924AAE25876E7ECF56 /* PFDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F573A1CB4AD29C64CBE5E382 /* PFDismissButton.m */; };
+		B87283D4966F1667D3C10C54 /* PFLogInViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A084A4F9673BD4635FFF5FD1 /* PFLogInViewController.h */; };
+		B92E9C262A9E8E4783A63AF7 /* PFSignUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 80DFD2E516F240AB4C0AB0C9 /* PFSignUpView.h */; };
+		C0D615F61F1ACAF178ECB1F8 /* PFProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = B52B1E2E91A855FD514DCA59 /* PFProduct.h */; };
+		C0EDF94736A3128EAA8841E3 /* PFSession.h in Headers */ = {isa = PBXBuildFile; fileRef = D81E5F35B29D7AEAEA18C920 /* PFSession.h */; };
+		C2DD8E46B0197E71CF1BE0BF /* Pods-PocketMoney-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1378D8258A6083974D4D50 /* Pods-PocketMoney-Bolts-dummy.m */; };
+		C2F914019D0B117D7DC8DAE2 /* Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = E4387C2504CF08374F396FF1 /* Parse.h */; };
+		C5A96878CFD9FB9A81850E77 /* PFQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C03DFF3D0E14837DFF2EFA /* PFQuery.h */; };
+		C6FBAE861CABCC0AD1320229 /* PFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7B4185B3C9C6350DA64509 /* PFImageView.m */; };
+		C7D995D15C8DA0F4E042EC22 /* PFQueryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB08579866F1B083F93ADAE /* PFQueryTableViewController.m */; };
+		C86090120EC87289DF0E55C2 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 469840F40F03336A26B4C8C5 /* BFExecutor.h */; };
+		C8F3B0CE9ECEAAA946E4E61B /* PFSignUpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CD6E2A1484F3B4E0B7B274 /* PFSignUpViewController.h */; };
+		C9EC9AEF2885C90512135829 /* PFDismissButton.h in Headers */ = {isa = PBXBuildFile; fileRef = FA814A800C1BF3840F8FE981 /* PFDismissButton.h */; };
+		CA54C77A91B0E4D3AA2F431E /* ParseUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C648A706B5D68A7ED3C67429 /* ParseUI.h */; };
+		CC19705DF83BD1EB53A557FF /* PFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CACF48EFB6535A81F0CDBA4D /* PFLoadingView.m */; };
+		CD47F1F1163D30DE84E744D4 /* PFActivityIndicatorTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA1C92D660A9EA61A11AD59 /* PFActivityIndicatorTableViewCell.h */; };
+		D08B706FE46707D5313A4C4A /* PFTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B1CB2F5E628288EF1561438 /* PFTextField.h */; };
+		D1BCBF6103E260F9891E7461 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38067002C1AD747674D40F93 /* QuartzCore.framework */; };
+		D78C4142A6A3746A4C956E0B /* PFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C795D7EC3A8B947507A9C09 /* PFObject.h */; };
+		DA717131640CC1414A68F897 /* PFConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 385AFB61D3716687EE8CBE3E /* PFConfig.h */; };
+		DA84E861B5612E9DFC0BE508 /* PFInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B610B9DEE8099805837863D /* PFInstallation.h */; };
+		DEBF270A0392EED1D3AE11A8 /* PFLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ADFBD40578CE81FC0D7C40A /* PFLogInViewController.m */; };
+		DEF9EA5D5D019BCA7C5F9D08 /* PFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 105109466B72C5616CFAB7EC /* PFTextField.m */; };
+		E4AAE43C76B059B4AB569B5D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60B84E2343EE3CAA2A04A5C /* Security.framework */; };
+		F3E021DE39DBEA223D4FECF9 /* Pods-PocketMoney-Parse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA0706B47E537EAA7825ADD /* Pods-PocketMoney-Parse-dummy.m */; };
+		F635CC60AC4E99E8E604A199 /* PFSignUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = C16303F128E324A87C97B66D /* PFSignUpView.m */; };
+		FC199B6436BFDAC193C66BA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17C056B20A3C05BF01AF420 /* CoreGraphics.framework */; };
+		FE140DC910F9DCE3B639DF83 /* PFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F904ABBCEA3AF1051E89D9 /* PFTableViewCell.m */; };
+		FF6659A129596E980B70C17E /* PFSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5405AF3CD0193A2B84D5353B /* PFSubclassing.h */; };
+		FFFB9E2776904669C5CE48A4 /* PFLocalization.h in Headers */ = {isa = PBXBuildFile; fileRef = 103EC5C0BE717C404F29CE31 /* PFLocalization.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		450C4C506F3B64970D6A866E /* PBXContainerItemProxy */ = {
+		0222E6081CFF51FB41CE6111 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
+			containerPortal = D925BE96A0B3FE3E059BCF61 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 98A3F72937BF9A9987B6B865;
+			remoteGlobalIDString = A39A8241C8BD753291587DD2;
+			remoteInfo = "Pods-PocketMoney-Bolts";
+		};
+		105C7CE5CACC7C957D77CC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D925BE96A0B3FE3E059BCF61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A39A8241C8BD753291587DD2;
+			remoteInfo = "Pods-PocketMoney-Bolts";
+		};
+		7A29FDDF81B0F94ED0D2E82F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D925BE96A0B3FE3E059BCF61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E1722835353EDDDD5565738;
 			remoteInfo = "Pods-PocketMoney-Parse";
 		};
-		52D35062DC002123A562417F /* PBXContainerItemProxy */ = {
+		A2A84090F43240DF13635AE3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
+			containerPortal = D925BE96A0B3FE3E059BCF61 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 98A3F72937BF9A9987B6B865;
-			remoteInfo = "Pods-PocketMoney-Parse";
-		};
-		9279F8F949CF0FC234065DD7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74B716E682CAC48C7B66121C;
+			remoteGlobalIDString = 3EACAD3A928123D8BC87DC46;
 			remoteInfo = "Pods-PocketMoney-ParseUI";
 		};
-		BAC27B4A6CF0E0FC5612BF1F /* PBXContainerItemProxy */ = {
+		D5B34E167BED1323A20DE00B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
+			containerPortal = D925BE96A0B3FE3E059BCF61 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FF0BA091EE1DA4BCD8989682;
-			remoteInfo = "Pods-PocketMoney-Bolts";
-		};
-		F30CA334C2537064B1766EF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF0BA091EE1DA4BCD8989682;
-			remoteInfo = "Pods-PocketMoney-Bolts";
+			remoteGlobalIDString = 6E1722835353EDDDD5565738;
+			remoteInfo = "Pods-PocketMoney-Parse";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037EA4B9061C793BC3FCAC6E /* PFTextButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTextButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFTextButton.h; sourceTree = "<group>"; };
-		05C1EEE61C398D3991D456F3 /* Pods-PocketMoney-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Bolts.xcconfig"; sourceTree = "<group>"; };
-		0620E6DF9BBC9A960C694E7D /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
-		074DC0C12088D1AD8CB40024 /* PFProductTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProductTableViewController.h; path = ParseUI/Classes/ProductTableViewController/PFProductTableViewController.h; sourceTree = "<group>"; };
-		0BBFD23B219FE9FAEACE4F05 /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
-		0C15DD111BE58099F74A0433 /* Pods-PocketMoney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PocketMoney-acknowledgements.plist"; sourceTree = "<group>"; };
-		0D1F3E2D8D16E35152CD79C1 /* PFFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFile.h; path = Parse.framework/Headers/PFFile.h; sourceTree = "<group>"; };
-		0F515D002333239006D03BC9 /* PFLogInViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogInViewController.h; path = ParseUI/Classes/LogInViewController/PFLogInViewController.h; sourceTree = "<group>"; };
-		1041E0E10D64A8314B5FC5CB /* Pods-PocketMoney-Parse-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Parse-Private.xcconfig"; sourceTree = "<group>"; };
-		12616AB79316356AADB16B6A /* Pods-PocketMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney.release.xcconfig"; sourceTree = "<group>"; };
-		12886A77CEC4EFC1769F8127 /* PFConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConstants.h; path = Parse.framework/Headers/PFConstants.h; sourceTree = "<group>"; };
-		1377503D91DF426C77A6AC74 /* PFLogInViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLogInViewController.m; path = ParseUI/Classes/LogInViewController/PFLogInViewController.m; sourceTree = "<group>"; };
-		16C0DF277178E24F4E347453 /* PFAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAlertView.h; path = ParseUI/Classes/Internal/Extensions/PFAlertView.h; sourceTree = "<group>"; };
-		1B5940BADCF33766BE3C9B52 /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
-		1C4411438199F5385D0EE0CB /* PFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTextField.m; path = ParseUI/Classes/Views/PFTextField.m; sourceTree = "<group>"; };
-		1D21E26532FAD7FD3F39EBEF /* Pods-PocketMoney-ParseUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-ParseUI.xcconfig"; sourceTree = "<group>"; };
-		1D813382BFA9C466928E9F15 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		1FF698E543DBBB47868F0046 /* libPods-PocketMoney-ParseUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-ParseUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2004E174E2A872450E4C014A /* Pods-PocketMoney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-dummy.m"; sourceTree = "<group>"; };
-		2365CECF5B97089ABD0E9B51 /* libPods-PocketMoney-Parse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-Parse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C42B0D3CB1BDDAB23024631 /* PFRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelation.h; path = Parse.framework/Headers/PFRelation.h; sourceTree = "<group>"; };
-		2D176C37A23D0EA17EA4FD95 /* PFPrimaryButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPrimaryButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFPrimaryButton.h; sourceTree = "<group>"; };
-		2DCEC3D120594EEF3A21C799 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		311D30B79C981666F098FF85 /* Pods-PocketMoney-ParseUI-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-ParseUI-Private.xcconfig"; sourceTree = "<group>"; };
-		33AC5F4F9B00380AC0E1387D /* PFSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSession.h; path = Parse.framework/Headers/PFSession.h; sourceTree = "<group>"; };
-		34D148002AA7735B68F3B085 /* PFActivityIndicatorCollectionReusableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActivityIndicatorCollectionReusableView.m; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorCollectionReusableView.m; sourceTree = "<group>"; };
-		35E2F37128F4CB596A95A2F2 /* PFAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAlertView.m; path = ParseUI/Classes/Internal/Extensions/PFAlertView.m; sourceTree = "<group>"; };
-		38183E43EA960330DD178EFD /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
-		3951516A0A146904ECC6AD13 /* PFActivityIndicatorTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActivityIndicatorTableViewCell.h; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorTableViewCell.h; sourceTree = "<group>"; };
-		396324560EA0197A7A6EC1AB /* PFImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImageCache.h; path = ParseUI/Classes/Internal/PFImageCache.h; sourceTree = "<group>"; };
-		3A79E6DE7EF65EA1CF1FE0AF /* PFLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLoadingView.m; path = ParseUI/Classes/Internal/Views/PFLoadingView.m; sourceTree = "<group>"; };
-		3C44C6A69030C92A52FF23E6 /* PFPurchase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchase.h; path = Parse.framework/Headers/PFPurchase.h; sourceTree = "<group>"; };
-		3CE761DE7BBCF284E577B6F0 /* PFTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTableViewCell.h; path = ParseUI/Classes/Cells/PFTableViewCell.h; sourceTree = "<group>"; };
-		3DC4BAD806FC23F18A2BC5AD /* PFRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRole.h; path = Parse.framework/Headers/PFRole.h; sourceTree = "<group>"; };
-		3E403721AD0EB0C85AE588D0 /* PFTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTableViewCell.m; path = ParseUI/Classes/Cells/PFTableViewCell.m; sourceTree = "<group>"; };
-		3F220AE2DEE5A7B3FAB86C9A /* PFDismissButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDismissButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFDismissButton.m; sourceTree = "<group>"; };
-		3F792285A45ED5BD992BB071 /* ParseUIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseUIConstants.h; path = ParseUI/Other/ParseUIConstants.h; sourceTree = "<group>"; };
-		49CC21D8237E931918A6D636 /* PFNullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNullability.h; path = Parse.framework/Headers/PFNullability.h; sourceTree = "<group>"; };
-		4B1FC415B6B2473C15AD32B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		4DF437FBD059A1BB4D9DB339 /* PFTwitterUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTwitterUtils.h; path = Parse.framework/Headers/PFTwitterUtils.h; sourceTree = "<group>"; };
-		5A93C71D898B6165412663A1 /* PFRect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRect.m; path = ParseUI/Classes/Internal/Extensions/PFRect.m; sourceTree = "<group>"; };
-		5A9A68228F928FC36AE69086 /* Pods-PocketMoney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PocketMoney-resources.sh"; sourceTree = "<group>"; };
-		5AA379CCEFF53BB051CCDE13 /* PFInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallation.h; path = Parse.framework/Headers/PFInstallation.h; sourceTree = "<group>"; };
-		5B0918942059C17403E1BBAA /* PFActionButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActionButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFActionButton.m; sourceTree = "<group>"; };
-		5B5FBD9A7592E31C810ADA51 /* PFLogInView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogInView.h; path = ParseUI/Classes/LogInViewController/PFLogInView.h; sourceTree = "<group>"; };
-		5D9A55B2A1B9DADA12490D0D /* Pods-PocketMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney.debug.xcconfig"; sourceTree = "<group>"; };
-		5FCD14F527A58550D8691472 /* PFSignUpViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSignUpViewController.m; path = ParseUI/Classes/SignUpViewController/PFSignUpViewController.m; sourceTree = "<group>"; };
-		619809F1CFC93E2233791E6F /* PFProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProduct.h; path = Parse.framework/Headers/PFProduct.h; sourceTree = "<group>"; };
-		6256D8F36C086C2436234C89 /* Pods-PocketMoney-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-environment.h"; sourceTree = "<group>"; };
-		62FEA6A28A6481189ED4BDAC /* Pods-PocketMoney-ParseUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-ParseUI-prefix.pch"; sourceTree = "<group>"; };
-		6386E59FD30CF391E686B0DD /* PFLocalization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLocalization.h; path = ParseUI/Classes/Internal/PFLocalization.h; sourceTree = "<group>"; };
-		63AA234F6F2CF0BA4917146C /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse.framework/Headers/PFGeoPoint.h; sourceTree = "<group>"; };
-		656006E9AE5C6ACE9984F803 /* PFQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQuery.h; path = Parse.framework/Headers/PFQuery.h; sourceTree = "<group>"; };
-		68C2315124F391E83A0CAC0F /* PFPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPush.h; path = Parse.framework/Headers/PFPush.h; sourceTree = "<group>"; };
-		69BA0FB1D7B84E8B6C3E3D34 /* PFLogInView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLogInView.m; path = ParseUI/Classes/LogInViewController/PFLogInView.m; sourceTree = "<group>"; };
-		69F8073436979FA7F352601E /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
-		6EA249E16A95DF612D29B49D /* PF_Twitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PF_Twitter.h; path = Parse.framework/Headers/PF_Twitter.h; sourceTree = "<group>"; };
-		6F9E5896BF65D03E8D017487 /* libPods-PocketMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70B7D6CD119D62661E39CA40 /* PFActionButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActionButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFActionButton.h; sourceTree = "<group>"; };
-		71CE0079368B61BCC6264AF5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		71D758BBC0E8F8741B6017CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		731C0ACA5A1E907122E3642B /* PFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNetworkActivityIndicatorManager.h; path = Parse.framework/Headers/PFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		739933019D6EDCD8845EEC26 /* Pods-PocketMoney-ParseUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-ParseUI-dummy.m"; sourceTree = "<group>"; };
-		74FCCFDEB2EA7B54323489F1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		7913B514B612A02C950B093C /* PFRect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRect.h; path = ParseUI/Classes/Internal/Extensions/PFRect.h; sourceTree = "<group>"; };
-		7A20531DF2A4598EF584A65E /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		7A430B71B87965CA29A2C89E /* PFQueryTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryTableViewController.h; path = ParseUI/Classes/QueryTableViewController/PFQueryTableViewController.h; sourceTree = "<group>"; };
-		7A5A18F1CB553BB41BA846E8 /* Pods-PocketMoney-Parse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-Parse-prefix.pch"; sourceTree = "<group>"; };
-		7AFD8BDF0FBAC104B708CC58 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7B8F8D1C40F981C9BA7C9CBA /* PFPrimaryButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPrimaryButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFPrimaryButton.m; sourceTree = "<group>"; };
-		7BE73DE2A2CEA122E0B313AF /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
-		7C0AD77CC8AB0268631E5F7B /* PFAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils.h; path = Parse.framework/Headers/PFAnonymousUtils.h; sourceTree = "<group>"; };
-		81EA2BE6ABA10290CB6F247D /* PFImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImageView.m; path = ParseUI/Classes/Views/PFImageView.m; sourceTree = "<group>"; };
-		85BCFC39CB15875664DAED5F /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse.framework/Headers/PFCloud.h; sourceTree = "<group>"; };
-		8673ADADCABB57E7240E86E3 /* PFQueryCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryCollectionViewController.h; path = ParseUI/Classes/QueryCollectionViewController/PFQueryCollectionViewController.h; sourceTree = "<group>"; };
-		8A3459F69F5D0C981C7C4D56 /* PFQueryCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryCollectionViewController.m; path = ParseUI/Classes/QueryCollectionViewController/PFQueryCollectionViewController.m; sourceTree = "<group>"; };
-		8C6718DEB202106AC3541763 /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse.framework/Headers/PFObject.h; sourceTree = "<group>"; };
-		8F19445560FC48D4CB505269 /* Pods-PocketMoney-Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-Parse-dummy.m"; sourceTree = "<group>"; };
-		8F44BF9844308229FD5FB769 /* PFColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFColor.h; path = ParseUI/Classes/Internal/Extensions/PFColor.h; sourceTree = "<group>"; };
-		91FA79582FCD9E0A95F2BB58 /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse.framework/Headers/PFACL.h; sourceTree = "<group>"; };
-		9230EAAE169E841DEC63BA7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		92659E60D5613D008F61E01C /* PFPurchaseTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchaseTableViewCell.h; path = ParseUI/Classes/Cells/PFPurchaseTableViewCell.h; sourceTree = "<group>"; };
-		928AB19565707706B74DFE34 /* PFAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalytics.h; path = Parse.framework/Headers/PFAnalytics.h; sourceTree = "<group>"; };
-		98A77F77A9958F3F50C70D7F /* libParse.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libParse.a; sourceTree = "<group>"; };
-		9985293B6584B9867D4373B0 /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse.framework/Headers/PFUser.h; sourceTree = "<group>"; };
-		9C91DEEDDDC026AD98969B2A /* PFImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImageView.h; path = ParseUI/Classes/Views/PFImageView.h; sourceTree = "<group>"; };
-		A8647BED0C0E386033304C6A /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse.framework/Headers/PFSubclassing.h; sourceTree = "<group>"; };
-		B18125C0992937B0682B98A1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
-		B413DFB7975A40910FF343A7 /* PFSignUpViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSignUpViewController.h; path = ParseUI/Classes/SignUpViewController/PFSignUpViewController.h; sourceTree = "<group>"; };
-		B4AE46A276CA055FDD8B2EA2 /* PFImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImageCache.m; path = ParseUI/Classes/Internal/PFImageCache.m; sourceTree = "<group>"; };
-		B6A5ABA50E8613E039470252 /* Pods-PocketMoney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PocketMoney-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B70CFDC364D25BFABB0E9BC7 /* PFSignUpView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSignUpView.m; path = ParseUI/Classes/SignUpViewController/PFSignUpView.m; sourceTree = "<group>"; };
-		B88B39E734D547F18D902E66 /* Pods-PocketMoney-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
-		BBFB6D315D0E1B5B880A6DBD /* Pods-PocketMoney-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-Bolts-prefix.pch"; sourceTree = "<group>"; };
-		BD0C390E0FD1EF513B71DE49 /* PFLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLoadingView.h; path = ParseUI/Classes/Internal/Views/PFLoadingView.h; sourceTree = "<group>"; };
-		BF2DE336495E2A2822E7B76D /* PFTextButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTextButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFTextButton.m; sourceTree = "<group>"; };
-		C9262796FA84B912EF6815E5 /* PFActivityIndicatorCollectionReusableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActivityIndicatorCollectionReusableView.h; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorCollectionReusableView.h; sourceTree = "<group>"; };
-		CA3426022A12E231B41EEBA7 /* PFResources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFResources.h; path = ParseUI/Generated/PFResources.h; sourceTree = "<group>"; };
-		CE2BE6AE7DBF86726F3C8EBC /* PFQueryTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryTableViewController.m; path = ParseUI/Classes/QueryTableViewController/PFQueryTableViewController.m; sourceTree = "<group>"; };
-		D3EA2BEE7B185BB615DF310C /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
-		D67BA2C09815795247F5C6F5 /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
-		D8B29332B7D4969D6FC90C62 /* PFCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCollectionViewCell.m; path = ParseUI/Classes/Cells/PFCollectionViewCell.m; sourceTree = "<group>"; };
-		D914657B656B189360D4E42B /* PFTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTextField.h; path = ParseUI/Classes/Views/PFTextField.h; sourceTree = "<group>"; };
-		DD45B73A93E515CFC0D3F566 /* PFDismissButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFDismissButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFDismissButton.h; sourceTree = "<group>"; };
-		DDB528481722E15962F1B627 /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse.framework/Headers/PFConfig.h; sourceTree = "<group>"; };
-		DFF9901FB505391C6B102762 /* libPods-PocketMoney-Bolts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-Bolts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1BED4FBE6F3CBF11A3EC281 /* PFSignUpView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSignUpView.h; path = ParseUI/Classes/SignUpViewController/PFSignUpView.h; sourceTree = "<group>"; };
-		E25CF2F3B7EA270EE9C43082 /* PFProductTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFProductTableViewController.m; path = ParseUI/Classes/ProductTableViewController/PFProductTableViewController.m; sourceTree = "<group>"; };
-		E3A96441921DBD43F4B52707 /* Pods-PocketMoney-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-Bolts-dummy.m"; sourceTree = "<group>"; };
-		E425E1991CC715C95D2410CA /* PFImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImage.h; path = ParseUI/Classes/Internal/Extensions/PFImage.h; sourceTree = "<group>"; };
-		E497A7DB3EE3E8343893C824 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E8B577E11F448523CC5E2A31 /* PFActivityIndicatorTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActivityIndicatorTableViewCell.m; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorTableViewCell.m; sourceTree = "<group>"; };
-		E9FF849E37C6D143914D5EE2 /* PFImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImage.m; path = ParseUI/Classes/Internal/Extensions/PFImage.m; sourceTree = "<group>"; };
-		EA2CCB51629C9513F072626A /* ParseUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseUI.h; path = ParseUI/Other/ParseUI.h; sourceTree = "<group>"; };
-		ED8EBE15EB2CCA1E41EEE491 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		EE07CDF5076BD67ABAEB7C23 /* Pods-PocketMoney-Parse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Parse.xcconfig"; sourceTree = "<group>"; };
-		F27E33839050EF6262B82A53 /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
-		F2D3183027A171D58657F7F3 /* PFColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFColor.m; path = ParseUI/Classes/Internal/Extensions/PFColor.m; sourceTree = "<group>"; };
-		F423008CD71C2AA2E94346D7 /* PFObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Subclass.h"; path = "Parse.framework/Headers/PFObject+Subclass.h"; sourceTree = "<group>"; };
-		F678A716EC44040CF300F8B2 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse.framework/Headers/Parse.h; sourceTree = "<group>"; };
-		F6A105E8E0797EF268E69A15 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		F6AEFE1C873AEDDF6DDF1EDF /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = ParseUI/Resources/Localization/en.lproj; sourceTree = "<group>"; };
-		F8B36109B09027863C529820 /* PFCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCollectionViewCell.h; path = ParseUI/Classes/Cells/PFCollectionViewCell.h; sourceTree = "<group>"; };
-		F9CAC89D389867620AABA2C4 /* PFResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFResources.m; path = ParseUI/Generated/PFResources.m; sourceTree = "<group>"; };
-		FFA67EF9EB5E57C772958EFD /* PFPurchaseTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPurchaseTableViewCell.m; path = ParseUI/Classes/Cells/PFPurchaseTableViewCell.m; sourceTree = "<group>"; };
+		01786E6AB407EB32FCE17AF1 /* PFQueryCollectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryCollectionViewController.h; path = ParseUI/Classes/QueryCollectionViewController/PFQueryCollectionViewController.h; sourceTree = "<group>"; };
+		049527F140259C384425E76E /* PFSignUpViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSignUpViewController.m; path = ParseUI/Classes/SignUpViewController/PFSignUpViewController.m; sourceTree = "<group>"; };
+		07AD5D09E5206CDB90E01C8D /* Pods-PocketMoney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PocketMoney-resources.sh"; sourceTree = "<group>"; };
+		08014745A0AB8C832C86C065 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0C18AAA8D4665D8BB8422655 /* PFCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCollectionViewCell.h; path = ParseUI/Classes/Cells/PFCollectionViewCell.h; sourceTree = "<group>"; };
+		0CDB7600FA4588925BEEAFA9 /* PFTwitterUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTwitterUtils.h; path = Parse.framework/Headers/PFTwitterUtils.h; sourceTree = "<group>"; };
+		0E5C44A574171504AB52A711 /* PFPurchaseTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchaseTableViewCell.h; path = ParseUI/Classes/Cells/PFPurchaseTableViewCell.h; sourceTree = "<group>"; };
+		103EC5C0BE717C404F29CE31 /* PFLocalization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLocalization.h; path = ParseUI/Classes/Internal/PFLocalization.h; sourceTree = "<group>"; };
+		105109466B72C5616CFAB7EC /* PFTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTextField.m; path = ParseUI/Classes/Views/PFTextField.m; sourceTree = "<group>"; };
+		133AC30D6D97D797717A04F8 /* PFLogInView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogInView.h; path = ParseUI/Classes/LogInViewController/PFLogInView.h; sourceTree = "<group>"; };
+		15DB13CE6BAD2F43AB790E10 /* PFTextButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTextButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFTextButton.h; sourceTree = "<group>"; };
+		18DE17276249AE7002DD8E2F /* Pods-PocketMoney-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-environment.h"; sourceTree = "<group>"; };
+		19197E00DFC16F4E6398FFFB /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
+		19896449D56CE6B1003A57B6 /* Pods-PocketMoney-ParseUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-ParseUI.xcconfig"; sourceTree = "<group>"; };
+		1B7033B6F908824014357F61 /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		1C3F617E7E630F94D404BD11 /* PFRect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRect.h; path = ParseUI/Classes/Internal/Extensions/PFRect.h; sourceTree = "<group>"; };
+		1DA0706B47E537EAA7825ADD /* Pods-PocketMoney-Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-Parse-dummy.m"; sourceTree = "<group>"; };
+		20521DC53C95779D0CEE8955 /* PFQueryTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQueryTableViewController.h; path = ParseUI/Classes/QueryTableViewController/PFQueryTableViewController.h; sourceTree = "<group>"; };
+		221C5FF8C0500F5162A830D4 /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse.framework/Headers/PFCloud.h; sourceTree = "<group>"; };
+		25897333E16BD718AEF00F06 /* libPods-PocketMoney-ParseUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-ParseUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B8ACDBEE09F50EF5CB5D94 /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
+		293924C340AD10122A684BF7 /* Pods-PocketMoney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-dummy.m"; sourceTree = "<group>"; };
+		2B610B9DEE8099805837863D /* PFInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallation.h; path = Parse.framework/Headers/PFInstallation.h; sourceTree = "<group>"; };
+		2ED8DB3B98810706A9E91420 /* PFImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImageView.h; path = ParseUI/Classes/Views/PFImageView.h; sourceTree = "<group>"; };
+		3225E93C3BEF4B150D489CE7 /* PFAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAlertView.h; path = ParseUI/Classes/Internal/Extensions/PFAlertView.h; sourceTree = "<group>"; };
+		3535B4111DC95E1CBB5F13AD /* PFFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFile.h; path = Parse.framework/Headers/PFFile.h; sourceTree = "<group>"; };
+		362EA8A5BDA6F25D6C9FA009 /* PFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNetworkActivityIndicatorManager.h; path = Parse.framework/Headers/PFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		368BE0A960145B712C5D5AC6 /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
+		36DDF7179CEF58C471C96308 /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
+		37A16D1DCCFD5151C9E272DE /* PFResources.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFResources.h; path = ParseUI/Generated/PFResources.h; sourceTree = "<group>"; };
+		38067002C1AD747674D40F93 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		385AFB61D3716687EE8CBE3E /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse.framework/Headers/PFConfig.h; sourceTree = "<group>"; };
+		3A774E1903F5C0743E040E92 /* Pods-PocketMoney-Parse-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Parse-Private.xcconfig"; sourceTree = "<group>"; };
+		3B5BDBFDBBB5CC346B205A28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		3BFCA21E8132B59F098603A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		3C1378D8258A6083974D4D50 /* Pods-PocketMoney-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-Bolts-dummy.m"; sourceTree = "<group>"; };
+		40AEC0B4996FB0FD28FEE228 /* PFActivityIndicatorCollectionReusableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActivityIndicatorCollectionReusableView.m; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorCollectionReusableView.m; sourceTree = "<group>"; };
+		42F37543DFE4CE031361FC10 /* PFProductTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProductTableViewController.h; path = ParseUI/Classes/ProductTableViewController/PFProductTableViewController.h; sourceTree = "<group>"; };
+		448041E6F7EFB3C62B6697EF /* PFNullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNullability.h; path = Parse.framework/Headers/PFNullability.h; sourceTree = "<group>"; };
+		469840F40F03336A26B4C8C5 /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
+		4773001ACB0FD8A55313521D /* libPods-PocketMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47A8196864F7133E8C5E2EFB /* libPods-PocketMoney-Bolts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-Bolts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48001D0D31253F932B7CBF6C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		4ADFBD40578CE81FC0D7C40A /* PFLogInViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLogInViewController.m; path = ParseUI/Classes/LogInViewController/PFLogInViewController.m; sourceTree = "<group>"; };
+		4B1CB2F5E628288EF1561438 /* PFTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTextField.h; path = ParseUI/Classes/Views/PFTextField.h; sourceTree = "<group>"; };
+		4C795D7EC3A8B947507A9C09 /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse.framework/Headers/PFObject.h; sourceTree = "<group>"; };
+		4C7BA38C062EE0C2A2C44A61 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
+		4FFD91C7C63A09B2C1FDD341 /* PFImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImageCache.h; path = ParseUI/Classes/Internal/PFImageCache.h; sourceTree = "<group>"; };
+		502E5AB776DBB203522D21EA /* PFActivityIndicatorTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActivityIndicatorTableViewCell.m; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorTableViewCell.m; sourceTree = "<group>"; };
+		50AAC049939CC8E8F30E9730 /* libPods-PocketMoney-Parse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney-Parse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52024D869C90471C2E395A79 /* PFImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImage.m; path = ParseUI/Classes/Internal/Extensions/PFImage.m; sourceTree = "<group>"; };
+		52028A492C0006DDD51AF87E /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
+		530083158A62659A426ED34A /* PFObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Subclass.h"; path = "Parse.framework/Headers/PFObject+Subclass.h"; sourceTree = "<group>"; };
+		5405AF3CD0193A2B84D5353B /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse.framework/Headers/PFSubclassing.h; sourceTree = "<group>"; };
+		5476FEC59112D5813B33CC43 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		5F6ED0821C0D1D2139EC9FC7 /* PFConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConstants.h; path = Parse.framework/Headers/PFConstants.h; sourceTree = "<group>"; };
+		5FFE48913F35ED40B0B778D1 /* PFPrimaryButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPrimaryButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFPrimaryButton.h; sourceTree = "<group>"; };
+		60AB02563FB23522A0B271F1 /* PFPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPush.h; path = Parse.framework/Headers/PFPush.h; sourceTree = "<group>"; };
+		62399FE2C4201FB2CAFAC1DC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		63379817106D2EFEC383652D /* Pods-PocketMoney-ParseUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PocketMoney-ParseUI-dummy.m"; sourceTree = "<group>"; };
+		639750FF82B1F83F1765E160 /* PFPurchase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchase.h; path = Parse.framework/Headers/PFPurchase.h; sourceTree = "<group>"; };
+		6EAFDD4F3A2BA0E116598ACB /* PFActivityIndicatorCollectionReusableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActivityIndicatorCollectionReusableView.h; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorCollectionReusableView.h; sourceTree = "<group>"; };
+		71B043207275A27F5613FAE1 /* PFCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFCollectionViewCell.m; path = ParseUI/Classes/Cells/PFCollectionViewCell.m; sourceTree = "<group>"; };
+		71CD6E2A1484F3B4E0B7B274 /* PFSignUpViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSignUpViewController.h; path = ParseUI/Classes/SignUpViewController/PFSignUpViewController.h; sourceTree = "<group>"; };
+		7245683F7E006ED767377977 /* PFTextButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTextButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFTextButton.m; sourceTree = "<group>"; };
+		724DF9B0A18A1EBA16D3F41A /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
+		72E60DAD14BC9BC0B4A19D9C /* PFTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTableViewCell.h; path = ParseUI/Classes/Cells/PFTableViewCell.h; sourceTree = "<group>"; };
+		79C03DFF3D0E14837DFF2EFA /* PFQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQuery.h; path = Parse.framework/Headers/PFQuery.h; sourceTree = "<group>"; };
+		7F8519CAEC78B0C4721C408D /* PFPrimaryButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPrimaryButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFPrimaryButton.m; sourceTree = "<group>"; };
+		80DFD2E516F240AB4C0AB0C9 /* PFSignUpView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSignUpView.h; path = ParseUI/Classes/SignUpViewController/PFSignUpView.h; sourceTree = "<group>"; };
+		86B6C152B59C7440D6FE26E0 /* Pods-PocketMoney-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Bolts.xcconfig"; sourceTree = "<group>"; };
+		891DC77BBA2B5FD8F04AC0BB /* PFPurchaseTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFPurchaseTableViewCell.m; path = ParseUI/Classes/Cells/PFPurchaseTableViewCell.m; sourceTree = "<group>"; };
+		8B048F66AF7F0ED5220A8819 /* PFRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRole.h; path = Parse.framework/Headers/PFRole.h; sourceTree = "<group>"; };
+		8FA1C92D660A9EA61A11AD59 /* PFActivityIndicatorTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActivityIndicatorTableViewCell.h; path = ParseUI/Classes/Internal/Cells/PFActivityIndicatorTableViewCell.h; sourceTree = "<group>"; };
+		900A90DED9C314D1A18B3415 /* Pods-PocketMoney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PocketMoney-acknowledgements.plist"; sourceTree = "<group>"; };
+		913930D0BA8BCF761294D8C4 /* Pods-PocketMoney-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-Bolts-prefix.pch"; sourceTree = "<group>"; };
+		926F1A6BF9413B51F872D6D1 /* PFLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLoadingView.h; path = ParseUI/Classes/Internal/Views/PFLoadingView.h; sourceTree = "<group>"; };
+		93D4D8DAC1B8E9D72A22CC6E /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse.framework/Headers/PFACL.h; sourceTree = "<group>"; };
+		94D39498E9724A3893C684FD /* ParseUIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseUIConstants.h; path = ParseUI/Other/ParseUIConstants.h; sourceTree = "<group>"; };
+		983F98CE1C77E06F5FFE619F /* Pods-PocketMoney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PocketMoney-acknowledgements.markdown"; sourceTree = "<group>"; };
+		98C2BDB76EC05E72909AD271 /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
+		9AC64D567E314673A0B3A6B2 /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse.framework/Headers/PFGeoPoint.h; sourceTree = "<group>"; };
+		A084A4F9673BD4635FFF5FD1 /* PFLogInViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFLogInViewController.h; path = ParseUI/Classes/LogInViewController/PFLogInViewController.h; sourceTree = "<group>"; };
+		A17C056B20A3C05BF01AF420 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		AAB2EBF0E2D40438ABE00567 /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse.framework/Headers/PFUser.h; sourceTree = "<group>"; };
+		AB9C29F23C91A2F059742454 /* PFProductTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFProductTableViewController.m; path = ParseUI/Classes/ProductTableViewController/PFProductTableViewController.m; sourceTree = "<group>"; };
+		B48AFFC9C8EF46F0E12F7C23 /* PFAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalytics.h; path = Parse.framework/Headers/PFAnalytics.h; sourceTree = "<group>"; };
+		B52B1E2E91A855FD514DCA59 /* PFProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProduct.h; path = Parse.framework/Headers/PFProduct.h; sourceTree = "<group>"; };
+		B5FA24ADFFFC0A39EBA9C58A /* Pods-PocketMoney-ParseUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-ParseUI-prefix.pch"; sourceTree = "<group>"; };
+		B60B84E2343EE3CAA2A04A5C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B810697C803EB6BF15A49BF8 /* PFLogInView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLogInView.m; path = ParseUI/Classes/LogInViewController/PFLogInView.m; sourceTree = "<group>"; };
+		BC6E9906864E53C27564697E /* PFRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelation.h; path = Parse.framework/Headers/PFRelation.h; sourceTree = "<group>"; };
+		C16303F128E324A87C97B66D /* PFSignUpView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSignUpView.m; path = ParseUI/Classes/SignUpViewController/PFSignUpView.m; sourceTree = "<group>"; };
+		C4B2B124A81E69A2A16254EA /* Pods-PocketMoney-Parse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Parse.xcconfig"; sourceTree = "<group>"; };
+		C648A706B5D68A7ED3C67429 /* ParseUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ParseUI.h; path = ParseUI/Other/ParseUI.h; sourceTree = "<group>"; };
+		C785ADD404AE070FE800EC62 /* PFImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFImage.h; path = ParseUI/Classes/Internal/Extensions/PFImage.h; sourceTree = "<group>"; };
+		C7E488A4E6B76CF047A99B61 /* Pods-PocketMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney.release.xcconfig"; sourceTree = "<group>"; };
+		C9F904ABBCEA3AF1051E89D9 /* PFTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFTableViewCell.m; path = ParseUI/Classes/Cells/PFTableViewCell.m; sourceTree = "<group>"; };
+		CA47BE785A9070D6A54AB063 /* PFImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImageCache.m; path = ParseUI/Classes/Internal/PFImageCache.m; sourceTree = "<group>"; };
+		CACF48EFB6535A81F0CDBA4D /* PFLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFLoadingView.m; path = ParseUI/Classes/Internal/Views/PFLoadingView.m; sourceTree = "<group>"; };
+		CBFF45A27009206B58C0F330 /* PFAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFAlertView.m; path = ParseUI/Classes/Internal/Extensions/PFAlertView.m; sourceTree = "<group>"; };
+		CDADC5A9AFB02D189C7D449D /* PFColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFColor.m; path = ParseUI/Classes/Internal/Extensions/PFColor.m; sourceTree = "<group>"; };
+		CDCC599BD7810B2B371E7CC7 /* PFActionButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFActionButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFActionButton.h; sourceTree = "<group>"; };
+		D70E08E47F76DC956206FBE5 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = ParseUI/Resources/Localization/en.lproj; sourceTree = "<group>"; };
+		D81E5F35B29D7AEAEA18C920 /* PFSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSession.h; path = Parse.framework/Headers/PFSession.h; sourceTree = "<group>"; };
+		DB7635673F9264ED5776B7E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DC3C8AFC2ECFE6364E323210 /* PF_Twitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PF_Twitter.h; path = Parse.framework/Headers/PF_Twitter.h; sourceTree = "<group>"; };
+		DE7B4185B3C9C6350DA64509 /* PFImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFImageView.m; path = ParseUI/Classes/Views/PFImageView.m; sourceTree = "<group>"; };
+		DFB08579866F1B083F93ADAE /* PFQueryTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryTableViewController.m; path = ParseUI/Classes/QueryTableViewController/PFQueryTableViewController.m; sourceTree = "<group>"; };
+		E4387C2504CF08374F396FF1 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse.framework/Headers/Parse.h; sourceTree = "<group>"; };
+		E67AF0DCFCA1241BD8E709E7 /* Pods-PocketMoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney.debug.xcconfig"; sourceTree = "<group>"; };
+		E6D69BA4F8DB402D53B93605 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E6F51952F243E9DBDCC6E24D /* Pods-PocketMoney-Parse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PocketMoney-Parse-prefix.pch"; sourceTree = "<group>"; };
+		EBB1025CE6C2D69CEA1EEBE2 /* Pods-PocketMoney-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		EE5E85DA0E810C055019D66D /* PFAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils.h; path = Parse.framework/Headers/PFAnonymousUtils.h; sourceTree = "<group>"; };
+		F281734C34C636CEA99AE71C /* PFActionButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFActionButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFActionButton.m; sourceTree = "<group>"; };
+		F389D0D5356C825BF7E451F1 /* PFQueryCollectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFQueryCollectionViewController.m; path = ParseUI/Classes/QueryCollectionViewController/PFQueryCollectionViewController.m; sourceTree = "<group>"; };
+		F53771E0DD841D9CBF63F2C7 /* Pods-PocketMoney-ParseUI-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PocketMoney-ParseUI-Private.xcconfig"; sourceTree = "<group>"; };
+		F573A1CB4AD29C64CBE5E382 /* PFDismissButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFDismissButton.m; path = ParseUI/Classes/Internal/Views/Buttons/PFDismissButton.m; sourceTree = "<group>"; };
+		F60FAFE48E1DB37ACCA8FADE /* libParse.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libParse.a; sourceTree = "<group>"; };
+		F80F41B3B9A0233F998AC5A0 /* PFRect.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRect.m; path = ParseUI/Classes/Internal/Extensions/PFRect.m; sourceTree = "<group>"; };
+		FA814A800C1BF3840F8FE981 /* PFDismissButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFDismissButton.h; path = ParseUI/Classes/Internal/Views/Buttons/PFDismissButton.h; sourceTree = "<group>"; };
+		FB88316B436EE0EBE7932900 /* PFColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFColor.h; path = ParseUI/Classes/Internal/Extensions/PFColor.h; sourceTree = "<group>"; };
+		FCCFE0245E4319569004E9D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FE04D26D3749D3B10B599293 /* PFResources.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFResources.m; path = ParseUI/Generated/PFResources.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		414FC0F117DE9D583724E8A5 /* Frameworks */ = {
+		2B20A1F534843EE3DCC6C693 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6E1B3C54CBA960450FF6929 /* Foundation.framework in Frameworks */,
+				3E4F6CAC7F7410E6973D5036 /* AudioToolbox.framework in Frameworks */,
+				98E7E61EEBACBD4AC9AFCDAD /* CFNetwork.framework in Frameworks */,
+				FC199B6436BFDAC193C66BA8 /* CoreGraphics.framework in Frameworks */,
+				B20B550A7273F52E9C8F21C4 /* CoreLocation.framework in Frameworks */,
+				9E93DBFDC2DA69E2442A95B0 /* Foundation.framework in Frameworks */,
+				4AFF41F302CB5273BB99A997 /* MobileCoreServices.framework in Frameworks */,
+				2930AB265BA3814B8587E94E /* QuartzCore.framework in Frameworks */,
+				E4AAE43C76B059B4AB569B5D /* Security.framework in Frameworks */,
+				0191B5FF58B81D9DC1136320 /* StoreKit.framework in Frameworks */,
+				676503EECEAD71B3F3FE7DAE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41550388ECC14E9EEC618AAC /* Frameworks */ = {
+		3AF6354374DCA9AB9EFBFA58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23AA342A871CC1603D1BCDD /* Foundation.framework in Frameworks */,
+				4CB6F1BD561441BCB47CE360 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		595E64A8244D05A5F09691A1 /* Frameworks */ = {
+		8B3981B8A8B8531A377842EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C17826B498E2E502FF4624 /* CoreGraphics.framework in Frameworks */,
-				E4C28B7FD7DFDC12B3672B25 /* Foundation.framework in Frameworks */,
-				21137D7F3641E4368A1AE9F7 /* QuartzCore.framework in Frameworks */,
-				6C65DDCAA58609A14B83EEB7 /* UIKit.framework in Frameworks */,
+				B412F65DCFEE46CEA91E8177 /* CoreGraphics.framework in Frameworks */,
+				3AA751E373EE27AC151848D0 /* Foundation.framework in Frameworks */,
+				D1BCBF6103E260F9891E7461 /* QuartzCore.framework in Frameworks */,
+				7104799EC4B3217DB1EAAF33 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8694B3EDB2595074622D8F4 /* Frameworks */ = {
+		92EEA2C90E2C5A3802E2FE20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				134BC62DD7ADF038040A4422 /* AudioToolbox.framework in Frameworks */,
-				86DF49AAA60F15C9B0E5A944 /* CFNetwork.framework in Frameworks */,
-				9F5F91CE8A2727EF95904CCC /* CoreGraphics.framework in Frameworks */,
-				F6F402371E9AEF868EA434D4 /* CoreLocation.framework in Frameworks */,
-				B603824C8AA7F824404A4951 /* Foundation.framework in Frameworks */,
-				40BD6662961350B27434A868 /* MobileCoreServices.framework in Frameworks */,
-				4AD0BCE07C8A0F251C20D667 /* QuartzCore.framework in Frameworks */,
-				6C7F93339893D9448FEC7160 /* Security.framework in Frameworks */,
-				DC63EB1C1A9A5BDD075D9345 /* StoreKit.framework in Frameworks */,
-				EAD7ABBE7B5FD9F63F7FF56E /* SystemConfiguration.framework in Frameworks */,
+				0A6221685543DCBB4896DC15 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04DAAA986BA516B70C2A4711 /* Products */ = {
+		14F1494152A27323D4D4D472 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F9E5896BF65D03E8D017487 /* libPods-PocketMoney.a */,
-				DFF9901FB505391C6B102762 /* libPods-PocketMoney-Bolts.a */,
-				2365CECF5B97089ABD0E9B51 /* libPods-PocketMoney-Parse.a */,
-				1FF698E543DBBB47868F0046 /* libPods-PocketMoney-ParseUI.a */,
+				4773001ACB0FD8A55313521D /* libPods-PocketMoney.a */,
+				47A8196864F7133E8C5E2EFB /* libPods-PocketMoney-Bolts.a */,
+				50AAC049939CC8E8F30E9730 /* libPods-PocketMoney-Parse.a */,
+				25897333E16BD718AEF00F06 /* libPods-PocketMoney-ParseUI.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		123AFA3EAD18A95C750D47C7 = {
+		231EEC3716B78E2DDDABEE27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7AFD8BDF0FBAC104B708CC58 /* Podfile */,
-				8A3F42A93984A7CB57AB0A9F /* Frameworks */,
-				71F0B61FF13714D31CA24F11 /* Pods */,
-				04DAAA986BA516B70C2A4711 /* Products */,
-				AD7698A0E266863DEA622E6C /* Targets Support Files */,
+				8BE41F1937CDD5D074463F91 /* iOS */,
 			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		21BF8E3251D4D5CF00F79B99 /* iOS */ = {
+		65BBF57DE5207770FD6F566F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2DCEC3D120594EEF3A21C799 /* AudioToolbox.framework */,
-				1D813382BFA9C466928E9F15 /* CFNetwork.framework */,
-				4B1FC415B6B2473C15AD32B0 /* CoreGraphics.framework */,
-				ED8EBE15EB2CCA1E41EEE491 /* CoreLocation.framework */,
-				E497A7DB3EE3E8343893C824 /* Foundation.framework */,
-				74FCCFDEB2EA7B54323489F1 /* MobileCoreServices.framework */,
-				71D758BBC0E8F8741B6017CE /* QuartzCore.framework */,
-				F6A105E8E0797EF268E69A15 /* Security.framework */,
-				B18125C0992937B0682B98A1 /* StoreKit.framework */,
-				71CE0079368B61BCC6264AF5 /* SystemConfiguration.framework */,
-				9230EAAE169E841DEC63BA7C /* UIKit.framework */,
+				D70E08E47F76DC956206FBE5 /* en.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		685D3BFDC1C0FB32952FB94A /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				469840F40F03336A26B4C8C5 /* BFExecutor.h */,
+				4C7BA38C062EE0C2A2C44A61 /* BFExecutor.m */,
+				98C2BDB76EC05E72909AD271 /* BFTask.h */,
+				368BE0A960145B712C5D5AC6 /* BFTask.m */,
+				27B8ACDBEE09F50EF5CB5D94 /* BFTaskCompletionSource.h */,
+				52028A492C0006DDD51AF87E /* BFTaskCompletionSource.m */,
+				19197E00DFC16F4E6398FFFB /* Bolts.h */,
+				724DF9B0A18A1EBA16D3F41A /* Bolts.m */,
+				36DDF7179CEF58C471C96308 /* BoltsVersion.h */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		8BAFB8CB74C0AAB9315B3543 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F60FAFE48E1DB37ACCA8FADE /* libParse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BE41F1937CDD5D074463F91 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3BFCA21E8132B59F098603A2 /* AudioToolbox.framework */,
+				5476FEC59112D5813B33CC43 /* CFNetwork.framework */,
+				A17C056B20A3C05BF01AF420 /* CoreGraphics.framework */,
+				3B5BDBFDBBB5CC346B205A28 /* CoreLocation.framework */,
+				08014745A0AB8C832C86C065 /* Foundation.framework */,
+				62399FE2C4201FB2CAFAC1DC /* MobileCoreServices.framework */,
+				38067002C1AD747674D40F93 /* QuartzCore.framework */,
+				B60B84E2343EE3CAA2A04A5C /* Security.framework */,
+				48001D0D31253F932B7CBF6C /* StoreKit.framework */,
+				FCCFE0245E4319569004E9D8 /* SystemConfiguration.framework */,
+				DB7635673F9264ED5776B7E4 /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		254B5B909DA7192DB52F90B4 /* Pods-PocketMoney */ = {
+		9DA72DE1624C63A0D01C8BDC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B6A5ABA50E8613E039470252 /* Pods-PocketMoney-acknowledgements.markdown */,
-				0C15DD111BE58099F74A0433 /* Pods-PocketMoney-acknowledgements.plist */,
-				2004E174E2A872450E4C014A /* Pods-PocketMoney-dummy.m */,
-				6256D8F36C086C2436234C89 /* Pods-PocketMoney-environment.h */,
-				5A9A68228F928FC36AE69086 /* Pods-PocketMoney-resources.sh */,
-				5D9A55B2A1B9DADA12490D0D /* Pods-PocketMoney.debug.xcconfig */,
-				12616AB79316356AADB16B6A /* Pods-PocketMoney.release.xcconfig */,
-			);
-			name = "Pods-PocketMoney";
-			path = "Target Support Files/Pods-PocketMoney";
-			sourceTree = "<group>";
-		};
-		2A1FBD3EF1A7477A6FC4AAED /* Bolts */ = {
-			isa = PBXGroup;
-			children = (
-				D02655179C69D11250B88BB5 /* Support Files */,
-				86514A59793F98AEB6A166D9 /* Tasks */,
-			);
-			path = Bolts;
-			sourceTree = "<group>";
-		};
-		393A33BF7766365EAB205BAE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EE07CDF5076BD67ABAEB7C23 /* Pods-PocketMoney-Parse.xcconfig */,
-				1041E0E10D64A8314B5FC5CB /* Pods-PocketMoney-Parse-Private.xcconfig */,
-				8F19445560FC48D4CB505269 /* Pods-PocketMoney-Parse-dummy.m */,
-				7A5A18F1CB553BB41BA846E8 /* Pods-PocketMoney-Parse-prefix.pch */,
+				C4B2B124A81E69A2A16254EA /* Pods-PocketMoney-Parse.xcconfig */,
+				3A774E1903F5C0743E040E92 /* Pods-PocketMoney-Parse-Private.xcconfig */,
+				1DA0706B47E537EAA7825ADD /* Pods-PocketMoney-Parse-dummy.m */,
+				E6F51952F243E9DBDCC6E24D /* Pods-PocketMoney-Parse-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-PocketMoney-Parse";
 			sourceTree = "<group>";
 		};
-		71F0B61FF13714D31CA24F11 /* Pods */ = {
+		A0D6D110B47138CA10C9BF7B /* Pods-PocketMoney */ = {
 			isa = PBXGroup;
 			children = (
-				2A1FBD3EF1A7477A6FC4AAED /* Bolts */,
-				D99B8B2C1509FD3D35B50842 /* Parse */,
-				E42CA544EAD1FF93E5B0B8AA /* ParseUI */,
+				983F98CE1C77E06F5FFE619F /* Pods-PocketMoney-acknowledgements.markdown */,
+				900A90DED9C314D1A18B3415 /* Pods-PocketMoney-acknowledgements.plist */,
+				293924C340AD10122A684BF7 /* Pods-PocketMoney-dummy.m */,
+				18DE17276249AE7002DD8E2F /* Pods-PocketMoney-environment.h */,
+				07AD5D09E5206CDB90E01C8D /* Pods-PocketMoney-resources.sh */,
+				E67AF0DCFCA1241BD8E709E7 /* Pods-PocketMoney.debug.xcconfig */,
+				C7E488A4E6B76CF047A99B61 /* Pods-PocketMoney.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Pods-PocketMoney";
+			path = "Target Support Files/Pods-PocketMoney";
 			sourceTree = "<group>";
 		};
-		86514A59793F98AEB6A166D9 /* Tasks */ = {
+		B9C42F12F68A42464C3DD017 = {
 			isa = PBXGroup;
 			children = (
-				F27E33839050EF6262B82A53 /* BFExecutor.h */,
-				38183E43EA960330DD178EFD /* BFExecutor.m */,
-				0620E6DF9BBC9A960C694E7D /* BFTask.h */,
-				D3EA2BEE7B185BB615DF310C /* BFTask.m */,
-				7BE73DE2A2CEA122E0B313AF /* BFTaskCompletionSource.h */,
-				D67BA2C09815795247F5C6F5 /* BFTaskCompletionSource.m */,
-				0BBFD23B219FE9FAEACE4F05 /* Bolts.h */,
-				69F8073436979FA7F352601E /* Bolts.m */,
-				1B5940BADCF33766BE3C9B52 /* BoltsVersion.h */,
+				E6D69BA4F8DB402D53B93605 /* Podfile */,
+				231EEC3716B78E2DDDABEE27 /* Frameworks */,
+				D609CF74EEF9BE3362CED42E /* Pods */,
+				14F1494152A27323D4D4D472 /* Products */,
+				D50D4B095776BF825F3632BC /* Targets Support Files */,
 			);
-			name = Tasks;
 			sourceTree = "<group>";
 		};
-		8A3F42A93984A7CB57AB0A9F /* Frameworks */ = {
+		C3B5E56E64C2D62BAC42F277 /* ParseUI */ = {
 			isa = PBXGroup;
 			children = (
-				21BF8E3251D4D5CF00F79B99 /* iOS */,
+				CDCC599BD7810B2B371E7CC7 /* PFActionButton.h */,
+				F281734C34C636CEA99AE71C /* PFActionButton.m */,
+				6EAFDD4F3A2BA0E116598ACB /* PFActivityIndicatorCollectionReusableView.h */,
+				40AEC0B4996FB0FD28FEE228 /* PFActivityIndicatorCollectionReusableView.m */,
+				8FA1C92D660A9EA61A11AD59 /* PFActivityIndicatorTableViewCell.h */,
+				502E5AB776DBB203522D21EA /* PFActivityIndicatorTableViewCell.m */,
+				3225E93C3BEF4B150D489CE7 /* PFAlertView.h */,
+				CBFF45A27009206B58C0F330 /* PFAlertView.m */,
+				0C18AAA8D4665D8BB8422655 /* PFCollectionViewCell.h */,
+				71B043207275A27F5613FAE1 /* PFCollectionViewCell.m */,
+				FB88316B436EE0EBE7932900 /* PFColor.h */,
+				CDADC5A9AFB02D189C7D449D /* PFColor.m */,
+				FA814A800C1BF3840F8FE981 /* PFDismissButton.h */,
+				F573A1CB4AD29C64CBE5E382 /* PFDismissButton.m */,
+				C785ADD404AE070FE800EC62 /* PFImage.h */,
+				52024D869C90471C2E395A79 /* PFImage.m */,
+				4FFD91C7C63A09B2C1FDD341 /* PFImageCache.h */,
+				CA47BE785A9070D6A54AB063 /* PFImageCache.m */,
+				2ED8DB3B98810706A9E91420 /* PFImageView.h */,
+				DE7B4185B3C9C6350DA64509 /* PFImageView.m */,
+				926F1A6BF9413B51F872D6D1 /* PFLoadingView.h */,
+				CACF48EFB6535A81F0CDBA4D /* PFLoadingView.m */,
+				103EC5C0BE717C404F29CE31 /* PFLocalization.h */,
+				133AC30D6D97D797717A04F8 /* PFLogInView.h */,
+				B810697C803EB6BF15A49BF8 /* PFLogInView.m */,
+				A084A4F9673BD4635FFF5FD1 /* PFLogInViewController.h */,
+				4ADFBD40578CE81FC0D7C40A /* PFLogInViewController.m */,
+				5FFE48913F35ED40B0B778D1 /* PFPrimaryButton.h */,
+				7F8519CAEC78B0C4721C408D /* PFPrimaryButton.m */,
+				42F37543DFE4CE031361FC10 /* PFProductTableViewController.h */,
+				AB9C29F23C91A2F059742454 /* PFProductTableViewController.m */,
+				0E5C44A574171504AB52A711 /* PFPurchaseTableViewCell.h */,
+				891DC77BBA2B5FD8F04AC0BB /* PFPurchaseTableViewCell.m */,
+				01786E6AB407EB32FCE17AF1 /* PFQueryCollectionViewController.h */,
+				F389D0D5356C825BF7E451F1 /* PFQueryCollectionViewController.m */,
+				20521DC53C95779D0CEE8955 /* PFQueryTableViewController.h */,
+				DFB08579866F1B083F93ADAE /* PFQueryTableViewController.m */,
+				1C3F617E7E630F94D404BD11 /* PFRect.h */,
+				F80F41B3B9A0233F998AC5A0 /* PFRect.m */,
+				37A16D1DCCFD5151C9E272DE /* PFResources.h */,
+				FE04D26D3749D3B10B599293 /* PFResources.m */,
+				80DFD2E516F240AB4C0AB0C9 /* PFSignUpView.h */,
+				C16303F128E324A87C97B66D /* PFSignUpView.m */,
+				71CD6E2A1484F3B4E0B7B274 /* PFSignUpViewController.h */,
+				049527F140259C384425E76E /* PFSignUpViewController.m */,
+				72E60DAD14BC9BC0B4A19D9C /* PFTableViewCell.h */,
+				C9F904ABBCEA3AF1051E89D9 /* PFTableViewCell.m */,
+				15DB13CE6BAD2F43AB790E10 /* PFTextButton.h */,
+				7245683F7E006ED767377977 /* PFTextButton.m */,
+				4B1CB2F5E628288EF1561438 /* PFTextField.h */,
+				105109466B72C5616CFAB7EC /* PFTextField.m */,
+				C648A706B5D68A7ED3C67429 /* ParseUI.h */,
+				94D39498E9724A3893C684FD /* ParseUIConstants.h */,
+				65BBF57DE5207770FD6F566F /* Resources */,
+				E0DFE8D0C24409268D5CF1C0 /* Support Files */,
 			);
-			name = Frameworks;
+			path = ParseUI;
 			sourceTree = "<group>";
 		};
-		AD7698A0E266863DEA622E6C /* Targets Support Files */ = {
+		CF055CD37DA28F002F8E51C9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				254B5B909DA7192DB52F90B4 /* Pods-PocketMoney */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C7CA42F0C6A44C964D4E50B8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				98A77F77A9958F3F50C70D7F /* libParse.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D02655179C69D11250B88BB5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				05C1EEE61C398D3991D456F3 /* Pods-PocketMoney-Bolts.xcconfig */,
-				B88B39E734D547F18D902E66 /* Pods-PocketMoney-Bolts-Private.xcconfig */,
-				E3A96441921DBD43F4B52707 /* Pods-PocketMoney-Bolts-dummy.m */,
-				BBFB6D315D0E1B5B880A6DBD /* Pods-PocketMoney-Bolts-prefix.pch */,
+				86B6C152B59C7440D6FE26E0 /* Pods-PocketMoney-Bolts.xcconfig */,
+				EBB1025CE6C2D69CEA1EEBE2 /* Pods-PocketMoney-Bolts-Private.xcconfig */,
+				3C1378D8258A6083974D4D50 /* Pods-PocketMoney-Bolts-dummy.m */,
+				913930D0BA8BCF761294D8C4 /* Pods-PocketMoney-Bolts-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-PocketMoney-Bolts";
 			sourceTree = "<group>";
 		};
-		D99B8B2C1509FD3D35B50842 /* Parse */ = {
+		D50D4B095776BF825F3632BC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7A20531DF2A4598EF584A65E /* Empty.m */,
-				91FA79582FCD9E0A95F2BB58 /* PFACL.h */,
-				928AB19565707706B74DFE34 /* PFAnalytics.h */,
-				7C0AD77CC8AB0268631E5F7B /* PFAnonymousUtils.h */,
-				85BCFC39CB15875664DAED5F /* PFCloud.h */,
-				DDB528481722E15962F1B627 /* PFConfig.h */,
-				12886A77CEC4EFC1769F8127 /* PFConstants.h */,
-				0D1F3E2D8D16E35152CD79C1 /* PFFile.h */,
-				63AA234F6F2CF0BA4917146C /* PFGeoPoint.h */,
-				5AA379CCEFF53BB051CCDE13 /* PFInstallation.h */,
-				731C0ACA5A1E907122E3642B /* PFNetworkActivityIndicatorManager.h */,
-				49CC21D8237E931918A6D636 /* PFNullability.h */,
-				8C6718DEB202106AC3541763 /* PFObject.h */,
-				F423008CD71C2AA2E94346D7 /* PFObject+Subclass.h */,
-				619809F1CFC93E2233791E6F /* PFProduct.h */,
-				3C44C6A69030C92A52FF23E6 /* PFPurchase.h */,
-				68C2315124F391E83A0CAC0F /* PFPush.h */,
-				656006E9AE5C6ACE9984F803 /* PFQuery.h */,
-				2C42B0D3CB1BDDAB23024631 /* PFRelation.h */,
-				3DC4BAD806FC23F18A2BC5AD /* PFRole.h */,
-				33AC5F4F9B00380AC0E1387D /* PFSession.h */,
-				A8647BED0C0E386033304C6A /* PFSubclassing.h */,
-				4DF437FBD059A1BB4D9DB339 /* PFTwitterUtils.h */,
-				9985293B6584B9867D4373B0 /* PFUser.h */,
-				6EA249E16A95DF612D29B49D /* PF_Twitter.h */,
-				F678A716EC44040CF300F8B2 /* Parse.h */,
-				C7CA42F0C6A44C964D4E50B8 /* Frameworks */,
-				393A33BF7766365EAB205BAE /* Support Files */,
+				A0D6D110B47138CA10C9BF7B /* Pods-PocketMoney */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D609CF74EEF9BE3362CED42E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE5AECD7239C6EC1D11973 /* Bolts */,
+				E04A0BF73CBE8B017E522A92 /* Parse */,
+				C3B5E56E64C2D62BAC42F277 /* ParseUI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E04A0BF73CBE8B017E522A92 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				1B7033B6F908824014357F61 /* Empty.m */,
+				93D4D8DAC1B8E9D72A22CC6E /* PFACL.h */,
+				B48AFFC9C8EF46F0E12F7C23 /* PFAnalytics.h */,
+				EE5E85DA0E810C055019D66D /* PFAnonymousUtils.h */,
+				221C5FF8C0500F5162A830D4 /* PFCloud.h */,
+				385AFB61D3716687EE8CBE3E /* PFConfig.h */,
+				5F6ED0821C0D1D2139EC9FC7 /* PFConstants.h */,
+				3535B4111DC95E1CBB5F13AD /* PFFile.h */,
+				9AC64D567E314673A0B3A6B2 /* PFGeoPoint.h */,
+				2B610B9DEE8099805837863D /* PFInstallation.h */,
+				362EA8A5BDA6F25D6C9FA009 /* PFNetworkActivityIndicatorManager.h */,
+				448041E6F7EFB3C62B6697EF /* PFNullability.h */,
+				4C795D7EC3A8B947507A9C09 /* PFObject.h */,
+				530083158A62659A426ED34A /* PFObject+Subclass.h */,
+				B52B1E2E91A855FD514DCA59 /* PFProduct.h */,
+				639750FF82B1F83F1765E160 /* PFPurchase.h */,
+				60AB02563FB23522A0B271F1 /* PFPush.h */,
+				79C03DFF3D0E14837DFF2EFA /* PFQuery.h */,
+				BC6E9906864E53C27564697E /* PFRelation.h */,
+				8B048F66AF7F0ED5220A8819 /* PFRole.h */,
+				D81E5F35B29D7AEAEA18C920 /* PFSession.h */,
+				5405AF3CD0193A2B84D5353B /* PFSubclassing.h */,
+				0CDB7600FA4588925BEEAFA9 /* PFTwitterUtils.h */,
+				AAB2EBF0E2D40438ABE00567 /* PFUser.h */,
+				DC3C8AFC2ECFE6364E323210 /* PF_Twitter.h */,
+				E4387C2504CF08374F396FF1 /* Parse.h */,
+				8BAFB8CB74C0AAB9315B3543 /* Frameworks */,
+				9DA72DE1624C63A0D01C8BDC /* Support Files */,
 			);
 			path = Parse;
 			sourceTree = "<group>";
 		};
-		E42CA544EAD1FF93E5B0B8AA /* ParseUI */ = {
+		E0DFE8D0C24409268D5CF1C0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				70B7D6CD119D62661E39CA40 /* PFActionButton.h */,
-				5B0918942059C17403E1BBAA /* PFActionButton.m */,
-				C9262796FA84B912EF6815E5 /* PFActivityIndicatorCollectionReusableView.h */,
-				34D148002AA7735B68F3B085 /* PFActivityIndicatorCollectionReusableView.m */,
-				3951516A0A146904ECC6AD13 /* PFActivityIndicatorTableViewCell.h */,
-				E8B577E11F448523CC5E2A31 /* PFActivityIndicatorTableViewCell.m */,
-				16C0DF277178E24F4E347453 /* PFAlertView.h */,
-				35E2F37128F4CB596A95A2F2 /* PFAlertView.m */,
-				F8B36109B09027863C529820 /* PFCollectionViewCell.h */,
-				D8B29332B7D4969D6FC90C62 /* PFCollectionViewCell.m */,
-				8F44BF9844308229FD5FB769 /* PFColor.h */,
-				F2D3183027A171D58657F7F3 /* PFColor.m */,
-				DD45B73A93E515CFC0D3F566 /* PFDismissButton.h */,
-				3F220AE2DEE5A7B3FAB86C9A /* PFDismissButton.m */,
-				E425E1991CC715C95D2410CA /* PFImage.h */,
-				E9FF849E37C6D143914D5EE2 /* PFImage.m */,
-				396324560EA0197A7A6EC1AB /* PFImageCache.h */,
-				B4AE46A276CA055FDD8B2EA2 /* PFImageCache.m */,
-				9C91DEEDDDC026AD98969B2A /* PFImageView.h */,
-				81EA2BE6ABA10290CB6F247D /* PFImageView.m */,
-				BD0C390E0FD1EF513B71DE49 /* PFLoadingView.h */,
-				3A79E6DE7EF65EA1CF1FE0AF /* PFLoadingView.m */,
-				6386E59FD30CF391E686B0DD /* PFLocalization.h */,
-				5B5FBD9A7592E31C810ADA51 /* PFLogInView.h */,
-				69BA0FB1D7B84E8B6C3E3D34 /* PFLogInView.m */,
-				0F515D002333239006D03BC9 /* PFLogInViewController.h */,
-				1377503D91DF426C77A6AC74 /* PFLogInViewController.m */,
-				2D176C37A23D0EA17EA4FD95 /* PFPrimaryButton.h */,
-				7B8F8D1C40F981C9BA7C9CBA /* PFPrimaryButton.m */,
-				074DC0C12088D1AD8CB40024 /* PFProductTableViewController.h */,
-				E25CF2F3B7EA270EE9C43082 /* PFProductTableViewController.m */,
-				92659E60D5613D008F61E01C /* PFPurchaseTableViewCell.h */,
-				FFA67EF9EB5E57C772958EFD /* PFPurchaseTableViewCell.m */,
-				8673ADADCABB57E7240E86E3 /* PFQueryCollectionViewController.h */,
-				8A3459F69F5D0C981C7C4D56 /* PFQueryCollectionViewController.m */,
-				7A430B71B87965CA29A2C89E /* PFQueryTableViewController.h */,
-				CE2BE6AE7DBF86726F3C8EBC /* PFQueryTableViewController.m */,
-				7913B514B612A02C950B093C /* PFRect.h */,
-				5A93C71D898B6165412663A1 /* PFRect.m */,
-				CA3426022A12E231B41EEBA7 /* PFResources.h */,
-				F9CAC89D389867620AABA2C4 /* PFResources.m */,
-				E1BED4FBE6F3CBF11A3EC281 /* PFSignUpView.h */,
-				B70CFDC364D25BFABB0E9BC7 /* PFSignUpView.m */,
-				B413DFB7975A40910FF343A7 /* PFSignUpViewController.h */,
-				5FCD14F527A58550D8691472 /* PFSignUpViewController.m */,
-				3CE761DE7BBCF284E577B6F0 /* PFTableViewCell.h */,
-				3E403721AD0EB0C85AE588D0 /* PFTableViewCell.m */,
-				037EA4B9061C793BC3FCAC6E /* PFTextButton.h */,
-				BF2DE336495E2A2822E7B76D /* PFTextButton.m */,
-				D914657B656B189360D4E42B /* PFTextField.h */,
-				1C4411438199F5385D0EE0CB /* PFTextField.m */,
-				EA2CCB51629C9513F072626A /* ParseUI.h */,
-				3F792285A45ED5BD992BB071 /* ParseUIConstants.h */,
-				F73D6D1E417DD0278BD9FF83 /* Resources */,
-				F066931BEFDC369C636EA0F6 /* Support Files */,
-			);
-			path = ParseUI;
-			sourceTree = "<group>";
-		};
-		F066931BEFDC369C636EA0F6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D21E26532FAD7FD3F39EBEF /* Pods-PocketMoney-ParseUI.xcconfig */,
-				311D30B79C981666F098FF85 /* Pods-PocketMoney-ParseUI-Private.xcconfig */,
-				739933019D6EDCD8845EEC26 /* Pods-PocketMoney-ParseUI-dummy.m */,
-				62FEA6A28A6481189ED4BDAC /* Pods-PocketMoney-ParseUI-prefix.pch */,
+				19896449D56CE6B1003A57B6 /* Pods-PocketMoney-ParseUI.xcconfig */,
+				F53771E0DD841D9CBF63F2C7 /* Pods-PocketMoney-ParseUI-Private.xcconfig */,
+				63379817106D2EFEC383652D /* Pods-PocketMoney-ParseUI-dummy.m */,
+				B5FA24ADFFFC0A39EBA9C58A /* Pods-PocketMoney-ParseUI-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-PocketMoney-ParseUI";
 			sourceTree = "<group>";
 		};
-		F73D6D1E417DD0278BD9FF83 /* Resources */ = {
+		F3AE5AECD7239C6EC1D11973 /* Bolts */ = {
 			isa = PBXGroup;
 			children = (
-				F6AEFE1C873AEDDF6DDF1EDF /* en.lproj */,
+				CF055CD37DA28F002F8E51C9 /* Support Files */,
+				685D3BFDC1C0FB32952FB94A /* Tasks */,
 			);
-			name = Resources;
+			path = Bolts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		887AAB9B7DD8CE3AF718D3AB /* Headers */ = {
+		5ECFFE267F6FEC196172AE07 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8511E468ACD927A05EB3874 /* PFActionButton.h in Headers */,
-				B1E122FA363F855063A3BA6B /* PFActivityIndicatorCollectionReusableView.h in Headers */,
-				DA6E235E73EBEBBDB0FBCB2D /* PFActivityIndicatorTableViewCell.h in Headers */,
-				A6907ED3D40BF0CFDE0CD26A /* PFAlertView.h in Headers */,
-				6B30E2093EC85244618D83E2 /* PFCollectionViewCell.h in Headers */,
-				B591C02088622F4CC685B295 /* PFColor.h in Headers */,
-				376B0CC8E05AAACC26ECBDC9 /* PFDismissButton.h in Headers */,
-				69530D9EEC6E2D1BF35B613F /* PFImage.h in Headers */,
-				789A9043B0282D13B9BBB8B8 /* PFImageCache.h in Headers */,
-				BADA758727EF8E2C9F00787C /* PFImageView.h in Headers */,
-				101BDE9C830DC88CA6247BE8 /* PFLoadingView.h in Headers */,
-				FC4A2EE580735FDB3E12AFD5 /* PFLocalization.h in Headers */,
-				6219163C28DFDD000AAFF0A7 /* PFLogInView.h in Headers */,
-				CE9ACDEF2AF2380CC9C6B007 /* PFLogInViewController.h in Headers */,
-				94F8E19C80BF805C7BD16579 /* PFPrimaryButton.h in Headers */,
-				C336E253775162090B89B1B4 /* PFProductTableViewController.h in Headers */,
-				76677AC86FDB250DF7E830C4 /* PFPurchaseTableViewCell.h in Headers */,
-				B85F4033567714166BC537E2 /* PFQueryCollectionViewController.h in Headers */,
-				BEA7D1C9526B51EFE03B942D /* PFQueryTableViewController.h in Headers */,
-				E0F98FC25B4395EB2C033275 /* PFRect.h in Headers */,
-				1960A0682B4989B703216D04 /* PFResources.h in Headers */,
-				816E980B7456E920A7A94C34 /* PFSignUpView.h in Headers */,
-				3F2C75FA02616819269483C4 /* PFSignUpViewController.h in Headers */,
-				CA768DB9441CF9690D8FCA8A /* PFTableViewCell.h in Headers */,
-				2A040C6E94C424CCBDC06058 /* PFTextButton.h in Headers */,
-				2E44ED13CE1A1CD7BF84F9DA /* PFTextField.h in Headers */,
-				CBB6CC79EEDC6C6B867587DF /* ParseUI.h in Headers */,
-				F697C86C7F328CD7413411F0 /* ParseUIConstants.h in Headers */,
+				9388A6EF8FCC32D6A5D564D6 /* PFActionButton.h in Headers */,
+				685F03FDEA80C216B4364178 /* PFActivityIndicatorCollectionReusableView.h in Headers */,
+				CD47F1F1163D30DE84E744D4 /* PFActivityIndicatorTableViewCell.h in Headers */,
+				6FA8ECBA193436E56C07FBD2 /* PFAlertView.h in Headers */,
+				A286BDCAA9B672FA9EA03771 /* PFCollectionViewCell.h in Headers */,
+				20E43DD67659710841D253A9 /* PFColor.h in Headers */,
+				C9EC9AEF2885C90512135829 /* PFDismissButton.h in Headers */,
+				749F0A76C11921A1C35B6842 /* PFImage.h in Headers */,
+				59586BB7E60E165B24B39D5B /* PFImageCache.h in Headers */,
+				98FBFD32B6F3B2340A3B3F22 /* PFImageView.h in Headers */,
+				84B2DA5E82C371C5B4CBFADF /* PFLoadingView.h in Headers */,
+				FFFB9E2776904669C5CE48A4 /* PFLocalization.h in Headers */,
+				353A669F479108EE3E755462 /* PFLogInView.h in Headers */,
+				B87283D4966F1667D3C10C54 /* PFLogInViewController.h in Headers */,
+				0EA9BD2F1E68C1E4CF5A2B00 /* PFPrimaryButton.h in Headers */,
+				1176D1C687C25F34CBF9E600 /* PFProductTableViewController.h in Headers */,
+				623F8C92DC7940CF08CF8868 /* PFPurchaseTableViewCell.h in Headers */,
+				161DCDE3A059FC01E4108B7B /* PFQueryCollectionViewController.h in Headers */,
+				524C36C535D5D513F3C95544 /* PFQueryTableViewController.h in Headers */,
+				52AE7836BCD68366B7926AC4 /* PFRect.h in Headers */,
+				1CC3D37CB0FBAC580814CF72 /* PFResources.h in Headers */,
+				B92E9C262A9E8E4783A63AF7 /* PFSignUpView.h in Headers */,
+				C8F3B0CE9ECEAAA946E4E61B /* PFSignUpViewController.h in Headers */,
+				5C25151F6B6047BC76980B3C /* PFTableViewCell.h in Headers */,
+				607FE9E03158AEBEDB0615C3 /* PFTextButton.h in Headers */,
+				D08B706FE46707D5313A4C4A /* PFTextField.h in Headers */,
+				CA54C77A91B0E4D3AA2F431E /* ParseUI.h in Headers */,
+				B072BF788CDF068EA6819385 /* ParseUIConstants.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AE4096CC0334F1DB27E2695 /* Headers */ = {
+		C5401AF7D964D9B74845B99E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D984637E89E802B5E810BAD /* PFACL.h in Headers */,
-				F1DFF5679D95783C860F3537 /* PFAnalytics.h in Headers */,
-				111905E256D353F5C247BAF9 /* PFAnonymousUtils.h in Headers */,
-				5DED3D0FE4CA8A3EE78B9B17 /* PFCloud.h in Headers */,
-				E929CEB1621249D94351C5CE /* PFConfig.h in Headers */,
-				159C9748CC997FFE8A3E8A57 /* PFConstants.h in Headers */,
-				6D7C1493061FFDF1AFF25BE7 /* PFFile.h in Headers */,
-				52597D935B12781820199302 /* PFGeoPoint.h in Headers */,
-				1F026BADA4B963395A12CC26 /* PFInstallation.h in Headers */,
-				D09BCFBB4155639E8757ECC3 /* PFNetworkActivityIndicatorManager.h in Headers */,
-				4420E3571F2BD0791A7896BE /* PFNullability.h in Headers */,
-				9032FB0FD333BB72F49162DF /* PFObject+Subclass.h in Headers */,
-				2ECA57DECF02B2AB0CDFE56F /* PFObject.h in Headers */,
-				8930E670CBB8775ABF03A767 /* PFProduct.h in Headers */,
-				F386EAE8097819AC671BA31B /* PFPurchase.h in Headers */,
-				0DD0DF5E277F6CACE1B115C6 /* PFPush.h in Headers */,
-				FDBDF91CE5F80D0755CC5AE0 /* PFQuery.h in Headers */,
-				11D46D75979B487DA60ED63B /* PFRelation.h in Headers */,
-				F90D4F43BA8511C479CCB4D9 /* PFRole.h in Headers */,
-				CF38BD6DC20FE2E38B961B8A /* PFSession.h in Headers */,
-				B84C2A8974CAEB64A50A58CD /* PFSubclassing.h in Headers */,
-				74D731C0B28DCB8E05F7D373 /* PFTwitterUtils.h in Headers */,
-				6035E28326F11833D34015FC /* PFUser.h in Headers */,
-				C0F574D951415EA0E354E381 /* PF_Twitter.h in Headers */,
-				F724E05CE9629C210FD7D9DA /* Parse.h in Headers */,
+				C86090120EC87289DF0E55C2 /* BFExecutor.h in Headers */,
+				7CF088DB2A626779B23562AF /* BFTask.h in Headers */,
+				6171BA3824CEA8740385B55A /* BFTaskCompletionSource.h in Headers */,
+				26195CCBFA3B8CE88A00352D /* Bolts.h in Headers */,
+				9A3E12627C4591390F09617D /* BoltsVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8505E44BB45AB9C728222DC /* Headers */ = {
+		FD810FA4226A4B01D6770438 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				518538D1F204424ABE5AF7A2 /* BFExecutor.h in Headers */,
-				06013E2252F7766833A1BE78 /* BFTask.h in Headers */,
-				935E769E51733A648D5B95B6 /* BFTaskCompletionSource.h in Headers */,
-				A5C611586F662C036EF08E6A /* Bolts.h in Headers */,
-				36B72F6A25B2B2E9980F79BF /* BoltsVersion.h in Headers */,
+				2EADE0B16DA2CED4867EBF95 /* PFACL.h in Headers */,
+				235022E003D3FA38B94A5A32 /* PFAnalytics.h in Headers */,
+				45948F4C3564DEDB4262805B /* PFAnonymousUtils.h in Headers */,
+				5CEC97EEE0E6DFD03B0841F1 /* PFCloud.h in Headers */,
+				DA717131640CC1414A68F897 /* PFConfig.h in Headers */,
+				37E709FFDE2C36CD3BB6FBAF /* PFConstants.h in Headers */,
+				1EC7AB84229DF1FE00B1EFC1 /* PFFile.h in Headers */,
+				79FE3079D20790E03F62C9F2 /* PFGeoPoint.h in Headers */,
+				DA84E861B5612E9DFC0BE508 /* PFInstallation.h in Headers */,
+				03B218076FC33BEE9DB42AED /* PFNetworkActivityIndicatorManager.h in Headers */,
+				1DF91B2E99FA016EA42A9459 /* PFNullability.h in Headers */,
+				5821F5EFD65340BD479AB3F9 /* PFObject+Subclass.h in Headers */,
+				D78C4142A6A3746A4C956E0B /* PFObject.h in Headers */,
+				C0D615F61F1ACAF178ECB1F8 /* PFProduct.h in Headers */,
+				9CFFCF179168B343CBD71E60 /* PFPurchase.h in Headers */,
+				B5C23630ABCD43A641724DBE /* PFPush.h in Headers */,
+				C5A96878CFD9FB9A81850E77 /* PFQuery.h in Headers */,
+				805130B7BEA58140762DBFCF /* PFRelation.h in Headers */,
+				27A4D0315BDFA8920F80831B /* PFRole.h in Headers */,
+				C0EDF94736A3128EAA8841E3 /* PFSession.h in Headers */,
+				FF6659A129596E980B70C17E /* PFSubclassing.h in Headers */,
+				05CC92EA66D1CEE21AB07ED6 /* PFTwitterUtils.h in Headers */,
+				37E905AA9D45EBB39DD8DC83 /* PFUser.h in Headers */,
+				06738F1BA3ECDABC0EF43919 /* PF_Twitter.h in Headers */,
+				C2F914019D0B117D7DC8DAE2 /* Parse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5B2391E5207E0F35030C2AA8 /* Pods-PocketMoney */ = {
+		3EACAD3A928123D8BC87DC46 /* Pods-PocketMoney-ParseUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A077C1D3543ED6A3C6D236A0 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney" */;
+			buildConfigurationList = B2367DD3098147AA59BC2E16 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-ParseUI" */;
 			buildPhases = (
-				12A45C81062B014B12AF7763 /* Sources */,
-				41550388ECC14E9EEC618AAC /* Frameworks */,
+				8A950540E01E12C00F1DD55C /* Sources */,
+				8B3981B8A8B8531A377842EF /* Frameworks */,
+				5ECFFE267F6FEC196172AE07 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E9E953B8A9D9ABB28432D4AD /* PBXTargetDependency */,
-				16FACC3D22C6A5527CE3706D /* PBXTargetDependency */,
-				FD3C95714E181B523E7AABE6 /* PBXTargetDependency */,
-			);
-			name = "Pods-PocketMoney";
-			productName = "Pods-PocketMoney";
-			productReference = 6F9E5896BF65D03E8D017487 /* libPods-PocketMoney.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		74B716E682CAC48C7B66121C /* Pods-PocketMoney-ParseUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C358342F61A3A7B9E0C7B8B /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-ParseUI" */;
-			buildPhases = (
-				4D0681449B5921CA672D447C /* Sources */,
-				595E64A8244D05A5F09691A1 /* Frameworks */,
-				887AAB9B7DD8CE3AF718D3AB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				071764D8474C29CEB0C77E06 /* PBXTargetDependency */,
+				D3FBEF7364D102065730393A /* PBXTargetDependency */,
 			);
 			name = "Pods-PocketMoney-ParseUI";
 			productName = "Pods-PocketMoney-ParseUI";
-			productReference = 1FF698E543DBBB47868F0046 /* libPods-PocketMoney-ParseUI.a */;
+			productReference = 25897333E16BD718AEF00F06 /* libPods-PocketMoney-ParseUI.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		98A3F72937BF9A9987B6B865 /* Pods-PocketMoney-Parse */ = {
+		6E1722835353EDDDD5565738 /* Pods-PocketMoney-Parse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12D7E3C0821E3198A9B33D66 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Parse" */;
+			buildConfigurationList = 758962E1C87906C1DBABAE66 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Parse" */;
 			buildPhases = (
-				A24857328EF3BEAB899C7D66 /* Sources */,
-				D8694B3EDB2595074622D8F4 /* Frameworks */,
-				8AE4096CC0334F1DB27E2695 /* Headers */,
+				038B34484A012B21EDE04874 /* Sources */,
+				2B20A1F534843EE3DCC6C693 /* Frameworks */,
+				FD810FA4226A4B01D6770438 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5CB8797A945D43C8AA3A502F /* PBXTargetDependency */,
+				495655A5D8B7ABF795FCCDF3 /* PBXTargetDependency */,
 			);
 			name = "Pods-PocketMoney-Parse";
 			productName = "Pods-PocketMoney-Parse";
-			productReference = 2365CECF5B97089ABD0E9B51 /* libPods-PocketMoney-Parse.a */;
+			productReference = 50AAC049939CC8E8F30E9730 /* libPods-PocketMoney-Parse.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FF0BA091EE1DA4BCD8989682 /* Pods-PocketMoney-Bolts */ = {
+		A39A8241C8BD753291587DD2 /* Pods-PocketMoney-Bolts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9574D61B9B3964F136C1965 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Bolts" */;
+			buildConfigurationList = 89728690CB278E9A677CA0C0 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Bolts" */;
 			buildPhases = (
-				5E687BF8E240700ED7B3BF27 /* Sources */,
-				414FC0F117DE9D583724E8A5 /* Frameworks */,
-				E8505E44BB45AB9C728222DC /* Headers */,
+				26D46867A909EBD3175E84B7 /* Sources */,
+				3AF6354374DCA9AB9EFBFA58 /* Frameworks */,
+				C5401AF7D964D9B74845B99E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -740,139 +721,254 @@
 			);
 			name = "Pods-PocketMoney-Bolts";
 			productName = "Pods-PocketMoney-Bolts";
-			productReference = DFF9901FB505391C6B102762 /* libPods-PocketMoney-Bolts.a */;
+			productReference = 47A8196864F7133E8C5E2EFB /* libPods-PocketMoney-Bolts.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F95FD074879D83D199D24CCB /* Pods-PocketMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8F261F944E2078E8CBB4A05 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney" */;
+			buildPhases = (
+				900965486AEE70CF52506D8D /* Sources */,
+				92EEA2C90E2C5A3802E2FE20 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8D3F71609E08A56B8E43D02 /* PBXTargetDependency */,
+				C53A1C4E73F156315431F5C7 /* PBXTargetDependency */,
+				FED9E6EC99D09437D0C317E6 /* PBXTargetDependency */,
+			);
+			name = "Pods-PocketMoney";
+			productName = "Pods-PocketMoney";
+			productReference = 4773001ACB0FD8A55313521D /* libPods-PocketMoney.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		325BAB9A73BCEB2C1B8D24B1 /* Project object */ = {
+		D925BE96A0B3FE3E059BCF61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 156E27973C7AE7206F954055 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 628D6DDCE23585D516FA1184 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 123AFA3EAD18A95C750D47C7;
-			productRefGroup = 04DAAA986BA516B70C2A4711 /* Products */;
+			mainGroup = B9C42F12F68A42464C3DD017;
+			productRefGroup = 14F1494152A27323D4D4D472 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B2391E5207E0F35030C2AA8 /* Pods-PocketMoney */,
-				FF0BA091EE1DA4BCD8989682 /* Pods-PocketMoney-Bolts */,
-				98A3F72937BF9A9987B6B865 /* Pods-PocketMoney-Parse */,
-				74B716E682CAC48C7B66121C /* Pods-PocketMoney-ParseUI */,
+				F95FD074879D83D199D24CCB /* Pods-PocketMoney */,
+				A39A8241C8BD753291587DD2 /* Pods-PocketMoney-Bolts */,
+				6E1722835353EDDDD5565738 /* Pods-PocketMoney-Parse */,
+				3EACAD3A928123D8BC87DC46 /* Pods-PocketMoney-ParseUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		12A45C81062B014B12AF7763 /* Sources */ = {
+		038B34484A012B21EDE04874 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2B5393F764D20AA0A7EBD4 /* Pods-PocketMoney-dummy.m in Sources */,
+				55F44689ABF7D9F48F5ECF7A /* Empty.m in Sources */,
+				F3E021DE39DBEA223D4FECF9 /* Pods-PocketMoney-Parse-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D0681449B5921CA672D447C /* Sources */ = {
+		26D46867A909EBD3175E84B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E76518C39EC4C19EB7A8D021 /* PFActionButton.m in Sources */,
-				9AD9B6950BFB062D21AC208B /* PFActivityIndicatorCollectionReusableView.m in Sources */,
-				FE3E644A02308C46BF680A5B /* PFActivityIndicatorTableViewCell.m in Sources */,
-				A1F640F783112731FF008B61 /* PFAlertView.m in Sources */,
-				AA4339942928F6394C888F93 /* PFCollectionViewCell.m in Sources */,
-				6C604BE99225B25214CA4F96 /* PFColor.m in Sources */,
-				5EC26E9937E909550D21DA33 /* PFDismissButton.m in Sources */,
-				B60EA55269BBB2B0CC222FC4 /* PFImage.m in Sources */,
-				2B375D2522F02170A308C9A9 /* PFImageCache.m in Sources */,
-				1F1F103B7D603C0789A73EFC /* PFImageView.m in Sources */,
-				F4615B1A9655A14566F6B2A0 /* PFLoadingView.m in Sources */,
-				78ACD4CE48E6D2A532FF143D /* PFLogInView.m in Sources */,
-				E3BBC754CEAFDAD8B71F5AF9 /* PFLogInViewController.m in Sources */,
-				1E53CB24B0849CE67B3754C6 /* PFPrimaryButton.m in Sources */,
-				B971812E28430D1BC176DA91 /* PFProductTableViewController.m in Sources */,
-				A3BA2F6553D8A7F640402CBF /* PFPurchaseTableViewCell.m in Sources */,
-				1B0B770171F1257D9E916B16 /* PFQueryCollectionViewController.m in Sources */,
-				9F25175B1865CDD92286BA01 /* PFQueryTableViewController.m in Sources */,
-				3B94B1255CE96F9D697FC2DD /* PFRect.m in Sources */,
-				B4011D108696434C45468BC9 /* PFResources.m in Sources */,
-				B79003C1DAD6A497814C74C2 /* PFSignUpView.m in Sources */,
-				EAC306EDF5D8C216988A90D7 /* PFSignUpViewController.m in Sources */,
-				D0A8AA6BF5F18AAE94A1B187 /* PFTableViewCell.m in Sources */,
-				18DB885904F74FA0D2E75663 /* PFTextButton.m in Sources */,
-				F2201B0E072E3E82DC6301A7 /* PFTextField.m in Sources */,
-				BD0D78788710D95A81533CCC /* Pods-PocketMoney-ParseUI-dummy.m in Sources */,
+				AF3878B38D8EF339BF681D03 /* BFExecutor.m in Sources */,
+				9EDD9E8334E7344A06569496 /* BFTask.m in Sources */,
+				93CA30E68E7627F529851E89 /* BFTaskCompletionSource.m in Sources */,
+				8E3622A3B8CB152E4E1C40C9 /* Bolts.m in Sources */,
+				C2DD8E46B0197E71CF1BE0BF /* Pods-PocketMoney-Bolts-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E687BF8E240700ED7B3BF27 /* Sources */ = {
+		8A950540E01E12C00F1DD55C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C309D31FE92572C8CE2C8D /* BFExecutor.m in Sources */,
-				C929C33775C653DF53505DA4 /* BFTask.m in Sources */,
-				84901E234E2ECF88D0FFCED6 /* BFTaskCompletionSource.m in Sources */,
-				041E7EDD975FED90E7FC688A /* Bolts.m in Sources */,
-				4EC47DCBEE14432649A4C9F6 /* Pods-PocketMoney-Bolts-dummy.m in Sources */,
+				01B655A7BAB99E35DB65B213 /* PFActionButton.m in Sources */,
+				6D4E83EA5452BB3AF73A1283 /* PFActivityIndicatorCollectionReusableView.m in Sources */,
+				008936FB73673B0C277D862E /* PFActivityIndicatorTableViewCell.m in Sources */,
+				4FABB89286C633007FA8F0F0 /* PFAlertView.m in Sources */,
+				B2EABF1727F66881E0D2DD6E /* PFCollectionViewCell.m in Sources */,
+				51BAF71CBBDBA651264CBF23 /* PFColor.m in Sources */,
+				B7DF2F924AAE25876E7ECF56 /* PFDismissButton.m in Sources */,
+				30718A97DBB99C1C4CCA6975 /* PFImage.m in Sources */,
+				10AD402E3760AC73E8ED203C /* PFImageCache.m in Sources */,
+				C6FBAE861CABCC0AD1320229 /* PFImageView.m in Sources */,
+				CC19705DF83BD1EB53A557FF /* PFLoadingView.m in Sources */,
+				85E996CD9E5B9437058A0254 /* PFLogInView.m in Sources */,
+				DEBF270A0392EED1D3AE11A8 /* PFLogInViewController.m in Sources */,
+				5B5E8FF1876304E4732281F5 /* PFPrimaryButton.m in Sources */,
+				4A3991635C6509EA8D3FB151 /* PFProductTableViewController.m in Sources */,
+				7623C3157AC81EC0C6B2DD99 /* PFPurchaseTableViewCell.m in Sources */,
+				767F654AA27C687D5B543D80 /* PFQueryCollectionViewController.m in Sources */,
+				C7D995D15C8DA0F4E042EC22 /* PFQueryTableViewController.m in Sources */,
+				800EE6BE4027F352549A5932 /* PFRect.m in Sources */,
+				235DCA2CD7207ECD8BD87563 /* PFResources.m in Sources */,
+				F635CC60AC4E99E8E604A199 /* PFSignUpView.m in Sources */,
+				965D38DDD050479665A0A066 /* PFSignUpViewController.m in Sources */,
+				FE140DC910F9DCE3B639DF83 /* PFTableViewCell.m in Sources */,
+				AE9F24C9A2486F1978EA8B2A /* PFTextButton.m in Sources */,
+				DEF9EA5D5D019BCA7C5F9D08 /* PFTextField.m in Sources */,
+				1B2D8FC49CCE1303507BEB4F /* Pods-PocketMoney-ParseUI-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A24857328EF3BEAB899C7D66 /* Sources */ = {
+		900965486AEE70CF52506D8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8066B1D86417F7E650960147 /* Empty.m in Sources */,
-				17424DC838404E3C4E765BE9 /* Pods-PocketMoney-Parse-dummy.m in Sources */,
+				312CC363D2F618CE8FEE1B31 /* Pods-PocketMoney-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		071764D8474C29CEB0C77E06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PocketMoney-Parse";
-			target = 98A3F72937BF9A9987B6B865 /* Pods-PocketMoney-Parse */;
-			targetProxy = 450C4C506F3B64970D6A866E /* PBXContainerItemProxy */;
-		};
-		16FACC3D22C6A5527CE3706D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PocketMoney-Parse";
-			target = 98A3F72937BF9A9987B6B865 /* Pods-PocketMoney-Parse */;
-			targetProxy = 52D35062DC002123A562417F /* PBXContainerItemProxy */;
-		};
-		5CB8797A945D43C8AA3A502F /* PBXTargetDependency */ = {
+		495655A5D8B7ABF795FCCDF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PocketMoney-Bolts";
-			target = FF0BA091EE1DA4BCD8989682 /* Pods-PocketMoney-Bolts */;
-			targetProxy = BAC27B4A6CF0E0FC5612BF1F /* PBXContainerItemProxy */;
+			target = A39A8241C8BD753291587DD2 /* Pods-PocketMoney-Bolts */;
+			targetProxy = 0222E6081CFF51FB41CE6111 /* PBXContainerItemProxy */;
 		};
-		E9E953B8A9D9ABB28432D4AD /* PBXTargetDependency */ = {
+		C53A1C4E73F156315431F5C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PocketMoney-Parse";
+			target = 6E1722835353EDDDD5565738 /* Pods-PocketMoney-Parse */;
+			targetProxy = 7A29FDDF81B0F94ED0D2E82F /* PBXContainerItemProxy */;
+		};
+		D3FBEF7364D102065730393A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PocketMoney-Parse";
+			target = 6E1722835353EDDDD5565738 /* Pods-PocketMoney-Parse */;
+			targetProxy = D5B34E167BED1323A20DE00B /* PBXContainerItemProxy */;
+		};
+		D8D3F71609E08A56B8E43D02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PocketMoney-Bolts";
-			target = FF0BA091EE1DA4BCD8989682 /* Pods-PocketMoney-Bolts */;
-			targetProxy = F30CA334C2537064B1766EF2 /* PBXContainerItemProxy */;
+			target = A39A8241C8BD753291587DD2 /* Pods-PocketMoney-Bolts */;
+			targetProxy = 105C7CE5CACC7C957D77CC65 /* PBXContainerItemProxy */;
 		};
-		FD3C95714E181B523E7AABE6 /* PBXTargetDependency */ = {
+		FED9E6EC99D09437D0C317E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PocketMoney-ParseUI";
-			target = 74B716E682CAC48C7B66121C /* Pods-PocketMoney-ParseUI */;
-			targetProxy = 9279F8F949CF0FC234065DD7 /* PBXContainerItemProxy */;
+			target = 3EACAD3A928123D8BC87DC46 /* Pods-PocketMoney-ParseUI */;
+			targetProxy = A2A84090F43240DF13635AE3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		006DB0C253DD98BBFA60D821 /* Release */ = {
+		09662DA64A73E4B95218618D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B88B39E734D547F18D902E66 /* Pods-PocketMoney-Bolts-Private.xcconfig */;
+			baseConfigurationReference = 3A774E1903F5C0743E040E92 /* Pods-PocketMoney-Parse-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Parse/Pods-PocketMoney-Parse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		43D65223D14A360A9E9926DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB1025CE6C2D69CEA1EEBE2 /* Pods-PocketMoney-Bolts-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Bolts/Pods-PocketMoney-Bolts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		58068FADDCC8357D64BC0F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67AF0DCFCA1241BD8E709E7 /* Pods-PocketMoney.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		69CB9B00804F77CB750628C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7E488A4E6B76CF047A99B61 /* Pods-PocketMoney.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6F69CF3419394230EEF4CE93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53771E0DD841D9CBF63F2C7 /* Pods-PocketMoney-ParseUI-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-ParseUI/Pods-PocketMoney-ParseUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		705B1D46CB1B3ED568CA0F68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53771E0DD841D9CBF63F2C7 /* Pods-PocketMoney-ParseUI-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-ParseUI/Pods-PocketMoney-ParseUI-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7CE211CCC8DF5C41E3CE7B94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBB1025CE6C2D69CEA1EEBE2 /* Pods-PocketMoney-Bolts-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Bolts/Pods-PocketMoney-Bolts-prefix.pch";
@@ -886,41 +982,7 @@
 			};
 			name = Release;
 		};
-		0854011BA0C8D5F3C07313AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0D318B48B7A7FADD700B0676 /* Debug */ = {
+		7EB8619262711EB679EE55F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -959,89 +1021,43 @@
 			};
 			name = Debug;
 		};
-		3D214DD9C31546B4EAD55920 /* Debug */ = {
+		8495AD6036F8B836E833E595 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B88B39E734D547F18D902E66 /* Pods-PocketMoney-Bolts-Private.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Bolts/Pods-PocketMoney-Bolts-prefix.pch";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		3DA03DD8229030D03026407F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D9A55B2A1B9DADA12490D0D /* Pods-PocketMoney.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		45D591AAD20DBD83F2DF4C62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 311D30B79C981666F098FF85 /* Pods-PocketMoney-ParseUI-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-ParseUI/Pods-PocketMoney-ParseUI-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6A3F91CA98C23D0B202F2059 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1041E0E10D64A8314B5FC5CB /* Pods-PocketMoney-Parse-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Parse/Pods-PocketMoney-Parse-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		80DD857DE811E84B4D887865 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 311D30B79C981666F098FF85 /* Pods-PocketMoney-ParseUI-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-ParseUI/Pods-PocketMoney-ParseUI-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9CDD816E9951C1EBB5435F47 /* Release */ = {
+		F960F52C2AF69B09DA679465 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1041E0E10D64A8314B5FC5CB /* Pods-PocketMoney-Parse-Private.xcconfig */;
+			baseConfigurationReference = 3A774E1903F5C0743E040E92 /* Pods-PocketMoney-Parse-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-PocketMoney-Parse/Pods-PocketMoney-Parse-prefix.pch";
@@ -1049,22 +1065,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		CDFC09BEC8D4E9109BC49208 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12616AB79316356AADB16B6A /* Pods-PocketMoney.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1074,52 +1074,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12D7E3C0821E3198A9B33D66 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Parse" */ = {
+		628D6DDCE23585D516FA1184 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A3F91CA98C23D0B202F2059 /* Debug */,
-				9CDD816E9951C1EBB5435F47 /* Release */,
+				7EB8619262711EB679EE55F8 /* Debug */,
+				8495AD6036F8B836E833E595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		156E27973C7AE7206F954055 /* Build configuration list for PBXProject "Pods" */ = {
+		758962E1C87906C1DBABAE66 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Parse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D318B48B7A7FADD700B0676 /* Debug */,
-				0854011BA0C8D5F3C07313AB /* Release */,
+				09662DA64A73E4B95218618D /* Debug */,
+				F960F52C2AF69B09DA679465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C358342F61A3A7B9E0C7B8B /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-ParseUI" */ = {
+		89728690CB278E9A677CA0C0 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Bolts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45D591AAD20DBD83F2DF4C62 /* Debug */,
-				80DD857DE811E84B4D887865 /* Release */,
+				43D65223D14A360A9E9926DD /* Debug */,
+				7CE211CCC8DF5C41E3CE7B94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A077C1D3543ED6A3C6D236A0 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney" */ = {
+		B2367DD3098147AA59BC2E16 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-ParseUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3DA03DD8229030D03026407F /* Debug */,
-				CDFC09BEC8D4E9109BC49208 /* Release */,
+				6F69CF3419394230EEF4CE93 /* Debug */,
+				705B1D46CB1B3ED568CA0F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9574D61B9B3964F136C1965 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney-Bolts" */ = {
+		E8F261F944E2078E8CBB4A05 /* Build configuration list for PBXNativeTarget "Pods-PocketMoney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D214DD9C31546B4EAD55920 /* Debug */,
-				006DB0C253DD98BBFA60D821 /* Release */,
+				58068FADDCC8357D64BC0F10 /* Debug */,
+				69CB9B00804F77CB750628C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 325BAB9A73BCEB2C1B8D24B1 /* Project object */;
+	rootObject = D925BE96A0B3FE3E059BCF61 /* Project object */;
 }

@@ -36,10 +36,7 @@ class AccountListViewController: UITableViewController {
 
     func checkAndPresentLogin(){
         
-        if PFUser.currentUser() != nil {
-            loadModelObjects()
-        }
-        else {
+        if PFUser.currentUser() == nil {
             // No user logged in
             // Create the log in view controller
             let logInViewController = LoginViewController();
@@ -87,6 +84,13 @@ class AccountListViewController: UITableViewController {
                 (segue.destinationViewController as! NewTransactionViewController).account = account
             }
         }
+        
+        if segue.identifier == "sharingDetails" {
+            if let indexPath = self.tableView.indexPathForSelectedRow() {
+                let account = accounts[indexPath.row]
+                (segue.destinationViewController as! SharingViewController).account = account
+            }
+        }
   }
 
     // MARK: - Table View
@@ -121,6 +125,7 @@ class AccountListViewController: UITableViewController {
 //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
 //        }
 //    }
+    
     func loadModelObjects() {
                 
         Account.loadFrom(.local, callback : { accounts, error in
@@ -128,11 +133,24 @@ class AccountListViewController: UITableViewController {
             if let a = accounts {
                 self.accounts = a
                 self.tableView.reloadData()
-
+                self.refreshFromServer()
             }
         })
     }
 
+    func refreshFromServer() {
+        Account.loadFrom(.server, callback : { accounts, error in
+    
+            if error == nil {
+                if let a = accounts {
+                    self.accounts = a
+                    self.tableView.reloadData()
+                }
+            }
+
+        })
+    }
+    
     @IBAction func unwindToAccountListViewController(segue: UIStoryboardSegue) {
     }
 }
@@ -141,7 +159,6 @@ extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpVie
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         loadModelObjects()
-        self.loadModelObjects()
 
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
         })

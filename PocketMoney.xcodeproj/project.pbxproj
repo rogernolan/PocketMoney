@@ -27,6 +27,11 @@
 		C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45131AE8FF5100FDC400 /* Security.framework */; };
 		C84C451D1AE8FF5100FDC400 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45141AE8FF5100FDC400 /* StoreKit.framework */; };
 		C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */; };
+		C85F981B1B0A4D6000E326BA /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981A1B0A4D6000E326BA /* SharingViewController.swift */; };
+		C85F981D1B0A4DAA00E326BA /* SharingHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981C1B0A4DAA00E326BA /* SharingHeaderCell.swift */; };
+		C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */; };
+		C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */; };
+		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
 		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
@@ -38,6 +43,7 @@
 		C8C991411AD80B46000E756E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991401AD80B46000E756E /* AccountCell.swift */; };
 		C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C9916A1AD80DCF000E756E /* RoundRectView.framework */; };
 		C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */; };
+		C8D51EFE1B1448BB0036DBE5 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = C8D51EFD1B1448BB0036DBE5 /* TODO.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +96,11 @@
 		C84C45131AE8FF5100FDC400 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C84C45141AE8FF5100FDC400 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C85F981A1B0A4D6000E326BA /* SharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
+		C85F981C1B0A4DAA00E326BA /* SharingHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingHeaderCell.swift; sourceTree = "<group>"; };
+		C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareNameCell.swift; sourceTree = "<group>"; };
+		C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonCell.swift; sourceTree = "<group>"; };
+		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +116,7 @@
 		C8C991401AD80B46000E756E /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		C8C9916A1AD80DCF000E756E /* RoundRectView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RoundRectView.framework; path = "RoundRectView/build/Debug-iphoneos/RoundRectView.framework"; sourceTree = "<group>"; };
 		C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+getRGB.swift"; path = "Extensions/UIColor+getRGB.swift"; sourceTree = "<group>"; };
+		C8D51EFD1B1448BB0036DBE5 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +178,8 @@
 		C800E6141AD8202A00896F96 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C85F98171B0A4CE000E326BA /* Sharing details */,
 				C89B0E7C1AF9EE3F00274F48 /* Account details */,
-				C8C991221AD80858000E756E /* Main.storyboard */,
 				C82A70B71ADD7BD300B8D021 /* AccountList */,
 				C82A70BA1ADD7C0500B8D021 /* CreateTransaction */,
 				C82A70B41ADD7BBD00B8D021 /* TransactionList */,
@@ -183,6 +195,7 @@
 				C800E6171AD8206F00896F96 /* Account.swift */,
 				C800E6191AD8255200896F96 /* Transaction.swift */,
 				C89EEE981AF0B55C00E63DA2 /* User.swift */,
+				C875DF4A1B16E67500519F30 /* PMUser.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,6 +275,17 @@
 			name = "System Frameworks";
 			sourceTree = "<group>";
 		};
+		C85F98171B0A4CE000E326BA /* Sharing details */ = {
+			isa = PBXGroup;
+			children = (
+				C85F981A1B0A4D6000E326BA /* SharingViewController.swift */,
+				C85F981C1B0A4DAA00E326BA /* SharingHeaderCell.swift */,
+				C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */,
+				C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */,
+			);
+			name = "Sharing details";
+			sourceTree = "<group>";
+		};
 		C89B0E7C1AF9EE3F00274F48 /* Account details */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +296,7 @@
 		C8C9910E1AD80858000E756E = {
 			isa = PBXGroup;
 			children = (
+				C8D51EFD1B1448BB0036DBE5 /* TODO.txt */,
 				C8C991191AD80858000E756E /* PocketMoney */,
 				C82A70BF1ADD879D00B8D021 /* Categories */,
 				C8C991311AD80858000E756E /* PocketMoneyTests */,
@@ -296,6 +321,7 @@
 		C8C991191AD80858000E756E /* PocketMoney */ = {
 			isa = PBXGroup;
 			children = (
+				C8C991221AD80858000E756E /* Main.storyboard */,
 				C800E6151AD8203100896F96 /* Model */,
 				C8059BB51AEF64CE003E68EB /* Login */,
 				C8C9911C1AD80858000E756E /* AppDelegate.swift */,
@@ -465,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D51EFE1B1448BB0036DBE5 /* TODO.txt in Resources */,
 				C8C991241AD80858000E756E /* Main.storyboard in Resources */,
 				C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */,
 				C8C991261AD80858000E756E /* Images.xcassets in Resources */,
@@ -519,9 +546,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */,
+				C85F981B1B0A4D6000E326BA /* SharingViewController.swift in Sources */,
+				C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */,
 				C800E61A1AD8255200896F96 /* Transaction.swift in Sources */,
 				C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */,
+				C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */,
 				C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */,
+				C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */,
 				C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */,
 				C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */,
 				C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */,
@@ -531,6 +562,7 @@
 				C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */,
 				C800E6181AD8206F00896F96 /* Account.swift in Sources */,
 				C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */,
+				C85F981D1B0A4DAA00E326BA /* SharingHeaderCell.swift in Sources */,
 				C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */,
 				C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */,
 			);

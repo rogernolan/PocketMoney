@@ -17,6 +17,8 @@ class Account : PFObject, PFSubclassing{
     @NSManaged var name : String?
     @NSManaged var owner : PFUser
     @NSManaged var lastMonthEnd : NSDate
+    @NSManaged var contributors: PFRelation
+    @NSManaged var contributerCount : Int
     
     class func parseClassName() -> String {
         return "Account"
@@ -31,38 +33,39 @@ class Account : PFObject, PFSubclassing{
     }
     
     /**
-    Load Account records from the specified source.
-    
-    // TODO: Should only fetch for current user
+    Load Account records for current user from the specified source.
     
     :param: source   specify whether to fetch locally or remotely.
     :param: callback called when data is available or an error occured.
     */
     
-    class func loadFrom(source:Source, callback:(accounts:[Account]?, error:NSError!) -> Void) {
+    class func loadFrom(source:Source, callback:(accounts:[Account]?, error:NSError!) -> Void) -> BFTask! {
         if let user = PFUser.currentUser() {
-            let query = PFQuery(className:Account.parseClassName())
-            // query.whereKey("owner", equalTo: user)
-            query.limit = 100
-            if source == .local {
-                query.fromLocalDatastore()
-            }
-            query.findObjectsInBackgroundWithBlock() { (objects: [AnyObject]?, error:NSError?) -> Void in
-                //
-                if let e = error {
+            let query = PMUser.query()
+            query?.includeKey("accounts")
+            return query?.getObjectInBackgroundWithId(user.objectId!).continueWithBlock{ (task:BFTask!) -> BFTask! in
+                if let e = task.error {
                     println("error fetching Accounts data from parse: \(e)")
-                    return callback(accounts: nil, error: error)
-                    
+                    callback(accounts: nil, error: e)
+                    return task
                 }
                 else {
-                    callback(accounts: objects as? [Account], error: error)
+                    if let user = task.result as? PMUser, accounts = user.accounts as? [Account] {
+                        callback(accounts: accounts , error: nil)
+                        return PFObject.pinAllInBackground(accounts)
+                    }
+                    else {
+                        callback(accounts: nil , error: NSError(domain: "PocketMoney", code: 500, userInfo: nil))
+                        return task
+
+                    }
                 }
             }
-
         }
         else {
-            callback(accounts: nil, error: NSError(domain: "PocketMoney", code: 0, userInfo: [NSLocalizedDescriptionKey : "Not logged in"]))
-
+            let error = NSError(domain: "PocketMoney", code: 500, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
+            callback(accounts: nil, error: error)
+            return BFTask(error: error)
         }
     }
 
@@ -164,27 +167,35 @@ class Account : PFObject, PFSubclassing{
     // https://openradar.appspot.com/20119848
     // Prevents us getting at PFSubclassing.parseClassName from an extension.
     
-    class func fetchModifications(callback:(error:NSError!) -> Void) {
-        let query = PFQuery(className:self.parseClassName())
-        
-        if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey("LastServerRefresh" + Account.parseClassName()) as? NSDate {
-            query.whereKey("UpdatedAt", greaterThan: lastFetch)
-        }
-        query.orderByAscending("UpdatedAt")
-        
+    class func fetchModifications(callback:(error:NSError!) -> Void) ->BFTask! {
         if let user = PFUser.currentUser() {
-            let query = PFQuery(className:Account.parseClassName())
-            query.whereKey("archived", equalTo: false)
-            query.limit = 100
-            query.findObjectsInBackgroundWithBlock() { (results: [AnyObject]?, error:NSError?) -> Void in
-                if let objects = results as? [PFObject] {
-                    for o in objects { o.pin() }
-                }
-                callback(error: error)
+            let query = PMUser.query()
+            query?.includeKey("accounts")
+            if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey("LastServerRefresh" + Account.parseClassName()) as? NSDate {
+                query?.whereKey("UpdatedAt", greaterThan: lastFetch)
+            }
+            
+            return query?.getObjectInBackgroundWithId(user.objectId!).continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
+                    NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: "LastServerRefresh" + Account.parseClassName())
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                
+                let user = task.result as! PMUser
+                return PFObject.pinAllInBackground(user.accounts as [AnyObject])
+                
+            }.continueWithBlock{ (task:BFTask!) -> BFTask! in
+
+                callback(error: task.error)
+                return task
             }
             
         }
+        else {
+            let error = NSError(domain: "PocketMoney", code: 500, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
+            callback(error: error)
+            return BFTask(error: error)
+        }
     }
+
     
 }
 

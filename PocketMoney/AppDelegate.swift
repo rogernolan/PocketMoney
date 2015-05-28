@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Account.registerSubclass()
         Transaction.registerSubclass()
+        PMUser.registerSubclass()
+        
+        fetchModifications()
         
         return true
     }
@@ -50,6 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    // MARK: Our init code
+    func fetchModifications() -> Void{
+        Account.fetchModifications { (error) -> Void in
+            println("Have mods")
+        }
+        
+//        Account.loadFrom(.server) { (accounts, error) -> Void in
+//            PFObject.pinAllInBackground(accounts)
+//            println("Have new data")
+//        }
+    }
 
 }
 
