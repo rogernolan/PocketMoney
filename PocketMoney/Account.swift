@@ -167,31 +167,32 @@ class Account : PFObject, PFSubclassing{
     // https://openradar.appspot.com/20119848
     // Prevents us getting at PFSubclassing.parseClassName from an extension.
     
-    class func fetchModifications(callback:(error:NSError!) -> Void) ->BFTask! {
+    class func fetchModifications() ->BFTask! {
         if let user = PFUser.currentUser() {
             let query = PMUser.query()
             query?.includeKey("accounts")
-            if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey("LastServerRefresh" + Account.parseClassName()) as? NSDate {
+            let keyName = "LastServerRefresh" + Account.parseClassName()
+            if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey(keyName) as? NSDate {
                 query?.whereKey("UpdatedAt", greaterThan: lastFetch)
             }
             
             return query?.getObjectInBackgroundWithId(user.objectId!).continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
-                    NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: "LastServerRefresh" + Account.parseClassName())
-                    NSUserDefaults.standardUserDefaults().synchronize()
+                NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: keyName)
+                NSUserDefaults.standardUserDefaults().synchronize()
                 
                 let user = task.result as! PMUser
                 return PFObject.pinAllInBackground(user.accounts as [AnyObject])
                 
             }.continueWithBlock{ (task:BFTask!) -> BFTask! in
 
-                callback(error: task.error)
+                // callback(error: task.error)
                 return task
             }
             
         }
         else {
             let error = NSError(domain: "PocketMoney", code: 500, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
-            callback(error: error)
+            // callback(error: error)
             return BFTask(error: error)
         }
     }

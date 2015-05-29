@@ -58,27 +58,39 @@ class Transaction: PFObject, PFSubclassing {
     // Prevents us getting at PFSubclassing.parseClassName from an extension.
     
     class func fetchModifications() -> BFTask {
-        let query = PFQuery(className:self.parseClassName())
-        
-        if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey("LastServerRefresh" + Account.parseClassName()) as? NSDate {
-            query.whereKey("UpdatedAt", greaterThan: lastFetch)
+        if PFUser.currentUser() == nil {
+            let error = NSError(domain: "PocketMoney", code: 0, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
+            return BFTask(result: error )
         }
-        query.orderByAscending("UpdatedAt")
         
-        if let user = PFUser.currentUser() {
-            let query = PFQuery(className:Account.parseClassName())
-            // query.whereKey("owner", equalTo: user)
-            query.limit = 100
-            return query.findObjectsInBackground().continueWithSuccessBlock({ (task : BFTask!) -> AnyObject! in
-                if let objects = task.result as? [PFObject] {
-                    for o in objects { o.pin() }
-                }
+        let accountQuery = PFQuery(className:Account.parseClassName())
+        accountQuery.fromLocalDatastore()
+        
+        return accountQuery.findObjectsInBackground().continueWithBlock { (task:BFTask!) -> AnyObject! in
+            if let accounts = task.result as? [Account] {
+                let query = PFQuery(className:self.parseClassName())
+                let keyName = "LastServerRefresh" + Transaction.parseClassName()
                 
-                return task.result
-            })
+                query.whereKey("account", containedIn:accounts)
+                
+                if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey(keyName) as? NSDate {
+                    query.whereKey("UpdatedAt", greaterThan: lastFetch)
+                }
+                query.orderByAscending("UpdatedAt")
+                
+                
+                return query.findObjectsInBackground().continueWithSuccessBlock({ (task : BFTask!) -> AnyObject! in
+                    if let objects = task.result as? [PFObject] {
+                        NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: keyName)
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                        return PFObject.pinAllInBackground(objects)
+                    }
+                    
+                    return task.result
+                })
+            }
+            return task;
         }
-        let error = NSError(domain: "PocketMoney", code: 0, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
-        return BFTask(result: error )
   
     }
 }

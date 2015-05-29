@@ -55,8 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Our init code
     func fetchModifications() -> Void{
-        Account.fetchModifications { (error) -> Void in
-            println("Have mods")
+        Account.fetchModifications().continueWithBlock { (task:BFTask!) -> AnyObject! in
+            return Transaction.fetchModifications()
         }
         
 //        Account.loadFrom(.server) { (accounts, error) -> Void in
