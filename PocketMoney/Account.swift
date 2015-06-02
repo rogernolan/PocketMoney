@@ -70,6 +70,35 @@ class Account : PFObject, PFSubclassing{
     }
 
     /**
+    Find all transactions for the given account
+    
+    :param: anAccount the account to retrieve the transactions for
+    :param: callback  callback called when the find completes
+    
+    :returns: a Bolt task for the search
+    */
+    func currentTransactions() ->BFTask {
+        let pred = NSPredicate(format: "account = %@", self)
+        let query = Transaction.queryWithPredicate(pred)!
+        query.fromLocalDatastore()
+        return query.findObjectsInBackground()
+    }
+    
+    
+    func fetchArchivedTransactions(queryLimit : Int = 100, skip : Int = 0) -> BFTask! {
+        let pred = NSPredicate(format: "account = %@", self)
+        let query = Transaction.queryWithPredicate(pred)!
+
+        query.limit = queryLimit
+        query.skip = skip
+        query.orderByAscending("createdAt")
+        query.whereKey("archived" , equalTo:true)
+        
+        return query.findObjectsInBackground()
+    }
+    
+    
+    /**
     Add a transaction to an account. Will auto decrement the balance
     
     :param: name         Name of the tranasaction
@@ -108,7 +137,7 @@ class Account : PFObject, PFSubclassing{
         // Get the transactions for this month.
         // We get them before creating the EOM transaction so we don't
         // archive it immediately after creation.
-       return Transaction.transactionsForAccount(account: self).continueWithSuccessBlock{ (task: BFTask!) -> BFTask in
+       return self.currentTransactions().continueWithSuccessBlock{ (task: BFTask!) -> BFTask in
             if let array = task.result as? [Transaction] {
                 transactions = array
             }

@@ -442,7 +442,7 @@
                                     <outlet property="name" destination="egA-6r-uja" id="wlN-tE-i6V"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Vhg-3t-Yrv" customClass="AddPersonCell" customModule="PocketMoney" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addUser" id="Vhg-3t-Yrv" customClass="AddPersonCell" customModule="PocketMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vhg-3t-Yrv" id="e3K-lr-SEr">
@@ -528,6 +528,29 @@
                                     <outlet property="nameLabel" destination="6B6-5V-W9n" id="vLX-JL-CR7"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadMoreCell" id="RMX-jQ-dam" customClass="LoadMoreCell" customModule="PocketMoney" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RMX-jQ-dam" id="fuB-bp-hce">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-dD-TSf">
+                                            <rect key="frame" x="263" y="23" width="74" height="30"/>
+                                            <state key="normal" title="Load More">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3eM-dD-TSf" secondAttribute="bottom" constant="14.5" id="VhI-vy-c47"/>
+                                        <constraint firstItem="3eM-dD-TSf" firstAttribute="top" secondItem="fuB-bp-hce" secondAttribute="topMargin" constant="15" id="lea-I6-t84"/>
+                                        <constraint firstAttribute="centerX" secondItem="3eM-dD-TSf" secondAttribute="centerX" id="o29-DV-keI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="loadMoreButton" destination="3eM-dD-TSf" id="vW0-Ic-YZT"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="dK9-g0-gX5" id="VVb-pE-M0X"/>
@@ -549,6 +572,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xpu-kV-I2L"/>
+        <segue reference="RLe-Xy-ue0"/>
     </inferredMetricsTieBreakers>
 </document>

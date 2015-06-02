@@ -37,21 +37,6 @@ class Transaction: PFObject, PFSubclassing {
 
     }
 
-    /**
-    Find all transactions for the given account
-    
-    :param: anAccount the account to retrieve the transactions for
-    :param: callback  callback called when the find completes
-    
-    :returns: a Bolt task for the search
-    */
-    class func transactionsForAccount(account anAccount:Account) ->BFTask {
-        let pred = NSPredicate(format: "account = %@", anAccount)
-        let query = Transaction.queryWithPredicate(pred)!
-        query.fromLocalDatastore()
-        return query.findObjectsInBackground()
-    }
-    
     // TODO: Would like to implement this as an extension on all
     // our model classes but this bug:
     // https://openradar.appspot.com/20119848

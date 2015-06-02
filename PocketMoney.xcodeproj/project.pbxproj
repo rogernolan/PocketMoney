@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */; };
-		B1BAF0EBA0E45559953179FC /* Pods_PocketMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CF75E59AF5483A18BD84 /* Pods_PocketMoney.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C800E6181AD8206F00896F96 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6171AD8206F00896F96 /* Account.swift */; };
 		C800E61A1AD8255200896F96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6191AD8255200896F96 /* Transaction.swift */; };
 		C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61B1AD8328C00896F96 /* CreateAccount.swift */; };
@@ -32,6 +31,7 @@
 		C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */; };
 		C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */; };
 		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
+		C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */; };
 		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
@@ -39,7 +39,6 @@
 		C8C991241AD80858000E756E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8C991221AD80858000E756E /* Main.storyboard */; };
 		C8C991261AD80858000E756E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C991251AD80858000E756E /* Images.xcassets */; };
 		C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8C991271AD80858000E756E /* LaunchScreen.xib */; };
-		C8C991351AD80858000E756E /* PocketMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991341AD80858000E756E /* PocketMoneyTests.swift */; };
 		C8C991411AD80B46000E756E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991401AD80B46000E756E /* AccountCell.swift */; };
 		C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C9916A1AD80DCF000E756E /* RoundRectView.framework */; };
 		C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */; };
@@ -60,13 +59,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = C8C991571AD80C12000E756E;
 			remoteInfo = RoundRectViewTests;
-		};
-		C8C9912F1AD80858000E756E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8C9910F1AD80858000E756E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C8C991161AD80858000E756E;
-			remoteInfo = PocketMoney;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -101,6 +93,7 @@
 		C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareNameCell.swift; sourceTree = "<group>"; };
 		C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonCell.swift; sourceTree = "<group>"; };
 		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
+		C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +103,6 @@
 		C8C991231AD80858000E756E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8C991251AD80858000E756E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8C991281AD80858000E756E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C991331AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C991341AD80858000E756E /* PocketMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketMoneyTests.swift; sourceTree = "<group>"; };
 		C8C991401AD80B46000E756E /* AccountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -135,14 +127,6 @@
 				C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */,
 				C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */,
 				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
-				B1BAF0EBA0E45559953179FC /* Pods_PocketMoney.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C8C9912B1AD80858000E756E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +214,7 @@
 			children = (
 				C8C991201AD80858000E756E /* TransactionsListViewController.swift */,
 				C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */,
+				C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */,
 			);
 			name = TransactionList;
 			sourceTree = "<group>";
@@ -313,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				C8C991171AD80858000E756E /* PocketMoney.app */,
-				C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -408,24 +392,6 @@
 			productReference = C8C991171AD80858000E756E /* PocketMoney.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C8C9912D1AD80858000E756E /* PocketMoneyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C8C9913B1AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoneyTests" */;
-			buildPhases = (
-				C8C9912A1AD80858000E756E /* Sources */,
-				C8C9912B1AD80858000E756E /* Frameworks */,
-				C8C9912C1AD80858000E756E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C8C991301AD80858000E756E /* PBXTargetDependency */,
-			);
-			name = PocketMoneyTests;
-			productName = PocketMoneyTests;
-			productReference = C8C9912E1AD80858000E756E /* PocketMoneyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -437,10 +403,6 @@
 				TargetAttributes = {
 					C8C991161AD80858000E756E = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					C8C9912D1AD80858000E756E = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = C8C991161AD80858000E756E;
 					};
 				};
 			};
@@ -464,7 +426,6 @@
 			projectRoot = "";
 			targets = (
 				C8C991161AD80858000E756E /* PocketMoney */,
-				C8C9912D1AD80858000E756E /* PocketMoneyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,13 +456,6 @@
 				C8C991241AD80858000E756E /* Main.storyboard in Resources */,
 				C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */,
 				C8C991261AD80858000E756E /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C8C9912C1AD80858000E756E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +514,7 @@
 				C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */,
 				C824AA481AF3E3E60042FCFF /* SignUpViewController.swift in Sources */,
 				C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */,
+				C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */,
 				C800E6181AD8206F00896F96 /* Account.swift in Sources */,
 				C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */,
 				C85F981D1B0A4DAA00E326BA /* SharingHeaderCell.swift in Sources */,
@@ -568,23 +523,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8C9912A1AD80858000E756E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C8C991351AD80858000E756E /* PocketMoneyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C8C991301AD80858000E756E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C8C991161AD80858000E756E /* PocketMoney */;
-			targetProxy = C8C9912F1AD80858000E756E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C8C991221AD80858000E756E /* Main.storyboard */ = {
@@ -722,40 +661,6 @@
 			};
 			name = Release;
 		};
-		C8C9913C1AD80858000E756E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PocketMoneyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoney.app/PocketMoney";
-			};
-			name = Debug;
-		};
-		C8C9913D1AD80858000E756E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PocketMoneyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketMoney.app/PocketMoney";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -773,15 +678,6 @@
 			buildConfigurations = (
 				C8C991391AD80858000E756E /* Debug */,
 				C8C9913A1AD80858000E756E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C8C9913B1AD80858000E756E /* Build configuration list for PBXNativeTarget "PocketMoneyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C8C9913C1AD80858000E756E /* Debug */,
-				C8C9913D1AD80858000E756E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
