@@ -528,6 +528,26 @@
                                     <outlet property="nameLabel" destination="6B6-5V-W9n" id="vLX-JL-CR7"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noneCell" id="x7H-G8-YA6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x7H-G8-YA6" id="5l3-mK-cnu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transactions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJk-pj-sSq">
+                                            <rect key="frame" x="240" y="27" width="121" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hJk-pj-sSq" firstAttribute="top" secondItem="5l3-mK-cnu" secondAttribute="topMargin" constant="19" id="3jc-ir-EOK"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hJk-pj-sSq" secondAttribute="bottom" constant="19.5" id="W6k-Jl-3hE"/>
+                                        <constraint firstAttribute="centerX" secondItem="hJk-pj-sSq" secondAttribute="centerX" constant="-0.5" id="z5O-DL-q9M"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadMoreCell" id="RMX-jQ-dam" customClass="LoadMoreCell" customModule="PocketMoney" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>

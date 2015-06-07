@@ -79,13 +79,20 @@ class TransactionsListViewController: UITableViewController {
         case 0:
             if let rows = currentTransactions {
                 var count = rows.count
+                if count == 0 {
+                    count = 1   // Show the "no transactions cell
+                }
                 if historicTransactions == nil {
-                    count += 1
+                    count += 1  // Show load more
                 }
                 return count
             }
         case 1:
-            return historicTransactions!.count
+            var count = historicTransactions!.count
+            if count == 0 {
+                count = 1
+            }
+            return count
         default:
             return 0
         }
@@ -109,6 +116,11 @@ class TransactionsListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         if indexPath.section == 0 {
+            if currentTransactions!.count == 0 && row == 0 {
+                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            }
+            
             if row >= currentTransactions!.count && historicTransactions == nil {
                 let cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell", forIndexPath: indexPath) as! LoadMoreCell
                 cell.loadMoreButton.addTarget(self, action: "loadMore", forControlEvents: UIControlEvents.TouchUpInside)
@@ -124,6 +136,10 @@ class TransactionsListViewController: UITableViewController {
             return cell
 
         } else {
+            if historicTransactions!.count == 0 && row == 0 {
+                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
+                return cell
+            }
             if row >= historicTransactions!.count {
                 let cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell", forIndexPath: indexPath) as! LoadMoreCell
                 cell.loadMoreButton.addTarget(self, action: "loadMore", forControlEvents: UIControlEvents.TouchUpInside)
