@@ -15,38 +15,22 @@ public class NewTransactionViewController: UITableViewController {
     @IBOutlet weak var amountEdit: UITextField!
     @IBOutlet weak var nameEdit: UITextField!
     @IBOutlet weak var endOfMonthSwitch: UISwitch!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var lastTransactionName : String?
     
 
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        saveButton.enabled = false
         nameEdit.becomeFirstResponder()
     }
+    
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    override public func viewDidDisappear(animated: Bool) {
-        // Check that we are being dismissed from the top of the stack. Means back has been pressed and we should create a
-        // new transaction
-        if let description = self.nameEdit.text, ac = account, vcs = self.navigationController?.viewControllers as? [NSObject] {
-            if contains(vcs, self) {
-                if endOfMonthSwitch.on == true {
-                    ac.endMonth(description, amount: self.amountEdit.text.doubleValue, callback: { (error) -> Void in
-                        // code
-                    })
-
-                }
-                else {
-                    ac.addTransaction(description , amount: self.amountEdit.text.doubleValue)
-                }
-            }
-        }
-        super.viewDidDisappear(animated)
-    }
-    
     @IBAction func saveTapped(sender: AnyObject) {
         if let transactionTitle = self.nameEdit.text, ac = account {
             if endOfMonthSwitch.on == true {
@@ -98,11 +82,12 @@ extension NewTransactionViewController : UITextFieldDelegate {
             if count(components) > 2 {
                 return false
             }
-            let pennies = components[1]
-            if count(pennies) > 2 {
-                return false
+            if count(components) == 2 {
+                let pennies = components[1]
+                if count(pennies) > 2 {
+                    return false
+                }
             }
-
         }
         return true
     }
@@ -118,6 +103,13 @@ extension NewTransactionViewController : UITextFieldDelegate {
         }
         return true
     }
-
-
+    
+    public func textFieldDidEndEditing(textField: UITextField){
+        if count(nameEdit.text) > 0 && amountEdit.text.doubleValue != 0.0 {
+            saveButton.enabled = true
+        }
+        else {
+            saveButton.enabled = false
+        }
+    }
 }

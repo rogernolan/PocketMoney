@@ -277,7 +277,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bO0-1g-9HW" id="OTw-lE-9Of">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuK-ON-80F">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uuK-ON-80F">
                                                     <rect key="frame" x="86" y="30.5" width="506" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="506" id="K8Z-Jw-8D7"/>
@@ -340,7 +340,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0Z-6z-ymt">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0Z-6z-ymt">
                                                     <rect key="frame" x="85" y="19" width="506.5" height="26"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
@@ -444,6 +444,7 @@
                         <outlet property="amountEdit" destination="b0Z-6z-ymt" id="uL7-vx-Vb5"/>
                         <outlet property="endOfMonthSwitch" destination="MFi-2E-sK0" id="Fi9-9L-VrC"/>
                         <outlet property="nameEdit" destination="uuK-ON-80F" id="WQG-0d-fT8"/>
+                        <outlet property="saveButton" destination="7q5-vh-q88" id="E66-dJ-1Ol"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPx-06-GQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
