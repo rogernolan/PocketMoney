@@ -43,7 +43,6 @@ class SharingViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("SharingHeaderCell") as! SharingHeaderCell

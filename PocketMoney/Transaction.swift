@@ -78,4 +78,20 @@ class Transaction: PFObject, PFSubclassing {
         }
   
     }
+    
+    func deleteFromAccount() -> BFTask! {
+        var refund = self.amount
+        if let refreshedAccount = self.account {
+            return refreshedAccount.fetchIfNeededInBackground().continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
+                return self.deleteInBackground()
+            }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
+                refreshedAccount.balance += refund
+                return refreshedAccount.saveEventually()
+            }
+        }
+        else {
+            return BFTask(error: NSError(domain: "PocketMoney", code: 500, userInfo: nil))
+        }
+
+    }
 }
