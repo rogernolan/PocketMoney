@@ -15,7 +15,7 @@ enum Source {
 class Account : PFObject, PFSubclassing{
     @NSManaged var balance : Double
     @NSManaged var openingBalance : Double
-    @NSManaged var previousMonthOpeneingBalance : Double
+    @NSManaged var thisMonthOpeneingBalance : Double
     @NSManaged var name : String?
     @NSManaged var owner : PFUser
     @NSManaged var lastMonthEnd : NSDate
@@ -29,7 +29,7 @@ class Account : PFObject, PFSubclassing{
         name = aName
         balance = aBalance
         openingBalance = aBalance
-        previousMonthOpeneingBalance = aBalance
+        thisMonthOpeneingBalance = aBalance
         // We crash if you try to make an account without being logged in.
         owner = user != nil ?  user! : PFUser.currentUser()!
     }
@@ -161,6 +161,7 @@ class Account : PFObject, PFSubclassing{
             }
             // Now we are sure the transaction is saved, add the balance.
             self.balance += amount
+            self.thisMonthOpeneingBalance = self.balance
             self.saveEventually()
             
             // Archive last month's (actually all unarchived) transactions

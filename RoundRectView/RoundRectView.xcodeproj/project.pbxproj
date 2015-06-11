@@ -161,6 +161,7 @@
 		C8C991431AD80C12000E756E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Babbage Consulting";
 				TargetAttributes = {
@@ -406,6 +407,7 @@
 				C8C991641AD80C12000E756E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8C991651AD80C12000E756E /* Build configuration list for PBXNativeTarget "RoundRectViewTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +416,7 @@
 				C8C991671AD80C12000E756E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

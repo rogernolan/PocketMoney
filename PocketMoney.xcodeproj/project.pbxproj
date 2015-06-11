@@ -420,6 +420,7 @@
 		C8C9910F1AD80858000E756E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Babbage Consulting";
 				TargetAttributes = {

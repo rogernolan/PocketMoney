@@ -1,6 +1,16 @@
 
-TODO: Refresh transactions from server on startup
+TODO: Delete and edit transaction
 TODO: Error handling
+TODO: Loading activity indicator
+
+----------------
+
+TODO: Watch app
+TODO: Watch glance
+TODO: Watch complication
+
+----------------
+
 TODO: Logout
 TODO: Sharing
-TODO: Loading activity indicator
+TODO: Rebuild account data from transactions
