@@ -12,6 +12,9 @@
 		C800E61A1AD8255200896F96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6191AD8255200896F96 /* Transaction.swift */; };
 		C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61B1AD8328C00896F96 /* CreateAccount.swift */; };
 		C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8059BB91AEF659D003E68EB /* LoginViewController.swift */; };
+		C81115A81B295E7D006B3593 /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C800E6111AD8201700896F96 /* RoundRectView.framework */; };
+		C81115A91B295F24006B3593 /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C800E6111AD8201700896F96 /* RoundRectView.framework */; };
+		C81115AA1B295F24006B3593 /* RoundRectView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C800E6111AD8201700896F96 /* RoundRectView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C824AA481AF3E3E60042FCFF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824AA471AF3E3E60042FCFF /* SignUpViewController.swift */; };
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
@@ -39,7 +42,6 @@
 		C8C991261AD80858000E756E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8C991251AD80858000E756E /* Images.xcassets */; };
 		C8C991291AD80858000E756E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8C991271AD80858000E756E /* LaunchScreen.xib */; };
 		C8C991411AD80B46000E756E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991401AD80B46000E756E /* AccountCell.swift */; };
-		C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C9916A1AD80DCF000E756E /* RoundRectView.framework */; };
 		C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */; };
 		C8D51EFE1B1448BB0036DBE5 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = C8D51EFD1B1448BB0036DBE5 /* TODO.txt */; };
 /* End PBXBuildFile section */
@@ -59,7 +61,28 @@
 			remoteGlobalIDString = C8C991571AD80C12000E756E;
 			remoteInfo = RoundRectViewTests;
 		};
+		C81115AB1B295F24006B3593 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C8C9914B1AD80C12000E756E;
+			remoteInfo = RoundRectView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C81115AD1B295F24006B3593 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C81115AA1B295F24006B3593 /* RoundRectView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketMoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,12 +140,13 @@
 				C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */,
 				C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */,
 				C84C45181AE8FF5100FDC400 /* CoreGraphics.framework in Frameworks */,
+				C81115A91B295F24006B3593 /* RoundRectView.framework in Frameworks */,
 				C84C45191AE8FF5100FDC400 /* CoreLocation.framework in Frameworks */,
 				C84C451A1AE8FF5100FDC400 /* MobileCoreServices.framework in Frameworks */,
 				C84C451B1AE8FF5100FDC400 /* QuartzCore.framework in Frameworks */,
 				C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */,
 				C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */,
-				C8C9916B1AD80DCF000E756E /* RoundRectView.framework in Frameworks */,
+				C81115A81B295E7D006B3593 /* RoundRectView.framework in Frameworks */,
 				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +402,12 @@
 				C8C991141AD80858000E756E /* Frameworks */,
 				C8C991151AD80858000E756E /* Resources */,
 				23735DEE4A281CF3F1BFA431 /* Copy Pods Resources */,
+				C81115AD1B295F24006B3593 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C81115AC1B295F24006B3593 /* PBXTargetDependency */,
 			);
 			name = PocketMoney;
 			productName = PocketMoney;
@@ -526,6 +552,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C81115AC1B295F24006B3593 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RoundRectView;
+			targetProxy = C81115AB1B295F24006B3593 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C8C991221AD80858000E756E /* Main.storyboard */ = {
