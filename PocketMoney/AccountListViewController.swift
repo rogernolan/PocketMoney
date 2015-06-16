@@ -157,7 +157,7 @@ class AccountListViewController: UITableViewController {
 extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
-        loadModelObjects()
+        refreshFromServer()
 
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
         })
