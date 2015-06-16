@@ -1,7 +1,6 @@
 
-TODO: Delete and edit transaction
+TODO: Edit transaction
 TODO: Number formatting
-BUG: save enablement on new transaction
 TODO: Error handling
 TODO: Loading activity indicator
 
