@@ -22,14 +22,7 @@ class TransactionsListViewController: UITableViewController {
             self.configureView()
             // Update the model.
 
-            self.account?.currentTransactions().continueWithSuccessBlock { (task:BFTask!) in
-                if let objects = task.result as? [Transaction] {
-                    self.currentTransactions = objects
-                    self.configureView()
-                }
-                
-                return nil
-            }
+            loadTransactionsFromAccount()
         }
     }
 
@@ -46,6 +39,7 @@ class TransactionsListViewController: UITableViewController {
         return Static.instance
     }
     
+
     func configureView() {
         // Update the user interface for the detail item.
         if let ac = self.account {
@@ -65,7 +59,18 @@ class TransactionsListViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    func loadTransactionsFromAccount() {
+        self.account?.currentTransactions().continueWithSuccessBlock { (task:BFTask!) in
+            if let objects = task.result as? [Transaction] {
+                self.currentTransactions = objects
+                self.configureView()
+            }
+            
+            return nil
+        }
+    }
+        
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if historicTransactions == nil {
             return 1
@@ -154,6 +159,47 @@ class TransactionsListViewController: UITableViewController {
             return cell
         }
     }
+    
+    override func tableView(tableView: UITableView, shouldShowMenuForRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.section == 0 && indexPath.row < currentTransactions!.count {
+            return true
+        }
+        
+        return false
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // stub. Without this on iOS8 the editing swipe is not shown.
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if indexPath.section == 0 && indexPath.row < currentTransactions!.count {
+            return true
+        }
+        return false
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        if indexPath.section == 0 && indexPath.row < currentTransactions!.count {
+            var deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (action, indexPath) -> Void in
+                tableView.editing = false
+                let t = self.currentTransactions?[indexPath.row]
+                t?.deleteFromAccount().continueWithSuccessBlock({ (task) -> AnyObject! in
+                    self.loadTransactionsFromAccount()
+
+                    return nil
+                })
+            }
+                
+            return [deleteAction]
+        }
+        else {
+            // Can't edit history
+            return nil
+        }
+
+    }
+
     
     func loadMore(){
         account?.fetchArchivedTransactions(queryLimit : 100, skip: nextArchiveFetchSkip).continueWithBlock { (task: BFTask!) -> AnyObject! in
