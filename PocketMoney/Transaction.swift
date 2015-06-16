@@ -83,6 +83,8 @@ class Transaction: PFObject, PFSubclassing {
         var refund = self.amount
         if let refreshedAccount = self.account {
             return refreshedAccount.fetchIfNeededInBackground().continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
+                return self.unpinInBackground()
+            }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 return self.deleteInBackground()
             }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 refreshedAccount.balance += refund
