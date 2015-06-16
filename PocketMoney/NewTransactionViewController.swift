@@ -75,10 +75,14 @@ extension NewTransactionViewController : UITextFieldDelegate {
     
     public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
+        var proposedAmountString = amountEdit.text
+        var proposedName = nameEdit.text
+        
+        
         if textField == amountEdit {
             let existingString = amountEdit.text as NSString
-            let proposedString = existingString.stringByReplacingCharactersInRange(range, withString: string)
-            let components = proposedString.componentsSeparatedByString(".")
+            proposedAmountString = existingString.stringByReplacingCharactersInRange(range, withString: string)
+            let components = proposedAmountString.componentsSeparatedByString(".")
             if count(components) > 2 {
                 return false
             }
@@ -89,6 +93,18 @@ extension NewTransactionViewController : UITextFieldDelegate {
                 }
             }
         }
+        else if textField == nameEdit {
+            let existingString = nameEdit.text as NSString
+            proposedName = existingString.stringByReplacingCharactersInRange(range, withString: string)
+        }
+        
+        if count(proposedName) > 0 && proposedAmountString.doubleValue != 0.0 {
+            saveButton.enabled = true
+        }
+        else {
+            saveButton.enabled = false
+        }
+        
         return true
     }
     
@@ -102,14 +118,5 @@ extension NewTransactionViewController : UITextFieldDelegate {
             
         }
         return true
-    }
-    
-    public func textFieldDidEndEditing(textField: UITextField){
-        if count(nameEdit.text) > 0 && amountEdit.text.doubleValue != 0.0 {
-            saveButton.enabled = true
-        }
-        else {
-            saveButton.enabled = false
-        }
     }
 }
