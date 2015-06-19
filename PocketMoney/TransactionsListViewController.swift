@@ -39,6 +39,18 @@ class TransactionsListViewController: UITableViewController {
         return Static.instance
     }
     
+    var currencyFormatter: NSNumberFormatter {
+        struct Static {
+            static let instance : NSNumberFormatter = {
+                let formatter = NSNumberFormatter()
+                formatter.numberStyle = .CurrencyStyle
+                return formatter
+                }()
+        }
+        
+        return Static.instance
+    }
+    
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -51,7 +63,9 @@ class TransactionsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading")
+        self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
         self.configureView()
     }
 
@@ -60,8 +74,8 @@ class TransactionsListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func loadTransactionsFromAccount() {
-        self.account?.currentTransactions().continueWithSuccessBlock { (task:BFTask!) in
+    func loadTransactionsFromAccount(fromServer:Bool = false) {
+        self.account?.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
             if let objects = task.result as? [Transaction] {
                 self.currentTransactions = objects
                 self.configureView()
@@ -135,7 +149,7 @@ class TransactionsListViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("transaction", forIndexPath: indexPath) as! TransactionCell
             if let transaction = currentTransactions?[row] {
                 cell.nameLabel.text = transaction.name
-                cell.amountLabel.text = "£\(transaction.amount)"
+                cell.amountLabel.text = currencyFormatter.stringFromNumber(transaction.amount)
                 cell.dateLabel.text = dateFormatter.stringFromDate(transaction.date)
             }
             return cell
@@ -200,6 +214,9 @@ class TransactionsListViewController: UITableViewController {
 
     }
 
+    func pulledToRefresh() {
+        loadTransactionsFromAccount(fromServer:true)
+    }
     
     func loadMore(){
         account?.fetchArchivedTransactions(queryLimit : 100, skip: nextArchiveFetchSkip).continueWithBlock { (task: BFTask!) -> AnyObject! in

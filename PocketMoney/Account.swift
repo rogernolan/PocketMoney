@@ -81,10 +81,12 @@ class Account : PFObject, PFSubclassing{
     
     :returns: a Bolt task for the search
     */
-    func currentTransactions() ->BFTask {
+    func currentTransactions(fromServer:Bool = false) ->BFTask {
         let pred = NSPredicate(format: "account = %@", self)
         let query = Transaction.queryWithPredicate(pred)!
-        query.fromLocalDatastore()
+        if fromServer == false {
+            query.fromLocalDatastore()
+        }
         return query.findObjectsInBackground()
     }
     

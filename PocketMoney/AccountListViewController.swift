@@ -25,9 +25,12 @@ class AccountListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
-        refreshFromServer()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading")
+        self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
+        self.refreshControl?.tintColor = UIColor.blackColor()
+        loadModelObjects()
     }
 
     func checkAndPresentLogin(){
@@ -132,14 +135,23 @@ class AccountListViewController: UITableViewController {
             
             if let a = accounts {
                 self.accounts = a
-                self.tableView.reloadData()
+                if count(a) == 0 {
+                    self.refreshFromServer()
+                } else {
+                    self.tableView.reloadData()                    
+                }
             }
         })
     }
 
     func refreshFromServer() {
+        
+        tableView.userInteractionEnabled = false
+        self.refreshControl?.beginRefreshing()
         Account.loadFrom(.server, callback : { accounts, error in
-    
+            self.tableView.userInteractionEnabled = true
+            self.refreshControl?.endRefreshing()
+
             if error == nil {
                 if let a = accounts {
                     self.accounts = a
@@ -150,8 +162,15 @@ class AccountListViewController: UITableViewController {
         })
     }
     
+    func pulledToRefresh() {
+        refreshFromServer()
+    }
+    
+    // MARK: Segues and navigation
+    
     @IBAction func unwindToAccountListViewController(segue: UIStoryboardSegue) {
     }
+
 }
 
 extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {

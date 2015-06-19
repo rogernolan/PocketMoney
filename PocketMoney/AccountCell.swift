@@ -15,6 +15,18 @@ class AccountCell: UITableViewCell {
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var background: RoundRectView!
     
+    var currencyFormatter: NSNumberFormatter {
+        struct Static {
+            static let instance : NSNumberFormatter = {
+                let formatter = NSNumberFormatter()
+                formatter.numberStyle = .CurrencyStyle
+                return formatter
+                }()
+        }
+        
+        return Static.instance
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -47,6 +59,6 @@ class AccountCell: UITableViewCell {
 
     func configureForAccount(account:Account) {
         nameLabel.text = account.name
-        amountLabel.text = "£\(account.balance)"
+        amountLabel.text = currencyFormatter.stringFromNumber(account.balance)
     }
 }

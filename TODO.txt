@@ -1,8 +1,7 @@
+TODO: Loading activity indicator
 
 TODO: Edit transaction
-TODO: Number formatting
 TODO: Error handling
-TODO: Loading activity indicator
 
 ----------------
 
