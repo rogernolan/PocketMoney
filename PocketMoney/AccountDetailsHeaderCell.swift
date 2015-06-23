@@ -1,5 +1,5 @@
 //
-//  SharingHeaderCell.swift
+//  AccountDetailsHeaderCell.swift
 //  PocketMoney
 //
 //  Created by Roger Nolan on 18/05/2015.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SharingHeaderCell: UITableViewCell {
+class AccountDetailsHeaderCell: UITableViewCell {
 
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var balance: UILabel!

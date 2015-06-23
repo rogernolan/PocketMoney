@@ -1,5 +1,5 @@
 //
-//  SharingViewController.swift
+//  AccountDetailsViewController.swift
 //  PocketMoney
 //
 //  Created by Roger Nolan on 18/05/2015.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SharingViewController: UITableViewController {
+class AccountDetailsViewController: UITableViewController {
 
     var account : Account!
 
@@ -38,25 +38,24 @@ class SharingViewController: UITableViewController {
             return 1
         }
         else {
-            return 2
+            return 0
         }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("SharingHeaderCell") as! SharingHeaderCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("DetailsHeaderCell") as! AccountDetailsHeaderCell
             cell.accountName.text = account.name
             cell.balance.text = "£\(account.balance)"
             return cell
         }
         
-        if indexPath.row > 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("AddPersonCell") as! AddPersonCell
-            cell.addButton.addTarget(self, action: "addPerson", forControlEvents:UIControlEvents.TouchUpInside)
-        }
+        // if indexPath.row > 1 {
+        let cell = tableView.dequeueReusableCellWithIdentifier("AddPersonCell") as! AddPersonCell
+        cell.addButton.addTarget(self, action: "addPerson", forControlEvents:UIControlEvents.TouchUpInside)
+        return cell
         
-        return UITableViewCell()
     }
 
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

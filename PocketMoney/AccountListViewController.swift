@@ -70,29 +70,26 @@ class AccountListViewController: UITableViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "showTransactions" {
-//            CGPoint buttonPosition = [sender convertPoint:CGPointZero
-//                toView:self.tableView];
-//            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+        switch segue.identifier! {
+        case "showTransactions":
             if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
                 indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
                     let account = accounts[indexPath.row]
                     (segue.destinationViewController as! TransactionsListViewController).account = account
             }
-        }
-        
-        if segue.identifier == "newTransaction" {
+        case "newTransaction":
             if let indexPath = self.tableView.indexPathForSelectedRow() {
                 let account = accounts[indexPath.row]
                 (segue.destinationViewController as! NewTransactionViewController).account = account
             }
-        }
-        
-        if segue.identifier == "sharingDetails" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let account = accounts[indexPath.row]
-                (segue.destinationViewController as! SharingViewController).account = account
+        case "accountDetails":
+            if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
+                indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
+                    let account = accounts[indexPath.row]
+                    (segue.destinationViewController as! AccountDetailsViewController).account = account
             }
+        default:
+            println("Mystery segue from Account overview")
         }
   }
 
@@ -138,7 +135,7 @@ class AccountListViewController: UITableViewController {
                 if count(a) == 0 {
                     self.refreshFromServer()
                 } else {
-                    self.tableView.reloadData()                    
+                    self.tableView.reloadData()
                 }
             }
         })
