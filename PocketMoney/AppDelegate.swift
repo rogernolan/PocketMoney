@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         fetchModifications()
         
+        self.window?.backgroundColor = UIColor.blackColor()
+        
         return true
     }
 

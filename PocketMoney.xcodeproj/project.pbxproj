@@ -10,7 +10,6 @@
 		78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D9D759F24CAF9189E52F054 /* libPods-PocketMoney.a */; };
 		C800E6181AD8206F00896F96 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6171AD8206F00896F96 /* Account.swift */; };
 		C800E61A1AD8255200896F96 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E6191AD8255200896F96 /* Transaction.swift */; };
-		C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C800E61B1AD8328C00896F96 /* CreateAccount.swift */; };
 		C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8059BB91AEF659D003E68EB /* LoginViewController.swift */; };
 		C81115A81B295E7D006B3593 /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C800E6111AD8201700896F96 /* RoundRectView.framework */; };
 		C81115A91B295F24006B3593 /* RoundRectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C800E6111AD8201700896F96 /* RoundRectView.framework */; };
@@ -35,6 +34,7 @@
 		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
 		C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */; };
 		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
+		C8C14AB81B39A851007CEBCE /* EditAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C14AB71B39A851007CEBCE /* EditAccount.swift */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
 		C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C991201AD80858000E756E /* TransactionsListViewController.swift */; };
@@ -92,7 +92,6 @@
 		C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RoundRectView.xcodeproj; path = RoundRectView/RoundRectView.xcodeproj; sourceTree = "<group>"; };
 		C800E6171AD8206F00896F96 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C800E6191AD8255200896F96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		C800E61B1AD8328C00896F96 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		C800E61D1AD8350400896F96 /* String+floatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+floatValue.swift"; path = "Extensions/String+floatValue.swift"; sourceTree = "<group>"; };
 		C8059BAF1AEEA311003E68EB /* PocketMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketMoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8059BB91AEF659D003E68EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C8C14AB71B39A851007CEBCE /* EditAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccount.swift; sourceTree = "<group>"; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C9911B1AD80858000E756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8C9911C1AD80858000E756E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -188,7 +188,6 @@
 				C82A70B71ADD7BD300B8D021 /* AccountList */,
 				C82A70BA1ADD7C0500B8D021 /* CreateTransaction */,
 				C82A70B41ADD7BBD00B8D021 /* TransactionList */,
-				C800E61B1AD8328C00896F96 /* CreateAccount.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -294,6 +293,7 @@
 		C89B0E7C1AF9EE3F00274F48 /* Account details */ = {
 			isa = PBXGroup;
 			children = (
+				C8C14AB71B39A851007CEBCE /* EditAccount.swift */,
 			);
 			name = "Account details";
 			sourceTree = "<group>";
@@ -529,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */,
+				C8C14AB81B39A851007CEBCE /* EditAccount.swift in Sources */,
 				C85F981B1B0A4D6000E326BA /* SharingViewController.swift in Sources */,
 				C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */,
 				C800E61A1AD8255200896F96 /* Transaction.swift in Sources */,
@@ -548,7 +549,6 @@
 				C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */,
 				C85F981D1B0A4DAA00E326BA /* SharingHeaderCell.swift in Sources */,
 				C8059BBA1AEF659D003E68EB /* LoginViewController.swift in Sources */,
-				C800E61C1AD8328C00896F96 /* CreateAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

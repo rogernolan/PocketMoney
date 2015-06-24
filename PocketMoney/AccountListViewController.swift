@@ -20,6 +20,9 @@ class AccountListViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.backgroundColor = UIColor.blackColor()
+        self.tableView.backgroundColor = UIColor.blackColor()
+
         checkAndPresentLogin()
     }
     
@@ -69,31 +72,35 @@ class AccountListViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if segue.identifier == "showTransactions" {
-//            CGPoint buttonPosition = [sender convertPoint:CGPointZero
-//                toView:self.tableView];
-//            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
-            if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
-                indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
+        if let id = segue.identifier {
+            switch id {
+            case "showTransactions":
+                //            CGPoint buttonPosition = [sender convertPoint:CGPointZero
+                //                toView:self.tableView];
+                //            NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+                if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
+                    indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
+                        let account = accounts[indexPath.row]
+                        (segue.destinationViewController as! TransactionsListViewController).account = account
+                }
+            case "newTransaction":
+                if let indexPath = self.tableView.indexPathForSelectedRow() {
                     let account = accounts[indexPath.row]
-                    (segue.destinationViewController as! TransactionsListViewController).account = account
+                    (segue.destinationViewController as! NewTransactionViewController).account = account
+                }
+                
+            case "sharingDetails":
+                if let buttonPos = (sender as? UIButton)?.convertPoint(CGPointZero, toView: tableView),
+                    indexPath = self.tableView.indexPathForRowAtPoint(buttonPos) {
+                    let account = accounts[indexPath.row]
+                    (segue.destinationViewController as! SharingViewController).account = account
+                }
+            default:
+                return
             }
         }
-        
-        if segue.identifier == "newTransaction" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let account = accounts[indexPath.row]
-                (segue.destinationViewController as! NewTransactionViewController).account = account
-            }
-        }
-        
-        if segue.identifier == "sharingDetails" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let account = accounts[indexPath.row]
-                (segue.destinationViewController as! SharingViewController).account = account
-            }
-        }
+
+
   }
 
     // MARK: - Table View
@@ -167,7 +174,7 @@ class AccountListViewController: UITableViewController {
     }
     
     // MARK: Segues and navigation
-    
+
     @IBAction func unwindToAccountListViewController(segue: UIStoryboardSegue) {
     }
 
