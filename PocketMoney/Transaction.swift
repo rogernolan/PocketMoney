@@ -15,13 +15,13 @@ class Transaction: PFObject, PFSubclassing {
     @NSManaged var archived : Bool
     @NSManaged var account: Account?
     @NSManaged var endOfMonth : Bool
+    @NSManaged var deleted : Bool
 
     class func parseClassName() -> String {
         return "Transaction"
     }
     
     override init() {
-
         super.init()
 
     }
@@ -29,7 +29,10 @@ class Transaction: PFObject, PFSubclassing {
     convenience init(account anAccount:Account, name aName:String, amount anAmount:Double) {
         
         self.init()
+
         archived = false
+        deleted = false
+        
         name = aName
         account = anAccount
         amount = anAmount
@@ -65,13 +68,17 @@ class Transaction: PFObject, PFSubclassing {
                 
                 
                 return query.findObjectsInBackground().continueWithSuccessBlock({ (task : BFTask!) -> AnyObject! in
-                    if let objects = task.result as? [PFObject] {
+                    var keepers = [Transaction]()
+                    if let objects = task.result as? [Transaction] {
+                        keepers = objects.filter{(includeElement: Transaction) -> Bool in
+                            return !includeElement.deleted }
                         NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: keyName)
                         NSUserDefaults.standardUserDefaults().synchronize()
-                        return PFObject.pinAllInBackground(objects)
+                        
+                        return PFObject.pinAllInBackground(keepers)
                     }
                     
-                    return task.result
+                    return keepers
                 })
             }
             return task;
@@ -81,11 +88,12 @@ class Transaction: PFObject, PFSubclassing {
     
     func deleteFromAccount() -> BFTask! {
         var refund = self.amount
+        self.deleted = true
         if let refreshedAccount = self.account {
             return refreshedAccount.fetchIfNeededInBackground().continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 return self.unpinInBackground()
             }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
-                return self.deleteInBackground()
+                return self.saveEventually()
             }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 refreshedAccount.balance += refund
                 return refreshedAccount.saveEventually()

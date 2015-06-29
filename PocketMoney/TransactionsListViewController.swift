@@ -57,8 +57,7 @@ class TransactionsListViewController: UITableViewController {
         if let ac = self.account {
             title = ac.name
         }
-        
-        tableView.reloadData()
+        tableView.reloadData();
     }
 
     override func viewDidLoad() {
@@ -66,7 +65,8 @@ class TransactionsListViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading")
         self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
-        self.configureView()
+        loadTransactionsFromAccount(fromServer:false)
+
     }
 
     override func didReceiveMemoryWarning() {

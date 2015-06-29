@@ -84,6 +84,7 @@ class Account : PFObject, PFSubclassing{
     func currentTransactions(fromServer:Bool = false) ->BFTask {
         let pred = NSPredicate(format: "account = %@", self)
         let query = Transaction.queryWithPredicate(pred)!
+        query.whereKey("deleted", equalTo:false)
         if fromServer == false {
             query.fromLocalDatastore()
         }
@@ -98,8 +99,9 @@ class Account : PFObject, PFSubclassing{
         query.limit = queryLimit
         query.skip = skip
         query.orderByAscending("createdAt")
-        query.whereKey("archived" , equalTo:true)
-        
+        query.whereKey("archived", equalTo:true)
+        query.whereKey("deleted", equalTo:false)
+
         return query.findObjectsInBackground()
     }
     
@@ -110,15 +112,21 @@ class Account : PFObject, PFSubclassing{
     :param: name         Name of the tranasaction
     :param: amount       the amount of the transaction
     */
-    func addTransaction(name:String, amount:Double){
+    func addTransaction(name:String, amount:Double) -> BFTask!{
         let transaction = Transaction(account: self, name: name, amount: amount)
-        transaction.pinInBackgroundWithBlock({ (pinned: Bool, error: NSError?) -> Void in
-            transaction.saveEventually(nil)
-        })
         
-        balance -= amount
+        let task = transaction.pinInBackground().continueWithSuccessBlock { (pinTask:BFTask!) -> BFTask! in
+            transaction.saveEventually()
+            return pinTask
+        }.continueWithBlock { (pinnedTask:BFTask!) -> BFTask! in
+            if pinnedTask.error == nil {
+                self.balance -= amount
+                self.saveEventually()
+            }
+            return pinnedTask
+        }
         
-        self.saveEventually(nil)
+        return task
     }
     
     /**
