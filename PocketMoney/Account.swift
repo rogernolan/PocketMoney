@@ -117,26 +117,31 @@ class Account : PFObject, PFSubclassing {
     func addTransaction(name:String, amount:Double) -> BFTask!{
         let transaction = Transaction(account: self, name: name, amount: amount)
         
-        let task = transaction.pinInBackground().continueWithSuccessBlock { (pinTask:BFTask!) -> BFTask! in
-            transaction.saveEventually()
-            return pinTask
-        }.continueWithBlock { (pinnedTask:BFTask!) -> BFTask! in
-            if pinnedTask.error == nil {
-                self.balance -= amount
-                self.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
-                    NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
-                    if saveTask.error != nil {
-                        self.saveEventually()
-                    }
-                    return saveTask
-                }
-            }
-            return pinnedTask
-        }
-        
+        self.balance -= amount
+        self.saveEventually()
+        transaction.saveEventually()
         NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
-
-        return task
+        
+        return transaction.pinInBackground();
+        
+//        let task = transaction.pinInBackground().continueWithSuccessBlock { (pinTask:BFTask!) -> BFTask! in
+//            transaction.saveEventually()
+//            return pinTask
+//        }.continueWithBlock { (pinnedTask:BFTask!) -> BFTask! in
+//            if pinnedTask.error == nil {
+//                self.balance -= amount
+//                self.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
+//                    NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+//                    if saveTask.error != nil {
+//                        self.saveEventually()
+//                    }
+//                    return saveTask
+//                }
+//            }
+//            return pinnedTask
+//        }
+//        
+//        return task
     }
     
     /**
