@@ -32,14 +32,15 @@ class AccountListViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading")
         self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
-        self.refreshControl?.tintColor = UIColor.blackColor()
-        loadModelObjects()
+        self.refreshControl?.tintColor = UIColor.whiteColor()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "modelUpdated:", name: ModelUpdatedNotification, object: nil)
     }
 
     func checkAndPresentLogin(){
         
         if PFUser.currentUser() != nil {
-            loadModelObjects()
+            reloadData()
         }
         
         if PFUser.currentUser() == nil {
@@ -131,19 +132,23 @@ class AccountListViewController: UITableViewController {
 //        }
 //    }
     
-    func loadModelObjects() {
-                
-        Account.loadFrom(.local, callback : { accounts, error in
-            
-            if let a = accounts {
-                self.accounts = a
-                if count(a) == 0 {
-                    self.refreshFromServer()
-                } else {
-                    self.tableView.reloadData()
+    func reloadData() {
+        if self.refreshControl?.refreshing == false {
+            Account.loadFrom(.local, callback : { accounts, error in
+
+                if let a = accounts {
+                    self.accounts = a
+                    if count(a) == 0 {
+                        self.refreshFromServer()
+                    } else {
+                        self.tableView.reloadData()
+                    }
                 }
-            }
-        })
+                else if error.domain == "Parse" && error.code == 120 {
+                     self.refreshFromServer()
+                }
+            })
+        }
     }
 
     func refreshFromServer() {
@@ -159,6 +164,10 @@ class AccountListViewController: UITableViewController {
                     self.accounts = a
                     self.tableView.reloadData()
                 }
+            }
+            else {
+                var message = "Sorry, I couldn't fetch your accounts. Please try again later"
+                
             }
 
         })
@@ -188,12 +197,15 @@ extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpVie
         // create a new account.
         
         let account = Account(name: "My first account", balance: 0.0, user:user)
-        loadModelObjects()
+        reloadData()
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
             //
         })
-
-
     }
+}
 
+extension AccountListViewController {
+    func modelUpdated(note:NSNotification) {
+        reloadData()
+    }
 }

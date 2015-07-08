@@ -93,10 +93,22 @@ class Transaction: PFObject, PFSubclassing {
             return refreshedAccount.fetchIfNeededInBackground().continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 return self.unpinInBackground()
             }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
-                return self.saveEventually()
+                return self.saveInBackground()
+            }.continueWithBlock{ (saveTask : BFTask!) -> BFTask! in
+                if saveTask.error != nil {
+                    self.saveEventually()
+                }
+                return saveTask
             }.continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in
                 refreshedAccount.balance += refund
-                return refreshedAccount.saveEventually()
+                return refreshedAccount.saveInBackground()
+            }.continueWithSuccessBlock{ (task : BFTask!) -> AnyObject! in
+                if task.error != nil {
+                    refreshedAccount.saveEventually()
+                }
+                NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+
+                return nil
             }
         }
         else {

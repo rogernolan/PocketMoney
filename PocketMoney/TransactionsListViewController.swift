@@ -65,15 +65,26 @@ class TransactionsListViewController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Loading")
         self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "modelUpdated:", name: ModelUpdatedNotification, object: nil)
+
         loadTransactionsFromAccount(fromServer:false)
 
     }
+    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    func modelUpdated(_:NSNotification){
+        loadTransactionsFromAccount()
+    }
+    
     func loadTransactionsFromAccount(fromServer:Bool = false) {
         self.account?.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
             if let objects = task.result as? [Transaction] {

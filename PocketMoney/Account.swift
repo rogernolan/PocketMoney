@@ -7,12 +7,13 @@
 //
 
 // import Parse
+let ModelUpdatedNotification = "ModelUpdatedNotification"
 
 enum Source {
     case server, local
 }
 
-class Account : PFObject, PFSubclassing{
+class Account : PFObject, PFSubclassing {
     @NSManaged var balance : Double
     @NSManaged var openingBalance : Double
     @NSManaged var thisMonthOpeneingBalance : Double
@@ -43,13 +44,14 @@ class Account : PFObject, PFSubclassing{
     
     class func loadFrom(source:Source, callback:(accounts:[Account]?, error:NSError!) -> Void) -> BFTask! {
         if let user = PFUser.currentUser() {
-            let query = PMUser.query()
-            query?.includeKey("accounts")
+            let query = PMUser.query()!
+            query.includeKey("accounts")
             if source == .local {
-                query?.fromLocalDatastore()
+                query.fromLocalDatastore()
             }
-            return query?.getObjectInBackgroundWithId(user.objectId!).continueWithBlock{ (task:BFTask!) -> BFTask! in
+            return query.getObjectInBackgroundWithId(user.objectId!).continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
+                    //Error Domain=Parse Code=120 not an error? means does not exist yet?
                     println("error fetching Accounts data from parse: \(e)")
                     callback(accounts: nil, error: e)
                     return task
@@ -121,11 +123,19 @@ class Account : PFObject, PFSubclassing{
         }.continueWithBlock { (pinnedTask:BFTask!) -> BFTask! in
             if pinnedTask.error == nil {
                 self.balance -= amount
-                self.saveEventually()
+                self.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
+                    NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+                    if saveTask.error != nil {
+                        self.saveEventually()
+                    }
+                    return saveTask
+                }
             }
             return pinnedTask
         }
         
+        NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+
         return task
     }
     
@@ -164,7 +174,12 @@ class Account : PFObject, PFSubclassing{
         
         }.continueWithSuccessBlock{ (task: BFTask!) -> BFTask in
             if let pinnedObject = eom {
-                pinnedObject.saveEventually()
+                pinnedObject.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
+                    if saveTask.error != nil {
+                        pinnedObject.saveEventually()
+                    }
+                    return saveTask
+                }
             }
             else {
                 return BFTask(error: NSError(domain: "PocketMoney", code: 500, userInfo: nil))
@@ -172,8 +187,14 @@ class Account : PFObject, PFSubclassing{
             // Now we are sure the transaction is saved, add the balance.
             self.balance += amount
             self.thisMonthOpeneingBalance = self.balance
-            self.saveEventually()
-            
+            return self.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
+                if saveTask.error != nil {
+                    self.saveEventually()
+                }
+                return saveTask
+            }
+        }.continueWithSuccessBlock{ (task:BFTask!) -> AnyObject! in
+    
             // Archive last month's (actually all unarchived) transactions
             for transaction in transactions {
                 transaction.archived = true;
@@ -182,13 +203,17 @@ class Account : PFObject, PFSubclassing{
             // If the save worked, unpin all transactions
             return PFObject.unpinAllInBackground(transactions)
             
-            
         }.continueWithBlock{ (task: BFTask!) -> AnyObject! in
             
             // Save all the transactions we've just archived
             PFObject.saveAllInBackground(transactions).continueWithSuccessBlock{ (_) in
                 for transaction in transactions {
-                    transaction.saveEventually()
+                    transaction.saveInBackground().continueWithBlock{ (saveTask:BFTask!) -> AnyObject! in
+                        if saveTask.error != nil {
+                            self.saveEventually()
+                        }
+                        return saveTask;
+                    }
                 }
                 return nil
             }
@@ -196,6 +221,8 @@ class Account : PFObject, PFSubclassing{
             if let c = callback {
                 c(error: task.error)
             }
+            NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+
             return nil
         }
     }
@@ -229,6 +256,7 @@ class Account : PFObject, PFSubclassing{
                 
             }.continueWithBlock{ (task:BFTask!) -> BFTask! in
 
+                NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
                 // callback(error: task.error)
                 return task
             }
