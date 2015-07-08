@@ -17,6 +17,9 @@ class TransactionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        amountLabel.font = amountLabel.font.copyWithTabularNumbers()
+        amountLabel.font = amountLabel.font.copyWithTabularNumbers()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

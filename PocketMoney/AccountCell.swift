@@ -29,7 +29,8 @@ class AccountCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        amountLabel.font = amountLabel.font.copyWithTabularNumbers()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

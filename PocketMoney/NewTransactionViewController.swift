@@ -19,7 +19,11 @@ public class NewTransactionViewController: UITableViewController {
     
     var lastTransactionName : String?
     
-
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        amountEdit.font = amountEdit.font.copyWithTabularNumbers()
+    }
+    
     override public func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         saveButton.enabled = false

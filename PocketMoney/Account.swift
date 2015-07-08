@@ -120,9 +120,11 @@ class Account : PFObject, PFSubclassing {
         self.balance -= amount
         self.saveEventually()
         transaction.saveEventually()
-        NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
         
-        return transaction.pinInBackground();
+        return transaction.pinInBackground().continueWithBlock({ (pinTask:BFTask!) -> AnyObject! in
+            NSNotificationCenter.defaultCenter().postNotificationName(ModelUpdatedNotification, object: self)
+            return pinTask;
+        });
         
 //        let task = transaction.pinInBackground().continueWithSuccessBlock { (pinTask:BFTask!) -> BFTask! in
 //            transaction.saveEventually()

@@ -20,7 +20,6 @@
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
 		C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70C01ADD880600B8D021 /* String+numberValues.swift */; };
-		C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */; };
 		C83EA8F31B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */; };
 		C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */; };
 		C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */; };
@@ -32,6 +31,7 @@
 		C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */; };
 		C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */; };
 		C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */; };
+		C874017C1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */; };
 		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
 		C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */; };
 		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
@@ -103,7 +103,6 @@
 		C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		C82A70C01ADD880600B8D021 /* String+numberValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+numberValues.swift"; path = "PocketMoney/Extensions/String+numberValues.swift"; sourceTree = "<group>"; };
-		C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
 		C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertView+SingleButtonAlert.swift"; path = "Extensions/UIAlertView+SingleButtonAlert.swift"; sourceTree = "<group>"; };
 		C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -115,6 +114,7 @@
 		C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareNameCell.swift; sourceTree = "<group>"; };
 		C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonCell.swift; sourceTree = "<group>"; };
+		C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
 		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -266,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				C82A70C01ADD880600B8D021 /* String+numberValues.swift */,
+				C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -382,7 +383,6 @@
 			children = (
 				C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */,
 				C800E61D1AD8350400896F96 /* String+floatValue.swift */,
-				C83284821AE795D300B5B36A /* UIFont+proprotionalNumbers.swift */,
 				C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */,
 			);
 			name = Extensions;
@@ -535,7 +535,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83284831AE795D300B5B36A /* UIFont+proprotionalNumbers.swift in Sources */,
 				C8C14AB81B39A851007CEBCE /* EditAccount.swift in Sources */,
 				C824E4311B3AD2E60095718A /* AccountDetailsHeaderCell.swift in Sources */,
 				C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */,
@@ -543,6 +542,7 @@
 				C8C9916F1AD811C8000E756E /* UIColor+getRGB.swift in Sources */,
 				C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */,
 				C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */,
+				C874017C1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift in Sources */,
 				C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */,
 				C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */,
 				C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */,

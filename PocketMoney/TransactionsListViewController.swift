@@ -73,7 +73,6 @@ class TransactionsListViewController: UITableViewController {
     
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,13 +85,16 @@ class TransactionsListViewController: UITableViewController {
     }
     
     func loadTransactionsFromAccount(fromServer:Bool = false) {
-        self.account?.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
-            if let objects = task.result as? [Transaction] {
-                self.currentTransactions = objects
-                self.configureView()
+        if refreshControl?.refreshing != nil {
+            refreshControl?.beginRefreshing()
+            account?.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
+                self.refreshControl?.endRefreshing()
+                if let objects = task.result as? [Transaction] {
+                    self.currentTransactions = objects
+                    self.configureView()
+                }
+                return nil
             }
-            
-            return nil
         }
     }
         
@@ -107,16 +109,18 @@ class TransactionsListViewController: UITableViewController {
     
         switch section {
         case 0:
+            var count = 0
             if let rows = currentTransactions {
-                var count = rows.count
-                if count == 0 {
-                    count = 1   // Show the "no transactions cell
+                    count = rows.count
                 }
-                if historicTransactions == nil {
-                    count += 1  // Show load more
-                }
-                return count
+
+            if count == 0 {
+                count = 1   // Show the "no transactions cell
             }
+            if historicTransactions == nil {
+                count += 1  // Show load more
+            }
+            return count
         case 1:
             var count = historicTransactions!.count
             if count == 0 {
@@ -126,10 +130,6 @@ class TransactionsListViewController: UITableViewController {
         default:
             return 0
         }
-
-
-        // else no rows.
-        return 0
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
