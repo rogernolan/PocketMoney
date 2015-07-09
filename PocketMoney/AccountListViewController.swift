@@ -180,6 +180,7 @@ class AccountListViewController: UITableViewController {
     // MARK: Segues and navigation
 
     @IBAction func unwindToAccountListViewController(segue: UIStoryboardSegue) {
+        reloadData()
     }
 
 }

@@ -22,7 +22,7 @@ extension UIFont {
                 UIFontFeatureSelectorIdentifierKey: 1
             ],
             [
-                // round .
+                // round . available on Helvetica Neue.
                 UIFontFeatureTypeIdentifierKey : kStyleOptionsType,
                 UIFontFeatureSelectorIdentifierKey:  1
             ]

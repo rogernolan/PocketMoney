@@ -289,8 +289,8 @@
 		C85F98171B0A4CE000E326BA /* Sharing details */ = {
 			isa = PBXGroup;
 			children = (
-				C824E42F1B3AD2E60095718A /* AccountDetailsHeaderCell.swift */,
 				C824E4301B3AD2E60095718A /* AccountDetailsViewController.swift */,
+				C824E42F1B3AD2E60095718A /* AccountDetailsHeaderCell.swift */,
 				C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */,
 				C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */,
 			);

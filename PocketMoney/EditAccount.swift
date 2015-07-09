@@ -56,24 +56,49 @@ class EditAccountViewController : UITableViewController {
     // MARK: UI Events
     
     @IBAction func done(sender: AnyObject) {
-        
-        if let a = account {
-            a.name = accountName.text!
-            a.balance = balance.text.doubleValue
-            a.saveEventually() { (saved: Bool, error:NSError?) -> Void in
-                    // code
-                }
+        if let name = accountName.text {
+            let balanceAmount = balance.text.doubleValue
+
+            if let a = account {
+                // editing
                 
-                self.performSegueWithIdentifier("haveEditedAccount", sender: self)
-        }
-        else {
-            let account = Account(name: accountName.text!, balance: Double(balance.text.doubleValue), user:PFUser.currentUser())
-            account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
-                account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
-                    // code
+                if balanceAmount <= 0 {
+                    // Best to confirm negative or zero balance.
+                    var messageString = "Are you sure you want to make this account overdrawn?"
+                    if balanceAmount == 0.0 {
+                        messageString = "Are you sure you want to clear this account balance?"
+                    }
+                    let alert = UIAlertController(title: "Save?", message: messageString, preferredStyle: .Alert)
+                    let yes = UIAlertAction(title: "Yes", style: .Default ){ (_:UIAlertAction!) -> Void in
+                        a.name = name
+                        a.balance = balanceAmount
+                        a.saveEventually()
+                        self.performSegueWithIdentifier("haveEditedAccount", sender: self)
+                    }
+                    let no = UIAlertAction(title: "No", style: .Cancel) { (_:UIAlertAction!) -> Void in }
+                    alert.addAction(yes)
+                    alert.addAction(no)
+                    self.presentViewController(alert, animated: true){}
                 }
-                
-                self.performSegueWithIdentifier("haveCreatedAccount", sender: self)
+                else {
+                    // Just save straight away
+                    a.name = name
+                    a.balance = balanceAmount
+                    a.saveEventually()
+                    self.performSegueWithIdentifier("haveEditedAccount", sender: self)
+                }
+
+            }
+            else {
+                // creating
+                let account = Account(name: accountName.text!, balance: Double(balance.text.doubleValue), user:PFUser.currentUser())
+                account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
+                    account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
+                        // code
+                    }
+                    
+                    self.performSegueWithIdentifier("haveCreatedAccount", sender: self)
+                }
             }
         }
     }
