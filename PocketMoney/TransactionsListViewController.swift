@@ -18,10 +18,7 @@ class TransactionsListViewController: UITableViewController {
     var account: Account? {
 
         didSet {
-            // set the title
-            self.configureView()
             // Update the model.
-
             loadTransactionsFromAccount()
         }
     }
@@ -33,7 +30,7 @@ class TransactionsListViewController: UITableViewController {
                 formatter.dateStyle = .MediumStyle
                 formatter.timeStyle = .NoStyle
                 return formatter
-                }()
+            }()
         }
         
         return Static.instance
@@ -85,15 +82,17 @@ class TransactionsListViewController: UITableViewController {
     }
     
     func loadTransactionsFromAccount(fromServer:Bool = false) {
-        if refreshControl?.refreshing != nil {
-            refreshControl?.beginRefreshing()
-            account?.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
-                self.refreshControl?.endRefreshing()
-                if let objects = task.result as? [Transaction] {
-                    self.currentTransactions = objects
-                    self.configureView()
+        if let a = account {
+            if refreshControl?.refreshing == false {
+                refreshControl?.beginRefreshing()
+                a.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
+                    self.refreshControl?.endRefreshing()
+                    if let objects = task.result as? [Transaction] {
+                        self.currentTransactions = objects
+                        self.configureView()
+                    }
+                    return nil
                 }
-                return nil
             }
         }
     }
@@ -146,12 +145,12 @@ class TransactionsListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let row = indexPath.row
         if indexPath.section == 0 {
-            if currentTransactions!.count == 0 && row == 0 {
+            if currentTransactions == nil && row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
                 return cell
             }
-            
-            if row >= currentTransactions!.count && historicTransactions == nil {
+            let transactionsCount = currentTransactions?.count ?? 0
+            if row >= transactionsCount && historicTransactions == nil {
                 let cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell", forIndexPath: indexPath) as! LoadMoreCell
                 cell.loadMoreButton.addTarget(self, action: "loadMore", forControlEvents: UIControlEvents.TouchUpInside)
                 return cell
@@ -166,6 +165,7 @@ class TransactionsListViewController: UITableViewController {
             return cell
 
         } else {
+            // indexPath.section == 1
             if historicTransactions!.count == 0 && row == 0 {
                 let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
                 return cell
@@ -198,6 +198,9 @@ class TransactionsListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if currentTransactions == nil {
+            return false
+        }
         if indexPath.section == 0 && indexPath.row < currentTransactions!.count {
             return true
         }
