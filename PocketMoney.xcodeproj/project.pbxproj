@@ -34,7 +34,6 @@
 		C874017C1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */; };
 		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
 		C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */; };
-		C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89EEE981AF0B55C00E63DA2 /* User.swift */; };
 		C8C14AB81B39A851007CEBCE /* EditAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C14AB71B39A851007CEBCE /* EditAccount.swift */; };
 		C8C9911D1AD80858000E756E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911C1AD80858000E756E /* AppDelegate.swift */; };
 		C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C9911E1AD80858000E756E /* AccountListViewController.swift */; };
@@ -117,7 +116,6 @@
 		C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
 		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
-		C89EEE981AF0B55C00E63DA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8B9D2BB1B433D41007CF7E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C8C14AB71B39A851007CEBCE /* EditAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccount.swift; sourceTree = "<group>"; };
 		C8C991171AD80858000E756E /* PocketMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,7 +202,6 @@
 				C824AA4C1AF8A2BD0042FCFF /* Categories */,
 				C800E6171AD8206F00896F96 /* Account.swift */,
 				C800E6191AD8255200896F96 /* Transaction.swift */,
-				C89EEE981AF0B55C00E63DA2 /* User.swift */,
 				C875DF4A1B16E67500519F30 /* PMUser.swift */,
 			);
 			name = Model;
@@ -546,7 +543,6 @@
 				C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */,
 				C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */,
 				C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */,
-				C89EEE991AF0B55C00E63DA2 /* User.swift in Sources */,
 				C83EA8F31B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift in Sources */,
 				C8C991411AD80B46000E756E /* AccountCell.swift in Sources */,
 				C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */,

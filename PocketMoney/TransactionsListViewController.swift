@@ -150,7 +150,7 @@ class TransactionsListViewController: UITableViewController {
                 return cell
             }
             let transactionsCount = currentTransactions?.count ?? 0
-            if row >= transactionsCount && historicTransactions == nil {
+            if row >= transactionsCount {
                 let cell = tableView.dequeueReusableCellWithIdentifier("loadMoreCell", forIndexPath: indexPath) as! LoadMoreCell
                 cell.loadMoreButton.addTarget(self, action: "loadMore", forControlEvents: UIControlEvents.TouchUpInside)
                 return cell

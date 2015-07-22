@@ -20,12 +20,12 @@ class Account : PFObject, PFSubclassing {
     @NSManaged var name : String?
     @NSManaged var owner : PFUser
     @NSManaged var lastMonthEnd : NSDate
-    
+
     class func parseClassName() -> String {
         return "Account"
     }
 
-    convenience init(name aName:String,  balance aBalance:Double, user: PFUser?) {
+    convenience init(name aName:String,  balance aBalance:Double, user: PMUser?) {
         self.init()
         name = aName
         balance = aBalance
@@ -33,6 +33,8 @@ class Account : PFObject, PFSubclassing {
         thisMonthOpeneingBalance = aBalance
         // We crash if you try to make an account without being logged in.
         owner = user != nil ?  user! : PFUser.currentUser()!
+        user!.accounts.addObject(self)
+        user!.saveEventually()
     }
     
     /**
@@ -42,14 +44,14 @@ class Account : PFObject, PFSubclassing {
     :param: callback called when data is available or an error occured.
     */
     
-    class func loadFrom(source:Source, callback:(accounts:[Account]?, error:NSError!) -> Void) -> BFTask! {
-        if let user = PFUser.currentUser() {
-            let query = PMUser.query()!
-            query.includeKey("accounts")
+    class func loadFrom(source:Source, callback:(accounts:NSArray?, error:NSError!) -> Void) -> BFTask! {
+        if let user = PMUser.currentUser() {
+            let accounts = user.accounts
+            let query = accounts.query()!
             if source == .local {
                 query.fromLocalDatastore()
             }
-            return query.getObjectInBackgroundWithId(user.objectId!).continueWithBlock{ (task:BFTask!) -> BFTask! in
+            return query.findObjectsInBackground().continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
                     //Error Domain=Parse Code=120 not an error? means does not exist yet?
                     println("error fetching Accounts data from parse: \(e)")
@@ -57,9 +59,9 @@ class Account : PFObject, PFSubclassing {
                     return task
                 }
                 else {
-                    if let user = task.result as? PMUser, accounts = user.accounts as? [Account] {
+                    if let accounts  = task.result as? NSArray {
                         callback(accounts: accounts , error: nil)
-                        return PFObject.pinAllInBackground(accounts)
+                        return PFObject.pinAllInBackground(accounts as [AnyObject])
                     }
                     else {
                         callback(accounts: nil , error: NSError(domain: "PocketMoney", code: 500, userInfo: nil))
@@ -246,20 +248,21 @@ class Account : PFObject, PFSubclassing {
     // Prevents us getting at PFSubclassing.parseClassName from an extension.
     
     class func fetchModifications() ->BFTask! {
-        if let user = PFUser.currentUser() {
-            let query = PMUser.query()
-            query?.includeKey("accounts")
+        if let user = PMUser.currentUser() {
+            let query = user.accounts.query()
             let keyName = "LastServerRefresh" + Account.parseClassName()
             if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey(keyName) as? NSDate {
                 query?.whereKey("UpdatedAt", greaterThan: lastFetch)
             }
             
-            return query?.getObjectInBackgroundWithId(user.objectId!).continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
+            return query?.findObjectsInBackground().continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
                 NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: keyName)
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
-                let user = task.result as! PMUser
-                return PFObject.pinAllInBackground(user.accounts as [AnyObject])
+                if let accounts = task.result as? NSArray {
+                    return PFObject.pinAllInBackground(accounts as [AnyObject])
+                }
+                return task
                 
             }.continueWithBlock{ (task:BFTask!) -> BFTask! in
 

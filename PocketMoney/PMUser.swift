@@ -9,6 +9,5 @@
 import Foundation
 
 class PMUser : PFUser, PFSubclassing {
-    @NSManaged var accounts : NSArray
-    
+    @NSManaged var accounts : PFRelation
 }

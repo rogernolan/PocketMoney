@@ -92,6 +92,8 @@ class AccountListViewController: UITableViewController {
                     let account = accounts[indexPath.row]
                     (segue.destinationViewController as! AccountDetailsViewController).account = account
             }
+        case "newAccount":
+            break
         default:
             println("Mystery segue from Account overview")
         }
@@ -136,7 +138,7 @@ class AccountListViewController: UITableViewController {
         if self.refreshControl?.refreshing == false {
             Account.loadFrom(.local, callback : { accounts, error in
 
-                if let a = accounts {
+                if let a = accounts as? [Account]{
                     self.accounts = a
                     if count(a) == 0 {
                         self.refreshFromServer()
@@ -160,7 +162,7 @@ class AccountListViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
 
             if error == nil {
-                if let a = accounts {
+                if let a = accounts as? [Account] {
                     self.accounts = a
                     self.tableView.reloadData()
                 }
@@ -197,11 +199,16 @@ extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpVie
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
         // create a new account.
         
-        let account = Account(name: "My first account", balance: 0.0, user:user)
-        reloadData()
-        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            //
-        })
+        if let pmUser = user as? PMUser {
+            let account = Account(name: "My first account", balance: 0.0, user:pmUser)
+            reloadData()
+            self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                //
+            })
+        } else {
+            println("****************** logged in with PFUser, not PMUser **********************")
+        }
+
     }
 }
 

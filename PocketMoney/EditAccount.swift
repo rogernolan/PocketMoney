@@ -91,7 +91,7 @@ class EditAccountViewController : UITableViewController {
             }
             else {
                 // creating
-                let account = Account(name: accountName.text!, balance: Double(balance.text.doubleValue), user:PFUser.currentUser())
+                let account = Account(name: accountName.text!, balance: Double(balance.text.doubleValue), user:PMUser.currentUser())
                 account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
                     account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
                         // code
@@ -141,7 +141,7 @@ extension EditAccountViewController : UITextFieldDelegate {
             proposedName = existingString.stringByReplacingCharactersInRange(range, withString: string)
         }
         
-        if count(proposedName) > 0 && proposedAmountString.doubleValue != 0.0 {
+        if count(proposedName) > 0 && (proposedAmountString.doubleValue != 0.0 && account != nil) {
             saveButton.enabled = true
         }
         else {

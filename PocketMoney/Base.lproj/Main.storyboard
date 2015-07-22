@@ -160,7 +160,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qsE-eo-Htp">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Uhp-De-gau"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Uhp-De-gau">
+                            <connections>
+                                <action selector="done:" destination="gkH-SF-zMN" id="ofn-z2-m9g"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -274,7 +278,7 @@
                     <navigationItem key="navigationItem" title="Accounts" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpX-6R-Pee">
                             <connections>
-                                <segue destination="gkH-SF-zMN" kind="show" id="Bpa-pf-ydI"/>
+                                <segue destination="gkH-SF-zMN" kind="show" identifier="newAccount" id="Bpa-pf-ydI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -685,7 +689,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XwU-So-Cay"/>
-        <segue reference="RLe-Xy-ue0"/>
+        <segue reference="xpu-kV-I2L"/>
+        <segue reference="Bpa-pf-ydI"/>
     </inferredMetricsTieBreakers>
 </document>
