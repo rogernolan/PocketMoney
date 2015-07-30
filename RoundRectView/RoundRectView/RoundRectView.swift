@@ -25,7 +25,7 @@ import UIKit
 
         }
         get {
-            return UIColor(CGColor: layer.backgroundColor)!
+            return UIColor(CGColor: layer.backgroundColor!)
         }
     }
 }

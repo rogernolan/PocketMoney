@@ -8,6 +8,6 @@
 
 import Foundation
 
-class PMUser : PFUser, PFSubclassing {
+class PMUser : PFUser {
     @NSManaged var accounts : PFRelation
 }

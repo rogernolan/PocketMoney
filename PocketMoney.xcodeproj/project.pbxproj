@@ -19,7 +19,6 @@
 		C824E4321B3AD2E60095718A /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824E4301B3AD2E60095718A /* AccountDetailsViewController.swift */; };
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
-		C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70C01ADD880600B8D021 /* String+numberValues.swift */; };
 		C83EA8F31B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */; };
 		C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */; };
 		C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */; };
@@ -31,6 +30,8 @@
 		C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */; };
 		C85F981F1B0A4DEB00E326BA /* ShareNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */; };
 		C85F98211B0A4E2C00E326BA /* AddPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */; };
+		C86BFC1C1B69F7B40068C94C /* String+NSRangeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BFC1B1B69F7B40068C94C /* String+NSRangeConversion.swift */; };
+		C86BFC211B69FAAC0068C94C /* String+numberValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BFC201B69FAAC0068C94C /* String+numberValues.swift */; };
 		C874017C1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */; };
 		C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DF4A1B16E67500519F30 /* PMUser.swift */; };
 		C875DFAF1B1C312F00519F30 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */; };
@@ -92,7 +93,6 @@
 		C800E60B1AD8201700896F96 /* RoundRectView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RoundRectView.xcodeproj; path = RoundRectView/RoundRectView.xcodeproj; sourceTree = "<group>"; };
 		C800E6171AD8206F00896F96 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		C800E6191AD8255200896F96 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		C800E61D1AD8350400896F96 /* String+floatValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+floatValue.swift"; path = "Extensions/String+floatValue.swift"; sourceTree = "<group>"; };
 		C8059BAF1AEEA311003E68EB /* PocketMoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketMoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8059BB91AEF659D003E68EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C80E80F91B450D28008B68E1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -101,7 +101,6 @@
 		C824E4301B3AD2E60095718A /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
-		C82A70C01ADD880600B8D021 /* String+numberValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+numberValues.swift"; path = "PocketMoney/Extensions/String+numberValues.swift"; sourceTree = "<group>"; };
 		C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertView+SingleButtonAlert.swift"; path = "Extensions/UIAlertView+SingleButtonAlert.swift"; sourceTree = "<group>"; };
 		C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -113,7 +112,9 @@
 		C84C45151AE8FF5100FDC400 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C85F981E1B0A4DEB00E326BA /* ShareNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareNameCell.swift; sourceTree = "<group>"; };
 		C85F98201B0A4E2C00E326BA /* AddPersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonCell.swift; sourceTree = "<group>"; };
-		C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
+		C86BFC1B1B69F7B40068C94C /* String+NSRangeConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+NSRangeConversion.swift"; path = "Extensions/String+NSRangeConversion.swift"; sourceTree = "<group>"; };
+		C86BFC201B69FAAC0068C94C /* String+numberValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+numberValues.swift"; sourceTree = "<group>"; };
+		C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+proprotionalNumbers.swift"; path = "../UIFont+proprotionalNumbers.swift"; sourceTree = "<group>"; };
 		C875DF4A1B16E67500519F30 /* PMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMUser.swift; sourceTree = "<group>"; };
 		C875DFAE1B1C312F00519F30 /* LoadMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
 		C8B9D2BB1B433D41007CF7E4 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -259,15 +260,6 @@
 			name = CreateTransaction;
 			sourceTree = "<group>";
 		};
-		C82A70BF1ADD879D00B8D021 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C82A70C01ADD880600B8D021 /* String+numberValues.swift */,
-				C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		C84C451F1AE8FF5A00FDC400 /* System Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,7 +299,6 @@
 			children = (
 				C8D51EFD1B1448BB0036DBE5 /* TODO.txt */,
 				C8C991191AD80858000E756E /* PocketMoney */,
-				C82A70BF1ADD879D00B8D021 /* Categories */,
 				C8C991311AD80858000E756E /* PocketMoneyTests */,
 				C8C991181AD80858000E756E /* Products */,
 				C8C9916C1AD80DD8000E756E /* Dependencies */,
@@ -378,8 +369,10 @@
 		C8C9916D1AD811A8000E756E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86BFC201B69FAAC0068C94C /* String+numberValues.swift */,
+				C874017B1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift */,
+				C86BFC1B1B69F7B40068C94C /* String+NSRangeConversion.swift */,
 				C8C9916E1AD811C8000E756E /* UIColor+getRGB.swift */,
-				C800E61D1AD8350400896F96 /* String+floatValue.swift */,
 				C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */,
 			);
 			name = Extensions;
@@ -424,8 +417,9 @@
 		C8C9910F1AD80858000E756E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Babbage Consulting";
 				TargetAttributes = {
 					C8C991161AD80858000E756E = {
@@ -541,8 +535,9 @@
 				C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */,
 				C874017C1B4D42FA0010E733 /* UIFont+proprotionalNumbers.swift in Sources */,
 				C875DF4B1B16E67500519F30 /* PMUser.swift in Sources */,
+				C86BFC211B69FAAC0068C94C /* String+numberValues.swift in Sources */,
+				C86BFC1C1B69F7B40068C94C /* String+NSRangeConversion.swift in Sources */,
 				C8C991211AD80858000E756E /* TransactionsListViewController.swift in Sources */,
-				C82A70C11ADD880600B8D021 /* String+numberValues.swift in Sources */,
 				C83EA8F31B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift in Sources */,
 				C8C991411AD80B46000E756E /* AccountCell.swift in Sources */,
 				C8C9911F1AD80858000E756E /* AccountListViewController.swift in Sources */,
@@ -607,6 +602,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -680,6 +676,7 @@
 				);
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babbage-consulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -699,6 +696,7 @@
 				);
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.babbage-consulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
 			};

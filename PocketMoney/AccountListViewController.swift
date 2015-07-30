@@ -47,8 +47,7 @@ class AccountListViewController: UITableViewController {
             // No user logged in
             // Create the log in view controller
             let logInViewController = LoginViewController();
-            logInViewController.fields = ( .UsernameAndPassword | .PasswordForgotten | .LogInButton |
-                                        .Facebook | .Twitter | .SignUpButton)
+            logInViewController.fields = ( [.UsernameAndPassword, .PasswordForgotten, .LogInButton, .Facebook, .Twitter, .SignUpButton])
 
             logInViewController.delegate = self
             
@@ -82,7 +81,7 @@ class AccountListViewController: UITableViewController {
                     (segue.destinationViewController as! TransactionsListViewController).account = account
             }
         case "newTransaction":
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 let account = accounts[indexPath.row]
                 (segue.destinationViewController as! NewTransactionViewController).account = account
             }
@@ -95,7 +94,7 @@ class AccountListViewController: UITableViewController {
         case "newAccount":
             break
         default:
-            println("Mystery segue from Account overview")
+            print("Mystery segue from Account overview")
         }
 
 
@@ -140,7 +139,7 @@ class AccountListViewController: UITableViewController {
 
                 if let a = accounts as? [Account]{
                     self.accounts = a
-                    if count(a) == 0 {
+                    if a.count == 0 {
                         self.refreshFromServer()
                     } else {
                         self.tableView.reloadData()
@@ -206,7 +205,7 @@ extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpVie
                 //
             })
         } else {
-            println("****************** logged in with PFUser, not PMUser **********************")
+            print("****************** logged in with PFUser, not PMUser **********************")
         }
 
     }

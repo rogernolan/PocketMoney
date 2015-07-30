@@ -64,7 +64,7 @@ class TransactionsListViewController: UITableViewController {
         self.refreshControl?.addTarget(self, action: "pulledToRefresh", forControlEvents: .ValueChanged)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "modelUpdated:", name: ModelUpdatedNotification, object: nil)
 
-        loadTransactionsFromAccount(fromServer:false)
+        loadTransactionsFromAccount(false)
 
     }
     
@@ -85,7 +85,7 @@ class TransactionsListViewController: UITableViewController {
         if let a = account {
             if refreshControl?.refreshing == false {
                 refreshControl?.beginRefreshing()
-                a.currentTransactions(fromServer:fromServer).continueWithSuccessBlock { (task:BFTask!) in
+                a.currentTransactions(fromServer).continueWithSuccessBlock { (task:BFTask!) in
                     self.refreshControl?.endRefreshing()
                     if let objects = task.result as? [Transaction] {
                         self.currentTransactions = objects
@@ -146,7 +146,7 @@ class TransactionsListViewController: UITableViewController {
         let row = indexPath.row
         if indexPath.section == 0 {
             if currentTransactions == nil && row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) 
                 return cell
             }
             let transactionsCount = currentTransactions?.count ?? 0
@@ -167,7 +167,7 @@ class TransactionsListViewController: UITableViewController {
         } else {
             // indexPath.section == 1
             if historicTransactions!.count == 0 && row == 0 {
-                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) as! UITableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("noneCell", forIndexPath: indexPath) 
                 return cell
             }
             if row >= historicTransactions!.count {
@@ -207,9 +207,9 @@ class TransactionsListViewController: UITableViewController {
         return false
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         if indexPath.section == 0 && indexPath.row < currentTransactions!.count {
-            var deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (action, indexPath) -> Void in
+            let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (action, indexPath) -> Void in
                 tableView.editing = false
                 let t = self.currentTransactions?[indexPath.row]
                 t?.deleteFromAccount().continueWithSuccessBlock({ (task) -> AnyObject! in
@@ -229,11 +229,11 @@ class TransactionsListViewController: UITableViewController {
     }
 
     func pulledToRefresh() {
-        loadTransactionsFromAccount(fromServer:true)
+        loadTransactionsFromAccount(true)
     }
     
     func loadMore(){
-        account?.fetchArchivedTransactions(queryLimit : 100, skip: nextArchiveFetchSkip).continueWithBlock { (task: BFTask!) -> AnyObject! in
+        account?.fetchArchivedTransactions(100, skip: nextArchiveFetchSkip).continueWithBlock { (task: BFTask!) -> AnyObject! in
             if let t = task.result as? [Transaction] {
                 if self.historicTransactions != nil {
                     self.historicTransactions! += t
@@ -246,7 +246,7 @@ class TransactionsListViewController: UITableViewController {
             }
             else {
                 // TODO: Error handling
-                println("Error loading historic transactions: \(task.error)")
+                print("Error loading historic transactions: \(task.error)")
             }
             
             return nil

@@ -87,7 +87,7 @@ class Transaction: PFObject, PFSubclassing {
     }
     
     func deleteFromAccount() -> BFTask! {
-        var refund = self.amount
+        let refund = self.amount
         self.deleted = true
         if let refreshedAccount = self.account {
             return refreshedAccount.fetchIfNeededInBackground().continueWithSuccessBlock{ (task : BFTask!) -> BFTask! in

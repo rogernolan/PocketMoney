@@ -21,7 +21,7 @@ public class NewTransactionViewController: UITableViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        amountEdit.font = amountEdit.font.copyWithTabularNumbers()
+        amountEdit.font = amountEdit.font!.copyWithTabularNumbers()
     }
     
     override public func viewDidAppear(animated: Bool) {
@@ -38,12 +38,12 @@ public class NewTransactionViewController: UITableViewController {
     @IBAction func saveTapped(sender: AnyObject) {
         if let transactionTitle = self.nameEdit.text, ac = account {
             if endOfMonthSwitch.on == true {
-                ac.endMonth(transactionTitle, amount: self.amountEdit.text.doubleValue, callback: { (error) -> Void in
+                ac.endMonth(transactionTitle, amount: self.amountEdit.text!.doubleValue, callback: { (error) -> Void in
                     // code
                 })
             }
             else {
-                ac.addTransaction(transactionTitle , amount: self.amountEdit.text.doubleValue)
+                ac.addTransaction(transactionTitle , amount: self.amountEdit.text!.doubleValue)
             }
             self.navigationController?.popViewControllerAnimated(true)
         }
@@ -77,32 +77,35 @@ extension NewTransactionViewController : UITextFieldDelegate {
         return true
     }
     
-    public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, string: String) -> Bool {
 
-        var proposedAmountString = amountEdit.text
-        var proposedName = nameEdit.text
-        
+        var proposedAmountString : NSString = amountEdit.text ?? ""
+        var proposedName : NSString = nameEdit.text ?? ""
         
         if textField == amountEdit {
-            let existingString = amountEdit.text as NSString
-            proposedAmountString = existingString.stringByReplacingCharactersInRange(range, withString: string)
+            
+            let existingString = amountEdit.text  ?? ""
+            let swiftRange = existingString.swiftRangeFrom(range)
+
+            proposedAmountString = existingString.stringByReplacingCharactersInRange(swiftRange, withString: string)
             let components = proposedAmountString.componentsSeparatedByString(".")
-            if count(components) > 2 {
+            if components.count > 2 {
                 return false
             }
-            if count(components) == 2 {
+            if components.count == 2 {
                 let pennies = components[1]
-                if count(pennies) > 2 {
+                if pennies.characters.count > 2 {
                     return false
                 }
             }
         }
         else if textField == nameEdit {
-            let existingString = nameEdit.text as NSString
-            proposedName = existingString.stringByReplacingCharactersInRange(range, withString: string)
+            if let existingString : NSString = nameEdit.text {
+               proposedName = existingString.stringByReplacingCharactersInRange(range, withString: string)
+            }
         }
         
-        if count(proposedName) > 0 && proposedAmountString.doubleValue != 0.0 {
+        if proposedName.length > 0 && proposedAmountString.doubleValue != 0.0 {
             saveButton.enabled = true
         }
         else {
@@ -113,13 +116,11 @@ extension NewTransactionViewController : UITextFieldDelegate {
     }
     
     public func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        if textField == nameEdit {
-            let string = nameEdit.text
-            if count(string) > 1 {
+        if textField == nameEdit , let string = nameEdit.text {
+            if string.characters.count > 1 {
                 return true
             }
             return false
-            
         }
         return true
     }

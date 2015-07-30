@@ -40,8 +40,8 @@ class Account : PFObject, PFSubclassing {
     /**
     Load Account records for current user from the specified source.
     
-    :param: source   specify whether to fetch locally or remotely.
-    :param: callback called when data is available or an error occured.
+    - parameter source:   specify whether to fetch locally or remotely.
+    - parameter callback: called when data is available or an error occured.
     */
     
     class func loadFrom(source:Source, callback:(accounts:NSArray?, error:NSError!) -> Void) -> BFTask! {
@@ -54,7 +54,7 @@ class Account : PFObject, PFSubclassing {
             return query.findObjectsInBackground().continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
                     //Error Domain=Parse Code=120 not an error? means does not exist yet?
-                    println("error fetching Accounts data from parse: \(e)")
+                    print("error fetching Accounts data from parse: \(e)")
                     callback(accounts: nil, error: e)
                     return task
                 }
@@ -80,10 +80,10 @@ class Account : PFObject, PFSubclassing {
     /**
     Find all transactions for the given account
     
-    :param: anAccount the account to retrieve the transactions for
-    :param: callback  callback called when the find completes
+    - parameter anAccount: the account to retrieve the transactions for
+    - parameter callback:  callback called when the find completes
     
-    :returns: a Bolt task for the search
+    - returns: a Bolt task for the search
     */
     func currentTransactions(fromServer:Bool = false) ->BFTask {
         let pred = NSPredicate(format: "account = %@", self)
@@ -113,8 +113,8 @@ class Account : PFObject, PFSubclassing {
     /**
     Add a transaction to an account. Will auto decrement the balance
     
-    :param: name         Name of the tranasaction
-    :param: amount       the amount of the transaction
+    - parameter name:         Name of the tranasaction
+    - parameter amount:       the amount of the transaction
     */
     func addTransaction(name:String, amount:Double) -> BFTask!{
         let transaction = Transaction(account: self, name: name, amount: amount)
@@ -151,9 +151,9 @@ class Account : PFObject, PFSubclassing {
     /**
     Insert an end of month transaction into the account, incrememnts balance and archives all of the current transactions.
     
-    :param: note        description for end of month
-    :param: amount      amount to increase balance by
-    :param: callback    called when all transactions have been archived.
+    - parameter note:        description for end of month
+    - parameter amount:      amount to increase balance by
+    - parameter callback:    called when all transactions have been archived.
     */
     
    func endMonth(note:String, amount:Double, callback:((error:NSError!) -> Void)? = nil ) -> BFTask!{
@@ -162,7 +162,7 @@ class Account : PFObject, PFSubclassing {
     
         let bolt = BFTask()
         bolt.continueWithBlock { (task: BFTask!) -> AnyObject! in
-            println("This does compile")
+            print("This does compile")
             return nil
         }
     
@@ -239,7 +239,7 @@ class Account : PFObject, PFSubclassing {
     /**
     Fetch all Accounts modified since we last called this method
     
-    :param: callback callback when data is availble (or error occured)
+    - parameter callback: callback when data is availble (or error occured)
     */
     
     // TODO: Would like to implement this as an extension on all 
@@ -284,7 +284,7 @@ class Account : PFObject, PFSubclassing {
 
 // MARK: - debug
 
-extension Account : DebugPrintable, Printable {
+extension Account : CustomDebugStringConvertible {
     
     override var debugDescription : String {
         return self.description

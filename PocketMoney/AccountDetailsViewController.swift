@@ -67,9 +67,7 @@ class AccountDetailsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "editAccount" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                (segue.destinationViewController as! EditAccountViewController).account = account
-            }
+            (segue.destinationViewController as! EditAccountViewController).account = account
         }
     }
 
@@ -77,7 +75,7 @@ class AccountDetailsViewController: UITableViewController {
     func addPerson() -> Void {
         let payload = ["email" : "rog@hatbat.net", "account" : account ]
         PFCloud.callFunctionInBackground("shareAccount", withParameters: payload).continueWithBlock { (task: BFTask!) -> BFTask in
-            println("Error: \(task.error)")
+            print("Error: \(task.error)")
             return task
         }
     }
