@@ -15,3 +15,11 @@ extension String {
 
     }
 }
+
+extension NSRange {
+    func swiftRangeOn(string : String) -> Range<String.Index> {
+        let startIndex = advance(string.startIndex, self.location)
+        let endIndex = advance(string.startIndex, self.length)
+        return startIndex..<endIndex
+    }
+}

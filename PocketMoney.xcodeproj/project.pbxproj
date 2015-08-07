@@ -19,6 +19,7 @@
 		C824E4321B3AD2E60095718A /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824E4301B3AD2E60095718A /* AccountDetailsViewController.swift */; };
 		C82A70B91ADD7BF900B8D021 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */; };
 		C82A70BC1ADD7F2600B8D021 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */; };
+		C83D72DE1B74DDE30003796C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83D72DD1B74DDE30003796C /* CloudKit.framework */; };
 		C83EA8F31B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */; };
 		C84C45161AE8FF5100FDC400 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */; };
 		C84C45171AE8FF5100FDC400 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */; };
@@ -101,6 +102,8 @@
 		C824E4301B3AD2E60095718A /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		C82A70B81ADD7BF900B8D021 /* TransactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		C82A70BB1ADD7F2600B8D021 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
+		C83D72DC1B74DDC40003796C /* PocketMoney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PocketMoney.entitlements; sourceTree = "<group>"; };
+		C83D72DD1B74DDE30003796C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C83EA8F21B4A5FF800BEB0CE /* UIAlertView+SingleButtonAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertView+SingleButtonAlert.swift"; path = "Extensions/UIAlertView+SingleButtonAlert.swift"; sourceTree = "<group>"; };
 		C84C450D1AE8FF5000FDC400 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C84C450E1AE8FF5100FDC400 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,7 @@
 				C84C451A1AE8FF5100FDC400 /* MobileCoreServices.framework in Frameworks */,
 				C84C451B1AE8FF5100FDC400 /* QuartzCore.framework in Frameworks */,
 				C84C451C1AE8FF5100FDC400 /* Security.framework in Frameworks */,
+				C83D72DE1B74DDE30003796C /* CloudKit.framework in Frameworks */,
 				C84C451E1AE8FF5100FDC400 /* SystemConfiguration.framework in Frameworks */,
 				78500AABB93892CA44710B8D /* libPods-PocketMoney.a in Frameworks */,
 			);
@@ -169,6 +173,7 @@
 		9C870BA09D876A154EF733B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C83D72DD1B74DDE30003796C /* CloudKit.framework */,
 				C80E80F91B450D28008B68E1 /* libsqlite3.dylib */,
 				C8B9D2BB1B433D41007CF7E4 /* libsqlite3.0.dylib */,
 				A859CF75E59AF5483A18BD84 /* Pods_PocketMoney.framework */,
@@ -320,6 +325,7 @@
 		C8C991191AD80858000E756E /* PocketMoney */ = {
 			isa = PBXGroup;
 			children = (
+				C83D72DC1B74DDC40003796C /* PocketMoney.entitlements */,
 				C8C991221AD80858000E756E /* Main.storyboard */,
 				C800E6151AD8203100896F96 /* Model */,
 				C8059BB51AEF64CE003E68EB /* Login */,
@@ -428,6 +434,9 @@
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
 							};
 						};
 					};
@@ -601,6 +610,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -646,6 +656,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -669,15 +680,52 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PocketMoney/PocketMoney.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Bolts\"",
+					"-l\"Parse\"",
+					"-l\"ParseLib\"",
+					"-l\"ParseUI\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"Social\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babbage-consulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -689,15 +737,52 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PocketMoney/PocketMoney.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RoundRectView/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = PocketMoney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Bolts\"",
+					"-l\"Parse\"",
+					"-l\"ParseLib\"",
+					"-l\"ParseUI\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"Social\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.babbage-consulting.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketMoney/PocketMoney-Bridging-Header.h";
 			};
 			name = Release;
