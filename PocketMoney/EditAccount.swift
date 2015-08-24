@@ -91,10 +91,10 @@ class EditAccountViewController : UITableViewController {
             }
             else {
                 let account = Account(name: name, balance: balanceAmount, user:PMUser.currentUser())
-                account.pinInBackgroundWithBlock { (status: Bool, error:NSError?) -> Void in
-                    account.saveEventually() { (saved: Bool, error:NSError?) -> Void in
-                        // code
-                    }
+                account.pinInBackgroundWithBlock { (status, error) in
+                    account.saveEventually()
+                    return
+
                 }
                 self.performSegueWithIdentifier("haveCreatedAccount", sender: self)
             }

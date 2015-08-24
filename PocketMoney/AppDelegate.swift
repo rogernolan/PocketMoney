@@ -57,8 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Our init code
     func fetchModifications() -> Void {
         if PFUser.currentUser() != nil {
-            Account.fetchModifications().continueWithBlock { (task:BFTask!) -> AnyObject! in
-                return Transaction.fetchModifications()
+            Account.fetchModifications()?.continueWithBlock { (task:BFTask!) -> AnyObject! in
+                Transaction.fetchModifications()
             }
             
             //        Account.loadFrom(.server) { (accounts, error) -> Void in

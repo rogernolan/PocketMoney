@@ -20,6 +20,7 @@ class Account : PFObject, PFSubclassing {
     @NSManaged var name : String?
     @NSManaged var owner : PFUser
     @NSManaged var lastMonthEnd : NSDate
+    @NSManaged var contributors : NSMutableArray
 
     class func parseClassName() -> String {
         return "Account"
@@ -33,7 +34,7 @@ class Account : PFObject, PFSubclassing {
         thisMonthOpeneingBalance = aBalance
         // We crash if you try to make an account without being logged in.
         owner = user != nil ?  user! : PFUser.currentUser()!
-        user!.accounts.addObject(self)
+        contributors.addObject(self)
         user!.saveEventually()
     }
     
@@ -46,11 +47,12 @@ class Account : PFObject, PFSubclassing {
     
     class func loadFrom(source:Source, callback:(accounts:NSArray?, error:NSError!) -> Void) -> BFTask! {
         if let user = PMUser.currentUser() {
-            let accounts = user.accounts
-            let query = accounts.query()!
+
+            let query = self.query()!
             if source == .local {
                 query.fromLocalDatastore()
             }
+            query.whereKey("contributors", containsAllObjectsInArray:[user] )
             return query.findObjectsInBackground().continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
                     //Error Domain=Parse Code=120 not an error? means does not exist yet?
@@ -247,15 +249,20 @@ class Account : PFObject, PFSubclassing {
     // https://openradar.appspot.com/20119848
     // Prevents us getting at PFSubclassing.parseClassName from an extension.
     
-    class func fetchModifications() ->BFTask! {
+    class func fetchModifications() ->BFTask? {
+        
         if let user = PMUser.currentUser() {
-            let query = user.accounts.query()
+
+            let query = self.query()!
+
+            query.whereKey("contributors", containsAllObjectsInArray:[user] )
+
             let keyName = "LastServerRefresh" + Account.parseClassName()
             if let lastFetch = NSUserDefaults.standardUserDefaults().objectForKey(keyName) as? NSDate {
-                query?.whereKey("UpdatedAt", greaterThan: lastFetch)
+                query.whereKey("UpdatedAt", greaterThan: lastFetch)
             }
             
-            return query?.findObjectsInBackground().continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
+            return query.findObjectsInBackground().continueWithSuccessBlock{ (task:BFTask!) -> BFTask! in
                 NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: keyName)
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
@@ -270,15 +277,9 @@ class Account : PFObject, PFSubclassing {
                 // callback(error: task.error)
                 return task
             }
-            
         }
-        else {
-            let error = NSError(domain: "PocketMoney", code: 500, userInfo: [NSLocalizedDescriptionKey : "Not logged in"])
-            // callback(error: error)
-            return BFTask(error: error)
-        }
+        return nil
     }
-
     
 }
 

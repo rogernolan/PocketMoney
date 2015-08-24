@@ -77,7 +77,7 @@ extension NewTransactionViewController : UITextFieldDelegate {
         return true
     }
     
-    public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, string: String) -> Bool {
+    public func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
 
         var proposedAmountString : NSString = amountEdit.text ?? ""
         var proposedName : NSString = nameEdit.text ?? ""

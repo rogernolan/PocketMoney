@@ -167,8 +167,8 @@ class AccountListViewController: UITableViewController {
                 }
             }
             else {
-                var message = "Sorry, I couldn't fetch your accounts. Please try again later"
-                
+                let message = "Sorry, I couldn't fetch your accounts. Please try again later"
+                UIAlertView.singleButtonAlert("Oh dear", message: message, button: "Thanks for nothing")
             }
 
         })
@@ -199,7 +199,7 @@ extension AccountListViewController : PFLogInViewControllerDelegate, PFSignUpVie
         // create a new account.
         
         if let pmUser = user as? PMUser {
-            let account = Account(name: "My first account", balance: 0.0, user:pmUser)
+            Account(name: "My first account", balance: 0.0, user:pmUser).pin()
             reloadData()
             self.dismissViewControllerAnimated(true, completion: { () -> Void in
                 //
