@@ -52,7 +52,7 @@ class Account : PFObject, PFSubclassing {
             if source == .local {
                 query.fromLocalDatastore()
             }
-            query.whereKey("contributors", containsAllObjectsInArray:[user] )
+            query.whereKey("contributors", containsAllObjectsInArray:[user])
             return query.findObjectsInBackground().continueWithBlock{ (task:BFTask!) -> BFTask! in
                 if let e = task.error {
                     //Error Domain=Parse Code=120 not an error? means does not exist yet?
